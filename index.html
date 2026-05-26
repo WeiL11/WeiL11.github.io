@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tzu-Wei Lee</title>
+  <meta name="description" content="Tzu-Wei Lee — Ph.D. candidate in Biomedical Engineering, Vanderbilt University." />
+  <style>
+    :root {
+      --fg: #1c1c1c;
+      --muted: #6c6c6c;
+      --rule: #e6e6e6;
+      --link: #2563eb;
+      --bg: #ffffff;
+      --max: 44rem;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --fg: #e7e7e7; --muted: #9a9a9a; --rule: #2a2a2a; --link: #7aa7ff; --bg: #0e0e0e; }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      padding: 3rem 1.25rem 4rem;
+    }
+    main { max-width: var(--max); margin: 0 auto; }
+    .header {
+      display: grid;
+      grid-template-columns: 8rem 1fr;
+      gap: 1.5rem;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    @media (max-width: 600px) {
+      .header { grid-template-columns: 1fr; text-align: center; }
+      .avatar { margin: 0 auto; }
+    }
+    .avatar {
+      width: 8rem; height: 8rem;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #d9e6ff 0%, #c2d3ff 100%);
+      display: grid; place-items: center;
+      color: #2c3e75; font-weight: 600; font-size: 2rem; letter-spacing: 0.05em;
+      object-fit: cover;
+    }
+    h1 {
+      font-weight: 600; font-size: 2rem; margin: 0 0 0.25rem;
+      letter-spacing: -0.01em;
+    }
+    .han { color: var(--muted); font-weight: 400; margin-left: 0.4rem; font-size: 1.4rem; }
+    .callme { color: var(--muted); margin: 0 0 0.35rem; font-size: 0.92rem; }
+    .callme strong { color: var(--fg); font-weight: 600; }
+    .role { color: var(--muted); margin: 0; }
+    .role a { color: inherit; }
+    .links { margin-top: 0.6rem; display: flex; flex-wrap: wrap; gap: 0.9rem; }
+    .links a {
+      color: var(--link); text-decoration: none; font-size: 0.92rem;
+    }
+    .links a:hover { text-decoration: underline; }
+    h2 {
+      font-size: 1rem; text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--muted); font-weight: 600;
+      margin: 2rem 0 0.5rem;
+      padding-bottom: 0.35rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    p { margin: 0 0 1rem; }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .interests {
+      display: flex; flex-wrap: wrap; gap: 0.5rem;
+      list-style: none; padding: 0; margin: 0.5rem 0 0;
+    }
+    .interests li {
+      padding: 0.25rem 0.7rem;
+      border: 1px solid var(--rule);
+      border-radius: 999px;
+      font-size: 0.88rem;
+      color: var(--fg);
+    }
+    .edu { margin: 0.5rem 0 0; padding: 0; list-style: none; }
+    .edu li { display: flex; justify-content: space-between; gap: 1rem; padding: 0.35rem 0; }
+    .edu .school { color: var(--muted); }
+    .visitors-note { color: var(--muted); font-size: 0.9rem; }
+    #clustrmaps-wrap { display: flex; justify-content: center; margin-top: 0.5rem; }
+    footer {
+      color: var(--muted); font-size: 0.85rem;
+      margin-top: 3rem; padding-top: 1rem;
+      border-top: 1px solid var(--rule);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="header">
+      <!-- Swap this div for <img class="avatar" src="profile.jpg" alt="Tzu-Wei Lee" /> once you drop a photo into this folder. -->
+      <div class="avatar" aria-hidden="true">TWL</div>
+      <div>
+        <h1>Tzu-Wei Lee<span class="han">李梓維</span></h1>
+        <p class="callme">call me <strong>Wei</strong> (pronounced &ldquo;way&rdquo;)</p>
+        <p class="role">
+          Ph.D. Candidate, Biomedical Engineering<br />
+          <a href="https://www.vanderbilt.edu/">Vanderbilt University</a> · advised by Prof. John Gore<br />
+          <a href="https://www.vumc.org/vuiis/">Vanderbilt University Institute of Imaging Science (VUIIS)</a>
+        </p>
+        <div class="links">
+          <a href="mailto:tzuweilee@outlook.com">Email</a>
+          <a href="https://github.com/WeiL11">GitHub</a>
+          <a href="https://www.linkedin.com/in/weileevandy/">LinkedIn</a>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <h2>About</h2>
+      <p>
+        Hello! I'm Tzu-Wei (李梓維), a Ph.D. candidate in Biomedical Engineering at
+        Vanderbilt University, working with Prof. John Gore and affiliated with
+        the Vanderbilt University Institute of Imaging Science (VUIIS). My
+        research spans signal and image processing, neuroscience, brain
+        decoding, and machine learning.
+      </p>
+      <p>
+        Beyond academic research, I'm passionate about using analytical methods
+        on real-world problems — emerging technologies, quantitative trading,
+        and semiconductor technology, the last close to my roots as a
+        Taiwanese.
+      </p>
+    </section>
+
+    <section>
+      <h2>Research Interests</h2>
+      <ul class="interests">
+        <li>Signal &amp; Image Processing</li>
+        <li>Image Reconstruction</li>
+        <li>Deep Learning</li>
+        <li>MR Physics</li>
+        <li>Neuroscience</li>
+        <li>Brain Decoding</li>
+        <li>AI Agents for Biomedicine &amp; Imaging</li>
+        <li>AI Trends &amp; Financial Markets</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <ul class="edu">
+        <li>
+          <span>Ph.D., Biomedical Engineering</span>
+          <span class="school">Vanderbilt University</span>
+        </li>
+        <li>
+          <span>B.S., Biomedical Engineering</span>
+          <span class="school">Taipei Medical University</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="visitors">
+      <h2>Who's Visited</h2>
+      <p class="visitors-note">Hello to everyone dropping by &mdash; here's where you're from.</p>
+      <div id="clustrmaps-wrap">
+        <!--
+          To activate this map:
+            1. Go to https://clustrmaps.com/  (free)
+            2. Sign up and create a widget for "https://weil11.github.io"
+            3. Copy ONLY the value of the "d=" parameter from the script they give you
+            4. Paste it into the data-d attribute below, then delete this comment
+        -->
+        <script type="text/javascript" id="clustrmaps"
+          src="//clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=PASTE_YOUR_CLUSTRMAPS_ID_HERE&co=1c1c1d&ct=808080&cmo=ff5555&cmn=00ff00"></script>
+      </div>
+    </section>
+
+    <footer>
+      © Tzu-Wei Lee · Last updated 2026-05-26
+    </footer>
+  </main>
+</body>
+</html>
