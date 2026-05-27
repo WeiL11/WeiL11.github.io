@@ -82,6 +82,21 @@
     .edu { margin: 0.5rem 0 0; padding: 0; list-style: none; }
     .edu li { display: flex; justify-content: space-between; gap: 1rem; padding: 0.35rem 0; }
     .edu .school { color: var(--muted); }
+
+    .pubs { padding-left: 1.2rem; margin: 0.5rem 0 0; }
+    .pub { margin: 0.4rem 0 0.9rem; }
+    .pub-title { font-weight: 600; }
+    .pub-authors { font-size: 0.92rem; }
+    .pub-venue { color: var(--muted); font-size: 0.9rem; font-style: italic; }
+    .pub-venue a { font-style: normal; }
+    .more { font-size: 0.9rem; margin-top: 0.25rem; }
+
+    .projects { list-style: none; padding: 0; margin: 0.5rem 0 0; }
+    .project { padding: 0.6rem 0; border-bottom: 1px solid var(--rule); }
+    .project:last-child { border-bottom: none; }
+    .project-title { font-weight: 600; }
+    .project-desc { color: var(--muted); margin: 0.15rem 0 0.25rem; font-size: 0.95rem; }
+    .project-links { font-size: 0.88rem; }
     .visitors-note { color: var(--muted); font-size: 0.9rem; }
     .visitor-map { display: flex; justify-content: center; margin-top: 0.5rem; }
     .visitor-map img { max-width: 100%; height: auto; }
@@ -123,12 +138,6 @@
         research spans signal and image processing, neuroscience, brain
         decoding, and machine learning.
       </p>
-      <p>
-        Beyond academic research, I'm passionate about using analytical methods
-        on real-world problems — emerging technologies, quantitative trading,
-        and semiconductor technology, the last close to my roots as a
-        Taiwanese.
-      </p>
     </section>
 
     <section>
@@ -155,6 +164,41 @@
         <li>
           <span>B.S., Biomedical Engineering</span>
           <span class="school">Taipei Medical University</span>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Publications</h2>
+      <ol class="pubs">
+        <li class="pub">
+          <div class="pub-title">[Paper title placeholder]</div>
+          <div class="pub-authors"><strong>T.-W. Lee</strong>, Co-author A, Co-author B, &hellip; J. Gore.</div>
+          <div class="pub-venue">Venue / Journal, Year.
+            <a href="#">PDF</a> &middot; <a href="#">arXiv</a> &middot; <a href="#">code</a>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="pub-title">[Second paper title placeholder]</div>
+          <div class="pub-authors"><strong>T.-W. Lee</strong>, Co-author C, &hellip;</div>
+          <div class="pub-venue">Conference, Year. <a href="#">link</a></div>
+        </li>
+      </ol>
+      <p class="more"><a href="#">Full list on Google&nbsp;Scholar &rarr;</a></p>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <ul class="projects">
+        <li class="project">
+          <div class="project-title">[Project name placeholder]</div>
+          <p class="project-desc">One-line description of what this project does and why it matters.</p>
+          <div class="project-links"><a href="#">site</a> &middot; <a href="#">code</a></div>
+        </li>
+        <li class="project">
+          <div class="project-title">[Second project placeholder]</div>
+          <p class="project-desc">Another short description.</p>
+          <div class="project-links"><a href="#">code</a></div>
         </li>
       </ul>
     </section>
