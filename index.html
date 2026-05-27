@@ -83,7 +83,8 @@
     .edu li { display: flex; justify-content: space-between; gap: 1rem; padding: 0.35rem 0; }
     .edu .school { color: var(--muted); }
     .visitors-note { color: var(--muted); font-size: 0.9rem; }
-    #clustrmaps-wrap { display: flex; justify-content: center; margin-top: 0.5rem; }
+    .visitor-map { display: flex; justify-content: center; margin-top: 0.5rem; }
+    .visitor-map img { max-width: 100%; height: auto; }
     footer {
       color: var(--muted); font-size: 0.85rem;
       margin-top: 3rem; padding-top: 1rem;
@@ -95,8 +96,8 @@
 <body>
   <main>
     <header class="header">
-      <!-- Swap this div for <img class="avatar" src="profile.jpg" alt="Tzu-Wei Lee" /> once you drop a photo into this folder. -->
-      <div class="avatar" aria-hidden="true">TWL</div>
+      <img class="avatar" src="profile.jpg" alt="Tzu-Wei Lee"
+        onerror="this.outerHTML='&lt;div class=&quot;avatar&quot; aria-hidden=&quot;true&quot;&gt;TWL&lt;/div&gt;';" />
       <div>
         <h1>Tzu-Wei Lee<span class="han">李梓維</span></h1>
         <p class="callme">call me <strong>Wei</strong> (pronounced &ldquo;way&rdquo;)</p>
@@ -160,17 +161,23 @@
 
     <section class="visitors">
       <h2>Who's Visited</h2>
-      <p class="visitors-note">Hello to everyone dropping by &mdash; here's where you're from.</p>
-      <div id="clustrmaps-wrap">
-        <!--
-          To activate this map:
-            1. Go to https://clustrmaps.com/  (free)
-            2. Sign up and create a widget for "https://weil11.github.io"
-            3. Copy ONLY the value of the "d=" parameter from the script they give you
-            4. Paste it into the data-d attribute below, then delete this comment
-        -->
-        <script type="text/javascript" id="clustrmaps"
-          src="//clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=PASTE_YOUR_CLUSTRMAPS_ID_HERE&co=1c1c1d&ct=808080&cmo=ff5555&cmn=00ff00"></script>
+      <p class="visitors-note">Hello to everyone dropping by &mdash; here&rsquo;s where you&rsquo;re from.</p>
+      <!--
+        Mirrors the soupeeli.github.io embed (same vendor, same params).
+        Vendor: mapmyvisitors.com (formerly ClustrMaps). The script injects a
+        300 px world-map image into the container below.
+
+        To activate:
+          1. Sign up at https://clustrmaps.com/ (free) and register the site
+             "https://weil11.github.io".
+          2. They give you a <script> snippet. Copy ONLY the value after "d="
+             (a ~43-char hash).
+          3. Replace PASTE_YOUR_CLUSTRMAPS_ID_HERE below with that value.
+          4. Save, commit, push. Map lights up within a minute.
+      -->
+      <div id="visitor-map-container" class="visitor-map">
+        <script async id="mapmyvisitors"
+          src="https://mapmyvisitors.com/map.js?cl=789caa&w=300&t=n&d=vNppOnu_6_n6Vz5ZJxeN_3iRYt_-livIC0F-9o0amDw&co=1c1c1d&ct=808080&cmo=e263ef&cmn=44d2ef"></script>
       </div>
     </section>
 
