@@ -102,12 +102,34 @@
     }
     .more { font-size: 0.9rem; margin-top: 0.25rem; }
 
-    .projects { list-style: none; padding: 0; margin: 0.5rem 0 0; }
-    .project { padding: 0.6rem 0; border-bottom: 1px solid var(--rule); }
+    .proj-cat {
+      font-size: 0.95rem; font-weight: 600;
+      margin: 1.25rem 0 0.25rem;
+      color: var(--fg);
+      letter-spacing: 0.005em;
+    }
+    .projects { list-style: none; padding: 0; margin: 0.25rem 0 0; }
+    .project {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--rule);
+      display: flex; gap: 0.75rem; align-items: baseline; justify-content: space-between;
+    }
     .project:last-child { border-bottom: none; }
-    .project-title { font-weight: 600; }
+    .project-title { font-weight: 500; flex: 1; }
+    a.project-title { color: var(--link); text-decoration: none; }
+    a.project-title:hover { text-decoration: underline; }
     .project-desc { color: var(--muted); margin: 0.15rem 0 0.25rem; font-size: 0.95rem; }
     .project-links { font-size: 0.88rem; }
+    .proj-tag {
+      flex: 0 0 auto;
+      font-size: 0.72rem;
+      padding: 0.1rem 0.5rem;
+      border: 1px solid var(--rule);
+      border-radius: 999px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
     .visitors-note { color: var(--muted); font-size: 0.9rem; }
     .visitor-map { display: flex; justify-content: center; margin-top: 0.5rem; }
     .visitor-map img { max-width: 100%; height: auto; }
@@ -232,16 +254,48 @@
 
     <section>
       <h2>Projects</h2>
+
+      <h3 class="proj-cat">LLM Inference</h3>
       <ul class="projects">
         <li class="project">
-          <div class="project-title">[Project name placeholder]</div>
-          <p class="project-desc">One-line description of what this project does and why it matters.</p>
-          <div class="project-links"><a href="#">site</a> &middot; <a href="#">code</a></div>
+          <a class="project-title" href="https://www.notion.so/How-to-Speed-Your-Inference-Speculative-Decoding-in-vLLM-2ff01df9127180a79eacf24f0d65461b?pvs=21">Speeding Up Inference with Speculative Decoding in vLLM</a>
+          <span class="proj-tag">Notion</span>
         </li>
         <li class="project">
-          <div class="project-title">[Second project placeholder]</div>
-          <p class="project-desc">Another short description.</p>
-          <div class="project-links"><a href="#">code</a></div>
+          <a class="project-title" href="https://www.notion.so/Deep-Learning-LLM-Speeding-up-on-H100-with-vLLM-and-SGLang-2ea01df91271807bb812f5c946f14d89?pvs=21">Accelerating LLMs on H100 with vLLM and SGLang</a>
+          <span class="proj-tag">Notion</span>
+        </li>
+        <li class="project">
+          <a class="project-title" href="https://www.notion.so/Practical-Model-Scaling-Quiz-Parallelism-Put-Big-model-in-GPUs-TPUs-2f001df912718067b44ed8523fa9222b?pvs=21">Practical Model Scaling: Fitting Big Models onto GPUs / TPUs with Parallelism</a>
+          <span class="proj-tag">Notion</span>
+        </li>
+        <li class="project">
+          <a class="project-title" href="https://www.notion.so/Model-Eval-Case-Study-LLaMA-Eval-with-EQ-bench-2f701df9127180ae8b81ca84ef3c929e?pvs=21">Evaluating LLaMA with EQ&#8209;Bench: A Case Study</a>
+          <span class="proj-tag">Notion</span>
+        </li>
+        <li class="project">
+          <a class="project-title" href="https://www.notion.so/Model-Eval-Benchmarks-How-can-we-tell-it-is-good-30501df912718091b72ded335b663bde?pvs=21">Model Evaluation Benchmarks: How Do We Tell a Model Is Good?</a>
+          <span class="proj-tag">Notion</span>
+        </li>
+        <li class="project">
+          <a class="project-title" href="https://www.notion.so/SoD-reasoning-Bench-Evaluating-Context-Reasoning-by-Sense-of-Direction-in-Context-31001df9127180078d26f76ecf5f402e?pvs=21">SoD Reasoning Bench: Evaluating Context Reasoning via Sense of Direction</a>
+          <span class="proj-tag">Notion</span>
+        </li>
+        <li class="project">
+          <span class="project-title">Compute&#8209;efficiency colabs:
+            <a href="https://colab.research.google.com/drive/1o0-azRYeu0LFtwp_L3aeo-zAj4AagzK8?usp=sharing">MFU &amp; DFU</a>
+            &middot;
+            <a href="https://colab.research.google.com/drive/12l28iLjShD3bC3MfzuOGtV7NG2cgzetw?usp=sharing">Porting PyTorch to Triton</a>
+          </span>
+          <span class="proj-tag">Colab</span>
+        </li>
+      </ul>
+
+      <h3 class="proj-cat">Algorithms Optimization</h3>
+      <ul class="projects">
+        <li class="project">
+          <a class="project-title" href="https://colab.research.google.com/drive/15oKHiHlpGPfwW907RavcJWMO6u7PQlnH?usp=sharing">Ricochet Robots (a.k.a. Pok&eacute;mon Ice Maze) &mdash; constraint search &amp; pruning</a>
+          <span class="proj-tag">Colab</span>
         </li>
       </ul>
     </section>
