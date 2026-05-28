@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Agent / 健康 AI / 神經科技 — VC 投融資地圖 · Tzu-Wei Lee</title>
+  <meta name="description" content="VC 重押的 AI Agent、神經科技、AI 新藥與數位醫療公司清單與商業模式速覽。" />
+  <style>
+    :root {
+      --fg: #1c1c1c;
+      --muted: #6c6c6c;
+      --rule: #e6e6e6;
+      --link: #2563eb;
+      --bg: #ffffff;
+      --card-bg: #fafafa;
+      --max: 52rem;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --fg: #e7e7e7; --muted: #9a9a9a; --rule: #2a2a2a; --link: #7aa7ff; --bg: #0e0e0e; --card-bg: #181818; }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Noto Sans CJK TC", "Microsoft JhengHei", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      padding: 2.5rem 1.25rem 4rem;
+    }
+    main { max-width: var(--max); margin: 0 auto; }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .back {
+      display: inline-block;
+      font-size: 0.9rem; color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+    h1 {
+      font-weight: 600; font-size: 1.85rem;
+      margin: 0 0 0.35rem; letter-spacing: -0.01em;
+    }
+    .subtitle { color: var(--muted); margin: 0 0 0.5rem; font-size: 1.05rem; }
+    .meta { color: var(--muted); font-size: 0.85rem; margin: 0 0 1.5rem; }
+    .intro {
+      background: var(--card-bg);
+      border-left: 3px solid var(--link);
+      padding: 0.9rem 1.1rem;
+      border-radius: 0 4px 4px 0;
+      margin: 1.25rem 0 2rem;
+      font-size: 0.95rem;
+    }
+    .intro p { margin: 0; }
+    .intro p + p { margin-top: 0.5rem; }
+
+    .toc {
+      margin: 0 0 2rem; padding: 0.75rem 1rem;
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      font-size: 0.9rem;
+    }
+    .toc strong { display: block; margin-bottom: 0.25rem; color: var(--muted); font-weight: 600; font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; }
+    .toc ul { margin: 0; padding-left: 1.1rem; }
+    .toc li { margin: 0.1rem 0; }
+
+    h2 {
+      font-size: 1.25rem; font-weight: 600;
+      margin: 2.5rem 0 0.5rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    h2 .track-no { color: var(--muted); font-weight: 500; margin-right: 0.4rem; }
+    .track-note {
+      color: var(--muted); font-size: 0.85rem; font-style: italic; margin: 0 0 1rem;
+    }
+
+    .companies { list-style: none; padding: 0; margin: 0; }
+    .company {
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .company:last-child { border-bottom: none; }
+    .company-head {
+      display: flex; flex-wrap: wrap;
+      align-items: baseline; gap: 0.5rem 0.75rem;
+      margin-bottom: 0.3rem;
+    }
+    .company-num { color: var(--muted); font-weight: 500; min-width: 1.7rem; }
+    .company-name { font-weight: 600; font-size: 1.05rem; }
+    .company-link { font-size: 0.88rem; }
+    .company-meta {
+      color: var(--muted); font-size: 0.88rem; margin: 0 0 0.4rem;
+    }
+    .company-meta strong { color: var(--fg); font-weight: 500; }
+    .company-body { font-size: 0.95rem; margin: 0; }
+
+    footer {
+      color: var(--muted); font-size: 0.85rem;
+      margin-top: 3rem; padding-top: 1rem;
+      border-top: 1px solid var(--rule);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="../">&larr; 回首頁</a>
+
+    <h1>AI Agent / 健康 AI / 神經科技 — VC 投融資地圖</h1>
+    <p class="subtitle">四大賽道、約 47 家代表性公司的階段、領投 VC 與獲利模式速覽。</p>
+    <p class="meta">By Tzu-Wei Lee · 2026</p>
+
+    <div class="intro">
+      <p>本頁整理近年 VC 重押的 AI Agent、神經科技、AI 新藥與數位醫療公司，依四條賽道分類，記錄成立年份、目前融資階段、領投機構與其獲利模式。</p>
+      <p>編號為較長分析中的全域序號；本頁僅收錄各賽道中段／後段公司（接續較長草稿中的前段，故首編號非從 1 開始）。</p>
+    </div>
+
+    <nav class="toc" aria-label="目錄">
+      <strong>目錄</strong>
+      <ul>
+        <li><a href="#track-1">賽道一：Agent 評測與自動化（Infrastructure &amp; Trust Layer）</a></li>
+        <li><a href="#track-2">賽道二：神經科技與 BCI（The Neuro-Frontier）</a></li>
+        <li><a href="#track-3">賽道三：AI 新藥與生物基建（AI &times; Bio Heavyweights）</a></li>
+        <li><a href="#track-4">賽道四：數位醫療與數據平台（Digital Health &amp; Data）</a></li>
+      </ul>
+    </nav>
+
+    <!-- ====== 賽道一 ====== -->
+    <h2 id="track-1"><span class="track-no">賽道一</span>Agent 評測與自動化</h2>
+    <p class="track-note">The Infrastructure &amp; Trust Layer · 接續前文 1–3 家，共 7 家</p>
+
+    <ul class="companies">
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">4.</span>
+          <span class="company-name">LangChain (LangSmith)</span>
+          <span class="company-link"><a href="https://smith.langchain.com/">smith.langchain.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2022</strong> · Series B+ · Sequoia</p>
+        <p class="company-body">提供開發者構建 LLM 應用的開源框架，並透過付費的 LangSmith 平台提供 Agent 軌跡追蹤與觀測服務。獲利來自企業級 SaaS 訂閱（按觀測軌跡量與座位數收費）。</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">5.</span>
+          <span class="company-name">DeepEval (Confident AI)</span>
+          <span class="company-link"><a href="https://confident-ai.com/">confident-ai.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2023</strong> · Seed · YC 等</p>
+        <p class="company-body">LLM 與 Agent 的開源壓力測試框架。獲利模式為「開源引流 + 企業版 SaaS 訂閱」，企業付費以獲得視覺化儀表板與 CI/CD 持續整合測試環境。</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">6.</span>
+          <span class="company-name">Galileo</span>
+          <span class="company-link"><a href="https://www.rungalileo.io/">rungalileo.io</a></span>
+        </div>
+        <p class="company-meta"><strong>2023</strong> · Series A · Battery Ventures</p>
+        <p class="company-body">GenAI 幻覺檢測與模型評估平台。獲利模式為純 B2B SaaS，向企業客戶收取高額軟體授權與平台使用費。</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">7.</span>
+          <span class="company-name">Braintrust</span>
+          <span class="company-link"><a href="https://www.braintrustdata.com/">braintrustdata.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2023</strong> · Series A · a16z, Greylock</p>
+        <p class="company-body">企業級提示詞（Prompt）測試與 Agent 效能評估平台。獲利模式為 B2B SaaS，按協作座位（per-seat）或運算用量收費。</p>
+      </li>
+    </ul>
+
+    <!-- ====== 賽道二 ====== -->
+    <h2 id="track-2"><span class="track-no">賽道二</span>神經科技與 BCI</h2>
+    <p class="track-note">The Neuro-Frontier · 接續前文 8–10 家，共 8 家</p>
+
+    <ul class="companies">
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">11.</span>
+          <span class="company-name">Neuralink</span>
+          <span class="company-link"><a href="https://neuralink.com/">neuralink.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2016</strong> · Series D+ · Founders Fund 等</p>
+        <p class="company-body">高頻寬侵入式腦機介面（植入物與手術機器人）。目前處於研發階段，未來將依賴高單價醫療器材銷售與保險給付。</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">12.</span>
+          <span class="company-name">Synchron</span>
+          <span class="company-link"><a href="https://synchron.com/">synchron.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2016</strong> · Series C+ · Khosla, ARCH</p>
+        <p class="company-body">無須開顱的微創血管內腦機介面。獲利模式依循傳統高階醫療器材的 FDA 批准途徑與醫療保險給付。</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">13.</span>
+          <span class="company-name">Kernel</span>
+          <span class="company-link"><a href="https://www.kernel.com/">kernel.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2016</strong> · Series C · General Catalyst</p>
+        <p class="company-body">量子級非侵入式腦部血氧偵測頭盔（Kernel Flow）。獲利模式為「硬體銷售 + 腦部數據即服務（DaaS）」，向研究機構收取標準化量測數據費用。</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">14.</span>
+          <span class="company-name">Rune Labs</span>
+          <span class="company-link"><a href="https://runelabs.io/">runelabs.io</a></span>
+        </div>
+        <p class="company-meta"><strong>2018</strong> · Series A+ · Eclipse Ventures</p>
+        <p class="company-body">針對帕金森氏症的神經數據整合 SaaS（StrivePD）。獲利模式為 B2B 平台訂閱，向藥廠與醫材廠收費以協助其追蹤臨床療效。</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">15.</span>
+          <span class="company-name">Paradromics</span>
+          <span class="company-link"><a href="https://paradromics.com/">paradromics.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2015</strong> · Series A+ · Prime Movers Lab</p>
+        <p class="company-body">開發目前市場上最高密度的微電極陣列腦部植入物（Connexus）。獲利模式為醫療級硬體設備銷售。</p>
+      </li>
+    </ul>
+
+    <!-- ====== 賽道三 ====== -->
+    <h2 id="track-3"><span class="track-no">賽道三</span>AI 新藥與生物基建</h2>
+    <p class="track-note">The AI &times; Bio Heavyweights · 接續前文 16–17 家，共 17 家</p>
+
+    <ul class="companies">
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">18.</span>
+          <span class="company-name">Ginkgo Bioworks</span>
+          <span class="company-link"><a href="https://www.ginkgobioworks.com/">ginkgobioworks.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2008</strong> · Public (NYSE) · YC 等早期</p>
+        <p class="company-body">細胞自動化編程工廠（Foundry）。獲利模式為「代工服務費 + 下游產品分成」，幫客戶改造細胞並獲取最終產品上市的利潤或股權。</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">19.</span>
+          <span class="company-name">Recursion</span>
+          <span class="company-link"><a href="https://www.recursion.com/">recursion.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2013</strong> · Public (Nasdaq) · Baillie Gifford 等</p>
+        <p class="company-body">AI 細胞顯微影像分析找藥平台（OS 平台）。獲利模式為「平台授權 + 自有管線」，利用自身技術開發具備龐大市場價值的新藥資產。</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">20.</span>
+          <span class="company-name">Schr&ouml;dinger</span>
+          <span class="company-link"><a href="https://www.schrodinger.com/">schrodinger.com</a></span>
+        </div>
+        <p class="company-meta"><strong>1990</strong> · Public (Nasdaq) · Gates Foundation</p>
+        <p class="company-body">基於物理學的分子模擬與對接計算軟體。獲利模式為「純軟體訂閱授權 + 內部自主研發藥物管線高價授權」。</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">21.</span>
+          <span class="company-name">Genesis Therapeutics</span>
+          <span class="company-link"><a href="https://www.genesistherapeutics.ai/">genesistherapeutics.ai</a></span>
+        </div>
+        <p class="company-meta"><strong>2019</strong> · Series B · a16z</p>
+        <p class="company-body">AI 驅動的小分子藥物生成平台。獲利模式為聯合研發協議（收取平台技術費）與自有管線推進的里程碑獎金。</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">22.</span>
+          <span class="company-name">BigHat Biosciences</span>
+          <span class="company-link"><a href="https://www.bighatbio.com/">bighatbio.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2019</strong> · Series B · a16z</p>
+        <p class="company-body">結合 AI 與合成生物學的抗體藥物設計平台。獲利模式為與大藥廠（如 Amgen）簽訂聯合研發協議，按階段收取高額授權金。</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">23.</span>
+          <span class="company-name">Asimov</span>
+          <span class="company-link"><a href="https://www.asimov.com/">asimov.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2017</strong> · Series B · a16z</p>
+        <p class="company-body">開發用於哺乳動物合成生物學的 CAD 軟體與細胞平台。獲利模式為向生技公司收取軟體授權費，並搭配販售專屬耗材。</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">24.</span>
+          <span class="company-name">Scribe Therapeutics</span>
+          <span class="company-link"><a href="https://www.scribetx.com/">scribetx.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2017</strong> · Series B · a16z</p>
+        <p class="company-body">開發下一代 CRISPR 基因編輯技術。獲利模式為專利技術授權，將底層技術授權給大廠並收取權利金與里程碑金。</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">25.</span>
+          <span class="company-name">BioAge Labs</span>
+          <span class="company-link"><a href="https://bioagelabs.com/">bioagelabs.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2015</strong> · Series D · a16z</p>
+        <p class="company-body">利用 AI 分析老化基因庫以尋找延長壽命的藥物。獲利模式為「資產驅動（Asset-Driven）」，低價買斷老藥進行研發，再高價授權（License-out）給大廠。</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">26.</span>
+          <span class="company-name">Valo Health</span>
+          <span class="company-link"><a href="https://www.valohealth.com/">valohealth.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2019</strong> · Series C · a16z</p>
+        <p class="company-body">端到端以人類數據為核心的 AI 研發平台（Opal）。獲利模式為平台技術授權與自建藥物資產管線。</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">27.</span>
+          <span class="company-name">Camp4 Therapeutics</span>
+          <span class="company-link"><a href="https://www.camp4tx.com/">camp4tx.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2016</strong> · Series B · a16z</p>
+        <p class="company-body">調節性 RNA 平台，針對基因表達異常疾病尋找靶點。獲利模式為與藥廠簽訂靶點發現合作協議，收取前期金與里程碑金。</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">28.</span>
+          <span class="company-name">Atomwise</span>
+          <span class="company-link"><a href="https://www.atomwise.com/">atomwise.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2012</strong> · Series B+ · YC, Tencent</p>
+        <p class="company-body">基於卷積神經網路（CNN）的小分子虛擬篩選平台（AtomNet）。獲利模式為專案合作費與藥物推進的里程碑獎金。</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">29.</span>
+          <span class="company-name">Culture Biosciences</span>
+          <span class="company-link"><a href="https://www.culturebiosciences.com/">culturebiosciences.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2016</strong> · Series B · YC, a16z</p>
+        <p class="company-body">雲端連線控制的生物反應器（Cloud Bioreactors）。獲利模式為「實驗室即服務（Lab-as-a-Service）」，按使用設備時數或容量收費。</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">30.</span>
+          <span class="company-name">Notable Labs</span>
+          <span class="company-link"><a href="https://www.notablelabs.com/">notablelabs.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2014</strong> · Series B · YC 等</p>
+        <p class="company-body">自動化預測癌細胞對藥物反應的篩選平台。獲利模式為向藥廠收取平台服務費及潛在臨床成功的分潤。</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">31.</span>
+          <span class="company-name">Owkin</span>
+          <span class="company-link"><a href="https://owkin.com/">owkin.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2016</strong> · Series C (Unicorn) · Sanofi, Google</p>
+        <p class="company-body">利用聯邦學習（Federated Learning）共享醫療數據訓練 AI 模型，但不侵犯病患隱私。獲利模式為大藥廠研發合作前期金與里程碑。</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">32.</span>
+          <span class="company-name">Tempus</span>
+          <span class="company-link"><a href="https://www.tempus.com/">tempus.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2015</strong> · Series G+ (Pre-IPO) · Baillie Gifford</p>
+        <p class="company-body">臨床與分子精準醫療數據庫。獲利模式為向醫院收取檢測服務費，再將龐大的數據庫授權給藥廠變現。</p>
+      </li>
+    </ul>
+
+    <!-- ====== 賽道四 ====== -->
+    <h2 id="track-4"><span class="track-no">賽道四</span>數位醫療與數據平台</h2>
+    <p class="track-note">Digital Health &amp; Data · 共 18 家</p>
+
+    <ul class="companies">
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">33.</span>
+          <span class="company-name">Freenome</span>
+          <span class="company-link"><a href="https://www.freenome.com/">freenome.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2014</strong> · Series E · a16z, Roche</p>
+        <p class="company-body">結合多模態生物標記的癌症血液篩檢平台。獲利模式為一般醫療保險給付，以及藥廠臨床試驗的伴隨式診斷費用。</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">34.</span>
+          <span class="company-name">Flatiron Health <span class="company-meta" style="display:inline; margin:0;">（前已述）</span></span>
+          <span class="company-link"><a href="https://flatiron.com/">flatiron.com</a></span>
+        </div>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">35.</span>
+          <span class="company-name">TrialSpark</span>
+          <span class="company-link"><a href="https://www.trialspark.com/">trialspark.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2013</strong> · Series C · Thrive, Sequoia</p>
+        <p class="company-body">科技賦能的臨床試驗平台。獲利模式從早期的「臨床代工（CRO）服務費」，進化為「買斷專利自己開發新藥」賺取暴利。</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">36.</span>
+          <span class="company-name">Devoted Health</span>
+          <span class="company-link"><a href="https://www.devoted.com/">devoted.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2017</strong> · Series E · a16z</p>
+        <p class="company-body">面向老年人的科技賦能聯邦醫療保險計畫（Medicare Advantage）。獲利模式為透過軟體提升健康、減少無效看病，賺取政府撥款與實際支出的利潤差額。</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">37.</span>
+          <span class="company-name">Omada Health</span>
+          <span class="company-link"><a href="https://www.omadahealth.com/">omadahealth.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2011</strong> · Series E · a16z</p>
+        <p class="company-body">數位慢性病管理療法（Digital Therapeutics）。獲利模式為 B2B 企業訂閱，並採「按績效付費（Pay-for-Performance）」，病患減重越多收越多錢。</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">38.</span>
+          <span class="company-name">Komodo Health</span>
+          <span class="company-link"><a href="https://www.komodohealth.com/">komodohealth.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2014</strong> · Series E · a16z, ICONIQ</p>
+        <p class="company-body">彙整全美病患看診與用藥路徑的「醫療數據地圖（Healthcare Map）」。獲利模式為向藥廠與保險公司收取高額的巨型 SaaS 年費。</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">39.</span>
+          <span class="company-name">PatientPing (Appriss Health)</span>
+          <span class="company-link"><a href="https://patientping.com/">patientping.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2013</strong> · 被 Appriss 併購 · a16z</p>
+        <p class="company-body">即時追蹤病患出入院動態的醫療協調網絡。獲利模式為按機構規模向醫院及長照中心收取 SaaS 訂閱費。（現跳轉 Appriss）</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">40.</span>
+          <span class="company-name">Athelas</span>
+          <span class="company-link"><a href="https://athelas.com/">athelas.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2016</strong> · Series B · YC</p>
+        <p class="company-body">提供病患家用的連網血液與生命徵象檢測儀。獲利模式為「硬體即服務」，硬體免費，每月向保險公司請領「遠距持續監測（RPM）」費用。</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">41.</span>
+          <span class="company-name">BioRender</span>
+          <span class="company-link"><a href="https://biorender.com/">biorender.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2017</strong> · Series A · YC</p>
+        <p class="company-body">科學界的 Canva，標準化生物醫學繪圖軟體。獲利模式為產品驅動成長（PLG）的 Freemium SaaS，個人免費，實驗室團隊付費訂閱。</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">42.</span>
+          <span class="company-name">Volumetric</span>
+          <span class="company-link"><a href="https://www.3dsystems.com/bioprinting">3dsystems.com/bioprinting</a></span>
+        </div>
+        <p class="company-meta"><strong>2018</strong> · 被 3D Systems 併購 · YC</p>
+        <p class="company-body">用於人體組織模型的 3D 生物列印機。獲利模式為硬體銷售與長尾的耗材（專利生物墨水）收入。（現跳轉 3D Systems）</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">43.</span>
+          <span class="company-name">Miroculus</span>
+          <span class="company-link"><a href="https://miroculus.com/">miroculus.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2014</strong> · 被 Integra Biosciences 併購 · YC</p>
+        <p class="company-body">自動化微流體基因定序樣本製備系統。獲利模式為吉列刮鬍刀模式（Razor and Blades），賣硬體綁定專屬耗材卡匣。（現跳轉 Integra）</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">44.</span>
+          <span class="company-name">Nurx (Thirty Madison)</span>
+          <span class="company-link"><a href="https://www.nurx.com/">nurx.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2015</strong> · 與 Thirty Madison 合併 · YC</p>
+        <p class="company-body">自動化女性健康與遠距醫療平台。獲利模式為低價 D2C 線上問診費，以及龐大的處方藥（如避孕藥）長期配送利潤。</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">45.</span>
+          <span class="company-name">Curative</span>
+          <span class="company-link"><a href="https://curative.com/">curative.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2020</strong> · 私人公司 · YC</p>
+        <p class="company-body">疫情期間崛起的優化核酸檢測與物流平台，現轉型健保。獲利模式最初為依賴保險或政府的按次檢測給付（Fee-for-Service）。</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">46.</span>
+          <span class="company-name">Oscar Health</span>
+          <span class="company-link"><a href="https://www.hioscar.com/">hioscar.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2012</strong> · Public (NYSE) · Thrive 等</p>
+        <p class="company-body">科技驅動的新一代醫療保險公司。獲利模式為收取保費，並透過軟體優化看診流程以降低理賠率，賺取保費淨利。</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">47.</span>
+          <span class="company-name">Cedar</span>
+          <span class="company-link"><a href="https://www.cedar.com/">cedar.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2016</strong> · Series D · Thrive, a16z</p>
+        <p class="company-body">優化病患醫療帳單與財務體驗的支付平台。獲利模式為向醫院收取 SaaS 年費，並針對病患透過系統支付的帳單抽取交易手續費。</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">48.</span>
+          <span class="company-name">Aetion</span>
+          <span class="company-link"><a href="https://aetion.com/">aetion.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2012</strong> · Series C · Thrive 等</p>
+        <p class="company-body">真實世界數據（RWD）驗證平台。獲利模式為向藥廠與監管機構（FDA）收取企業級軟體授權費與專業分析諮詢費。</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">49.</span>
+          <span class="company-name">PathAI</span>
+          <span class="company-link"><a href="https://www.pathai.com/">pathai.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2016</strong> · Series C+ · General Catalyst</p>
+        <p class="company-body">AI 數位病理學分析平台。獲利模式為向醫院銷售病理分析 SaaS 平台，並協助大藥廠在臨床試驗中篩選病患，收取合作費。</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">50.</span>
+          <span class="company-name">Spring Health</span>
+          <span class="company-link"><a href="https://www.springhealth.com/">springhealth.com</a></span>
+        </div>
+        <p class="company-meta"><strong>2016</strong> · Series D · Tiger Global</p>
+        <p class="company-body">結合 AI 精準匹配心理治療師的企業員工心理健康福利平台。獲利模式為 B2B 企業訂閱（按員工人數收費）。</p>
+      </li>
+    </ul>
+
+    <footer>
+      <p>整理 / 編輯：Tzu-Wei Lee · 資料截至 2026</p>
+      <p><a href="../">&larr; 回首頁</a></p>
+    </footer>
+  </main>
+</body>
+</html>
