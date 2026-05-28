@@ -153,6 +153,24 @@
       margin-top: 0.5rem; font-size: 0.85rem;
     }
 
+    .wave-cat {
+      font-size: 0.85rem; font-weight: 600;
+      margin: 1.75rem 0 0.5rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .wave-intro {
+      background: var(--card-bg);
+      border-left: 3px solid #cf853f;
+      padding: 0.7rem 1rem;
+      border-radius: 0 4px 4px 0;
+      margin: 0 0 1rem;
+      font-size: 0.92rem;
+    }
+    .wave-intro p { margin: 0; }
+    .wave-intro p + p { margin-top: 0.4rem; }
+
     footer {
       color: var(--muted); font-size: 0.85rem;
       margin-top: 3rem; padding-top: 1rem;
@@ -167,7 +185,7 @@
     <a class="back" href="../">&larr; Back to home</a>
 
     <h1>VC Funding Map: AI Agents, NeuroTech, AI Bio &amp; Digital Health</h1>
-    <p class="subtitle">50 representative VC-backed companies across four adjacent sectors &mdash; with stage, lead investors, product, and how they actually make money.</p>
+    <p class="subtitle">70 representative VC-backed companies across four adjacent sectors plus the 2024-2025 wave &mdash; with stage, lead investors, product, and how they actually make money.</p>
     <p class="meta">By Tzu-Wei Lee &middot; 2026</p>
 
     <div class="intro">
@@ -185,6 +203,7 @@
       <a href="#track-2">NeuroTech / BCI <span class="count">(6)</span></a>
       <a href="#track-3">AI Bio <span class="count">(17)</span></a>
       <a href="#track-4">Digital Health <span class="count">(20)</span></a>
+      <a href="#wave">2024&ndash;2025 Wave <span class="count">(20)</span></a>
     </nav>
 
     <!-- ====== Track 1 ====== -->
@@ -864,6 +883,287 @@
           <p><span class="label">Product.</span> Mental-health benefits platform for large employers (Morgan Stanley, Amgen, Starbucks, etc.). Combines ML-driven care navigation with a curated network of therapists trained in evidence-based modalities (CBT, ACT), plus coaching, psychiatry, and specialised programmes for complex care.</p>
           <p><span class="label">Model.</span> Per-employee-per-month enterprise subscription plus utilisation-based fees per therapy session, psychiatry visit, or specialised programme &mdash; the closer enterprise-tier competitor to Spring Health.</p>
           <p class="company-link-row"><a href="https://www.lyrahealth.com/">lyrahealth.com &nearr;</a></p>
+        </div>
+      </details></li>
+
+    </ul>
+
+    <!-- ====== 2024-2025 Wave ====== -->
+    <h2 id="wave"><span class="track-no">Wave</span>2024&ndash;2025 &mdash; recent entrants &amp; momentum</h2>
+    <div class="wave-intro">
+      <p>A snapshot of companies that either <strong>launched after January 2024</strong> or had a <strong>defining round / IPO in 2024-2025</strong> that vaulted them into the lead of their sub-category. Includes ~10 truly post-2024 founds plus ~10 slightly older companies whose 2024-2025 moment redefined the bar.</p>
+    </div>
+
+    <h3 class="wave-cat">Agent infrastructure &amp; vertical agents (7)</h3>
+    <ul class="companies">
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">1.</span><span class="company-name">Sierra</span></div>
+          <p class="company-meta"><strong>Founded 2024</strong> &middot; Series C ($350M, Sep 2025, ~$10B val) &middot; Greenoaks, Sequoia, Benchmark, ICONIQ, Thrive</p>
+          <p class="company-tldr">Conversational AI agents for customer service, branded per customer.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Founded by Bret Taylor (ex-Salesforce co-CEO, OpenAI chair) and Clay Bavor (ex-Google VR/AR). Builds bespoke voice and chat AI agents for large consumer brands &mdash; SoFi, ADT, Sonos, WeightWatchers &mdash; that handle returns, account changes, troubleshooting, and upsell.</p>
+          <p><span class="label">Model.</span> Outcome-based pricing: customers pay per resolved interaction rather than per seat, aligning Sierra&rsquo;s upside with measured CSAT and deflection metrics. Multi-year enterprise contracts.</p>
+          <p class="company-link-row"><a href="https://sierra.ai/">sierra.ai &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">2.</span><span class="company-name">Cognition Labs (Devin)</span></div>
+          <p class="company-meta"><strong>Founded 2024</strong> &middot; Series A2 ($175M, Mar 2024, ~$2B val) &middot; Founders Fund, Khosla</p>
+          <p class="company-tldr">Devin &mdash; autonomous AI software engineer.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Devin runs in a sandboxed environment with shell, browser, and editor access &mdash; takes a written ticket, plans steps, writes and tests code, opens PRs. Targeted at backend tasks, internal tools, and migrations. Acquired Windsurf IDE assets in 2025 to expand its surface.</p>
+          <p><span class="label">Model.</span> Per-seat SaaS for individual engineers; enterprise tier sized by team count plus committed agent compute hours.</p>
+          <p class="company-link-row"><a href="https://www.cognition.ai/">cognition.ai &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">3.</span><span class="company-name">/dev/agents</span></div>
+          <p class="company-meta"><strong>Founded Aug 2024</strong> &middot; Seed ($56M, ~$500M val) &middot; Index Ventures</p>
+          <p class="company-tldr">An operating-system layer for AI agents.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Founded by David Singleton (ex-Stripe CTO), Hugo Barra (ex-Meta VR), and Nicholas Jitkoff (Quora co-founder). Aims to build the &ldquo;Android of agents&rdquo; &mdash; a shared substrate handling memory, identity, tool coordination, and permissions across many agent applications.</p>
+          <p><span class="label">Model.</span> Pre-revenue; eventual model is likely usage-based platform fees for developers building on the OS, plus a consumer-facing entry product.</p>
+          <p class="company-link-row"><a href="https://sdsa.ai/">sdsa.ai &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">4.</span><span class="company-name">Harvey</span></div>
+          <p class="company-meta"><strong>Founded 2022</strong> &middot; Series E ($300M, 2025, $5B+ val) &middot; Sequoia, Kleiner Perkins</p>
+          <p class="company-tldr">Vertical AI agents for the legal industry.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Legal-specific LLM workflows for contract review, due diligence, deal closings, and research. Deeply integrated with firm document management (NetDocuments, iManage). Customers include PwC, Allen &amp; Overy, A&amp;O Shearman.</p>
+          <p><span class="label">Model.</span> Per-attorney annual enterprise subscriptions; multi-year contracts with white-shoe firms running into eight-figure ACVs.</p>
+          <p class="company-link-row"><a href="https://www.harvey.ai/">harvey.ai &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">5.</span><span class="company-name">Decagon</span></div>
+          <p class="company-meta"><strong>Founded 2023</strong> &middot; Series C ($131M, 2025) &middot; Andreessen Horowitz, Accel</p>
+          <p class="company-tldr">Customer-service AI agents that resolve tickets end-to-end.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Founded by Jesse Zhang (ex-Lowkey CEO) and Ashwin Sreenivas (ex-Helia). AI agents that handle complex multi-step customer issues (refunds, account changes, troubleshooting) without human handoff. Customers: Eventbrite, Hertz, Bilt, Substack.</p>
+          <p><span class="label">Model.</span> Outcome pricing &mdash; charges per resolved conversation, not per seat. The closest competitor to Sierra in the CS-agent market.</p>
+          <p class="company-link-row"><a href="https://decagon.ai/">decagon.ai &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">6.</span><span class="company-name">Hippocratic AI</span></div>
+          <p class="company-meta"><strong>Founded 2023</strong> &middot; Series C ($141M, 2025, $3.5B val) &middot; General Catalyst, Andreessen Horowitz</p>
+          <p class="company-tldr">Voice AI agents (&ldquo;AI nurses&rdquo;) for low-acuity healthcare tasks.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Founded by Munjal Shah (ex-Health IQ). Builds safety-tuned voice agents for tasks that don&rsquo;t require a licensed clinician &mdash; appointment reminders, post-discharge follow-up, chronic-care check-ins, pre-op education. Each agent persona is validated by panels of clinicians.</p>
+          <p><span class="label">Model.</span> Per-call or per-hour pricing sold to health systems and payers, positioned as filling clinician shortages rather than replacing nurses.</p>
+          <p class="company-link-row"><a href="https://www.hippocraticai.com/">hippocraticai.com &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">7.</span><span class="company-name">Cursor (Anysphere)</span></div>
+          <p class="company-meta"><strong>Founded 2022</strong> &middot; Series C (2025, ~$9B val) &middot; Andreessen Horowitz, Thrive</p>
+          <p class="company-tldr">AI-native code editor; $300M+ ARR coding agent.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Founded by four MIT-affiliated engineers (Aman Sanger, Sualeh Asif, Michael Truell, Arvid Lunnemark). VS Code-based editor rebuilt around deep code context: agent mode for multi-file edits, model-of-the-week support, repo-wide retrieval. One of the fastest products to hit $100M ARR in software history.</p>
+          <p><span class="label">Model.</span> Freemium product-led growth. Pro tier $20/month per developer; Business tier with admin controls; enterprise contracts for security-conscious orgs. Bottom-up adoption that pulls into the enterprise sale.</p>
+          <p class="company-link-row"><a href="https://cursor.com/">cursor.com &nearr;</a></p>
+        </div>
+      </details></li>
+
+    </ul>
+
+    <h3 class="wave-cat">AI &times; Bio &mdash; generative protein &amp; cell-discovery labs (8)</h3>
+    <ul class="companies">
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">1.</span><span class="company-name">Xaira Therapeutics</span></div>
+          <p class="company-meta"><strong>Launched Apr 2024</strong> &middot; Series A ($1B, 2024) &middot; ARCH, Foresite, Sequoia, NEA, Lux</p>
+          <p class="company-tldr">$1B AI-first biotech built on RFdiffusion / RFantibody.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Co-founded with David Baker (2024 Nobel in Chemistry for computational protein design). Uses RFdiffusion (de novo protein design) and RFantibody (de novo antibody design) at industrial scale, paired with a large internal wet-lab footprint, to attack &ldquo;undruggable&rdquo; targets.</p>
+          <p><span class="label">Model.</span> Owned-pipeline biotech &mdash; the $1B capitalises a multi-year programme to bring AI-designed biologics into the clinic; future revenue from out-licensing or partnership deals on clinical assets.</p>
+          <p class="company-link-row"><a href="https://xaira.com/">xaira.com &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">2.</span><span class="company-name">EvolutionaryScale</span></div>
+          <p class="company-meta"><strong>Founded 2024</strong> &middot; Seed ($142M) &middot; Lux Capital, Nat Friedman, Daniel Gross, Amazon</p>
+          <p class="company-tldr">ESM3 protein foundation model from Meta FAIR spin-out.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Founded by Alexander Rives and the team that originally built ESMFold inside Meta FAIR. Released ESM3 &mdash; a generative protein language model trained on 2.78B sequences that can co-design sequence, structure, and function simultaneously.</p>
+          <p><span class="label">Model.</span> API access to ESM3 for academic and industrial use, plus paid tiers for high-throughput generation. Longer term: pharma R&amp;D partnerships using ESM-family models for target design.</p>
+          <p class="company-link-row"><a href="https://www.evolutionaryscale.ai/">evolutionaryscale.ai &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">3.</span><span class="company-name">Latent Labs</span></div>
+          <p class="company-meta"><strong>Founded 2024</strong> &middot; Seed ($50M) &middot; Radical Ventures, Sofinnova</p>
+          <p class="company-tldr">DeepMind alum&rsquo;s startup for programmable biologic design.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Founded by Simon Kohl, a former AlphaFold co-lead at DeepMind. Building foundation models that combine structure, function, and language constraints to design biologics on demand &mdash; targeting a future where designing a binder for a target is a web request rather than a six-month project.</p>
+          <p><span class="label">Model.</span> Pre-revenue research stage. Planned model: SaaS API for biotech and pharma R&amp;D teams plus deeper co-development partnerships.</p>
+          <p class="company-link-row"><a href="https://www.latentlabs.com/">latentlabs.com &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">4.</span><span class="company-name">Chai Discovery</span></div>
+          <p class="company-meta"><strong>Founded 2024</strong> &middot; Seed (~$30M) &middot; OpenAI Startup Fund, Thrive, Index</p>
+          <p class="company-tldr">Chai-1 &mdash; open-weights protein structure model rivalling AlphaFold 3.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Founded by ex-OpenAI researchers Jack Dent and Joshua Meier. Released Chai-1, a multi-modal structure-prediction model that handles proteins, ligands, RNAs, and ions together &mdash; reportedly matching AlphaFold 3 on benchmarks with open weights for research use.</p>
+          <p><span class="label">Model.</span> Open weights for academic use; commercial licence required for industrial use; pharma R&amp;D contracts and co-development partnerships in early stages.</p>
+          <p class="company-link-row"><a href="https://www.chaidiscovery.com/">chaidiscovery.com &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">5.</span><span class="company-name">Tahoe Therapeutics</span></div>
+          <p class="company-meta"><strong>Founded 2024</strong> &middot; Seed &middot; (undisclosed)</p>
+          <p class="company-tldr">Single-cell foundation models on a 100M-cell perturbation atlas.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Built Tahoe-100M &mdash; one of the largest single-cell drug-perturbation datasets ever, with ML models that learn how cells respond to compounds and genetic perturbations. Aims to predict on-target and off-target effects before wet-lab follow-up.</p>
+          <p><span class="label">Model.</span> Pharma co-development deals selling validated targets, plus a wholly-owned pipeline.</p>
+          <p class="company-link-row"><a href="https://tahoebio.ai/">tahoebio.ai &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">6.</span><span class="company-name">Manas AI</span></div>
+          <p class="company-meta"><strong>Launched Jan 2025</strong> &middot; Seed (~$24M) &middot; Greylock, General Catalyst</p>
+          <p class="company-tldr">Reid Hoffman &times; Siddhartha Mukherjee cancer-drug AI.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Co-founded by Reid Hoffman, Siddhartha Mukherjee (Pulitzer-winning oncologist), and Andrew Hopkins (ex-Exscientia). Combines multimodal models on patient and molecular data with traditional medicinal chemistry to target first-in-class cancer drugs.</p>
+          <p><span class="label">Model.</span> Pipeline-focused biotech; expected to out-license late-stage assets while keeping platform proprietary.</p>
+          <p class="company-link-row"><a href="https://www.manas.ai/">manas.ai &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">7.</span><span class="company-name">Lila Sciences</span></div>
+          <p class="company-meta"><strong>Launched 2025</strong> &middot; Seed ($200M) &middot; Flagship Pioneering, Catalio, March Capital</p>
+          <p class="company-tldr">Generative AI + autonomous wet labs for &ldquo;scientific superintelligence.&rdquo;</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Flagship Pioneering venture aimed at coupling generative scientific models with autonomous robotic labs &mdash; design hypothesis, run wet-lab experiment, learn, iterate &mdash; in a closed loop. First programmes target medicine, chemistry, and materials science.</p>
+          <p><span class="label">Model.</span> Flagship-style operating model: Lila advances its own programmes and spins out new biotechs that license the platform, with Flagship retaining concentrated upside.</p>
+          <p class="company-link-row"><a href="https://lila.ai/">lila.ai &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">8.</span><span class="company-name">Profluent AI</span></div>
+          <p class="company-meta"><strong>Founded 2022</strong> &middot; Series A ($35M, 2024) &middot; Spark Capital, Insight</p>
+          <p class="company-tldr">Generative protein language models; released first AI-designed CRISPR.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Founded by Ali Madani (ex-Salesforce Research). Trains transformer-based protein language models for enzyme and antibody design. Released OpenCRISPR-1 in 2024 &mdash; reportedly the first fully AI-designed gene editor, open-sourced for research use.</p>
+          <p><span class="label">Model.</span> Combines a B2B platform for pharma/biotech (API + protein-design services) with an internal pipeline of AI-designed proteins selected for translational potential.</p>
+          <p class="company-link-row"><a href="https://www.profluent.bio/">profluent.bio &nearr;</a></p>
+        </div>
+      </details></li>
+
+    </ul>
+
+    <h3 class="wave-cat">Digital health &mdash; ambient AI scribes &amp; clinical agents (5)</h3>
+    <ul class="companies">
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">1.</span><span class="company-name">Abridge</span></div>
+          <p class="company-meta"><strong>Founded 2018</strong> &middot; Series E (2025, ~$5.3B val) &middot; Lightspeed, Bessemer, NEA</p>
+          <p class="company-tldr">Ambient AI clinical scribe, deeply integrated with Epic.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Founded by cardiologist Shiv Rao. Listens to physician-patient conversations and generates structured notes, billing codes, and patient summaries in seconds. Deep Epic, Athenahealth, and Mayo Clinic integrations. Most cited &ldquo;winner&rdquo; in the ambient-scribe category, growing exponentially through 2024-2025.</p>
+          <p><span class="label">Model.</span> Per-clinician-per-month SaaS sold to large health systems; enterprise contracts span thousands of clinicians with multi-year terms.</p>
+          <p class="company-link-row"><a href="https://www.abridge.com/">abridge.com &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">2.</span><span class="company-name">Ambience Healthcare</span></div>
+          <p class="company-meta"><strong>Founded 2020</strong> &middot; Series C ($243M, Jul 2025, $1.25B val) &middot; Kleiner Perkins, a16z, Oak HC/FT, OpenAI Startup Fund</p>
+          <p class="company-tldr">Ambient AI scribe + broader clinical-operations agents.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Founded by Mike Ng and Nikhil Buduma. Goes beyond pure documentation into adjacent clinical workflows &mdash; coding, prior authorisation, referral letters, after-visit summaries &mdash; positioning as a clinical operations platform rather than a scribe alone.</p>
+          <p><span class="label">Model.</span> Per-clinician-per-month subscriptions with modular add-ons priced by workflow. Sold primarily to large health systems and multi-specialty groups.</p>
+          <p class="company-link-row"><a href="https://www.ambiencehealthcare.com/">ambiencehealthcare.com &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">3.</span><span class="company-name">Suki</span></div>
+          <p class="company-meta"><strong>Founded 2017</strong> &middot; Series D (~$165M, 2025, unicorn) &middot; March Capital, Bond, Flare</p>
+          <p class="company-tldr">Voice-first AI clinical assistant across Epic, Cerner, MEDITECH.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Founded by Punit Soni (ex-Flipkart CPO, Google). Suki Assistant handles ambient documentation, dictation, and chart Q&amp;A. Differentiates with the broadest EHR coverage in the segment and a strong device-app experience.</p>
+          <p><span class="label">Model.</span> Per-clinician-per-month enterprise SaaS, sometimes with shared-savings terms tied to documentation-time reduction.</p>
+          <p class="company-link-row"><a href="https://www.suki.ai/">suki.ai &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">4.</span><span class="company-name">Nabla</span></div>
+          <p class="company-meta"><strong>Founded 2018</strong> &middot; Series C ($70M, Jun 2025) &middot; HV Capital, Cathay Innovation</p>
+          <p class="company-tldr">French ambient AI scribe with pre-visit context agent.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Founded by Alexandre Lebrun and team (ex-Facebook AI). Nabla Copilot delivers ambient documentation plus a pre-visit context-aware patient-summary agent &mdash; reading the chart and producing a one-page brief for the physician before the visit.</p>
+          <p><span class="label">Model.</span> Per-clinician-per-month subscription. Strong European footprint, with US expansion accelerating through 2025.</p>
+          <p class="company-link-row"><a href="https://www.nabla.com/">nabla.com &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">5.</span><span class="company-name">Open Evidence</span></div>
+          <p class="company-meta"><strong>Founded 2022</strong> &middot; Series B (~$210M, 2025, $3.5B val) &middot; Sequoia, GV, Kleiner</p>
+          <p class="company-tldr">Physician-facing AI grounded in Mayo / JAMA / NEJM literature.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Founded by Daniel Nadler (ex-Kensho). Clinical evidence search and Q&amp;A grounded in peer-reviewed sources &mdash; Mayo Clinic, JAMA, NEJM &mdash; with traceable citations on every answer. Free for verified physicians; adoption among US doctors is reportedly in the hundreds of thousands.</p>
+          <p><span class="label">Model.</span> Hybrid: pharma-funded brand placement on contextually relevant queries (similar to Medscape) plus enterprise licensing to large health systems for in-EHR integration.</p>
+          <p class="company-link-row"><a href="https://www.openevidence.com/">openevidence.com &nearr;</a></p>
         </div>
       </details></li>
 
