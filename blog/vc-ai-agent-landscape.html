@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>VC Funding Map: AI Agents, NeuroTech, AI Bio &amp; Digital Health · Tzu-Wei Lee</title>
-  <meta name="description" content="A scan of 50 VC-backed startups across four adjacent sectors: AI agent infrastructure, brain-computer interfaces, AI drug discovery, and digital health platforms. Stage, lead investors, product, and revenue model for each." />
+  <meta name="description" content="84 currently-VC-funded private startups across eight sectors of AI: agent infrastructure, neurotech / BCI, AI drug discovery, digital health, foundation models & infra, voice & multimodal, robotics, and defense. Stage, lead investors, product, and revenue model for each." />
   <style>
     :root {
       --fg: #1c1c1c;
@@ -14,10 +14,12 @@
       --bg: #ffffff;
       --card-bg: #fafafa;
       --card-hover: #f3f3f3;
+      --trend: #cf853f;
+      --trend-bg: rgba(207, 133, 63, 0.12);
       --max: 64rem;
     }
     @media (prefers-color-scheme: dark) {
-      :root { --fg: #e7e7e7; --muted: #9a9a9a; --rule: #2a2a2a; --link: #7aa7ff; --bg: #0e0e0e; --card-bg: #181818; --card-hover: #222; }
+      :root { --fg: #e7e7e7; --muted: #9a9a9a; --rule: #2a2a2a; --link: #7aa7ff; --bg: #0e0e0e; --card-bg: #181818; --card-hover: #222; --trend: #e0a665; --trend-bg: rgba(224, 166, 101, 0.16); }
     }
     * { box-sizing: border-box; }
     html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); }
@@ -125,15 +127,26 @@
       transition: transform 0.15s ease, color 0.15s ease;
     }
     .company details[open] > summary::after {
-      content: '\2212'; /* − minus */
+      content: '\2212';
       color: var(--link);
     }
     .company-head {
-      display: flex; align-items: baseline; gap: 0.4rem;
+      display: flex; align-items: baseline; gap: 0.4rem; flex-wrap: wrap;
       margin-bottom: 0.15rem;
     }
     .company-num { color: var(--muted); font-weight: 500; font-size: 0.85rem; min-width: 1.4rem; }
     .company-name { font-weight: 600; font-size: 1rem; flex: 1; }
+    .trend-tag {
+      display: inline-block;
+      padding: 0.05rem 0.5rem;
+      font-size: 0.68rem;
+      border-radius: 999px;
+      background: var(--trend-bg);
+      color: var(--trend);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
     .company-meta {
       color: var(--muted); font-size: 0.78rem; margin: 0 0 0.35rem;
     }
@@ -153,24 +166,6 @@
       margin-top: 0.5rem; font-size: 0.85rem;
     }
 
-    .wave-cat {
-      font-size: 0.85rem; font-weight: 600;
-      margin: 1.75rem 0 0.5rem;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-    .wave-intro {
-      background: var(--card-bg);
-      border-left: 3px solid #cf853f;
-      padding: 0.7rem 1rem;
-      border-radius: 0 4px 4px 0;
-      margin: 0 0 1rem;
-      font-size: 0.92rem;
-    }
-    .wave-intro p { margin: 0; }
-    .wave-intro p + p { margin-top: 0.4rem; }
-
     footer {
       color: var(--muted); font-size: 0.85rem;
       margin-top: 3rem; padding-top: 1rem;
@@ -185,11 +180,19 @@
     <a class="back" href="../">&larr; Back to home</a>
 
     <h1>VC Funding Map: AI Agents, NeuroTech, AI Bio &amp; Digital Health</h1>
-    <p class="subtitle">100 representative VC-backed companies across four adjacent sectors plus the 2024-2026 wave &mdash; with stage, lead investors, product, and how they actually make money.</p>
+    <p class="subtitle">84 currently-VC-funded private startups across eight sectors &mdash; with stage, lead investors, product, and how they actually make money.</p>
     <p class="meta">By Tzu-Wei Lee &middot; 2026</p>
 
     <div class="intro">
-      <p>Cards are <strong>collapsed by default</strong>. Click any card to expand the Product / Model detail; click the company name in the detail view, or the URL on the right, for the company&rsquo;s own site.</p>
+      <p>Every company below is <strong>currently private and actively raising VC</strong>. Companies that have IPO&rsquo;d, been acquired, or are now corporate-scale are intentionally excluded.</p>
+      <p>Cards tagged <span class="trend-tag">#Trending2024&ndash;26</span> were identified as defining the <strong>2024-2026 funding wave</strong> &mdash; either launched after Jan 2024 or had a defining round in 2024-2026 that vaulted them into a category lead.</p>
+      <p><strong>Top VC themes in 2025-2026:</strong><br />
+      &middot; <strong>Agentic AI is the dominant flow</strong> &mdash; vertical agents crowning category leaders; outcome-based pricing becoming the norm.<br />
+      &middot; <strong>AI infra splits into compute &amp; inference</strong> &mdash; specialty chips (Groq LPUs), open-source inference clouds (Together, Fireworks), and stranded-energy GPU farms (Crusoe).<br />
+      &middot; <strong>Robotics has its iPhone moment</strong> &mdash; robot foundation models and humanoid hardware absorbing decacorn-scale capital; $10.3B raised across robotics in 2025.<br />
+      &middot; <strong>Voice AI matured into infrastructure</strong> &mdash; ElevenLabs / Cartesia / Vapi powering the voice-agent boom.<br />
+      &middot; <strong>Defense AI normalised</strong> &mdash; VCs once allergic, now pouring in.<br />
+      &middot; <strong>AI &times; bio splits in two</strong> &mdash; pipeline biotechs vs. foundation-model labs spun out of big-AI shops.</p>
     </div>
 
     <div class="controls">
@@ -199,23 +202,26 @@
 
     <nav class="toc" aria-label="Contents">
       <strong>Jump to</strong>
-      <a href="#track-1">Agent Eval <span class="count">(7)</span></a>
+      <a href="#track-1">Agent Infra &amp; Vertical Agents <span class="count">(21)</span></a>
       <a href="#track-2">NeuroTech / BCI <span class="count">(6)</span></a>
-      <a href="#track-3">AI Bio <span class="count">(17)</span></a>
-      <a href="#track-4">Digital Health <span class="count">(20)</span></a>
-      <a href="#wave">2024&ndash;2026 Wave <span class="count">(50)</span></a>
+      <a href="#track-3">AI Bio <span class="count">(18)</span></a>
+      <a href="#track-4">Digital Health <span class="count">(17)</span></a>
+      <a href="#track-5">Foundation Models &amp; AI Infra <span class="count">(8)</span></a>
+      <a href="#track-6">Voice &amp; Multimodal <span class="count">(4)</span></a>
+      <a href="#track-7">Embodied AI &amp; Robotics <span class="count">(6)</span></a>
+      <a href="#track-8">AI Defense &amp; Security <span class="count">(4)</span></a>
     </nav>
 
     <!-- ====== Track 1 ====== -->
-    <h2 id="track-1"><span class="track-no">Track 1</span>Agent Evaluation &amp; Automation</h2>
-    <p class="track-note">The infrastructure &amp; trust layer for LLM applications &mdash; the &ldquo;observability and CI&rdquo; of the agent era.</p>
+    <h2 id="track-1"><span class="track-no">Track 1</span>Agent Infrastructure &amp; Vertical Agents</h2>
+    <p class="track-note">The eval/observability stack plus the wave of vertical agents (CS, legal, healthcare, sales, recruiting, compliance).</p>
 
     <ul class="companies">
 
       <li class="company"><details>
         <summary>
           <div class="company-head"><span class="company-num">1.</span><span class="company-name">LangChain (LangSmith)</span></div>
-          <p class="company-meta"><strong>2022</strong> &middot; Series B+ &middot; Sequoia</p>
+          <p class="company-meta"><strong>Founded 2022</strong> &middot; Series B+ &middot; Sequoia</p>
           <p class="company-tldr">Open-source LLM-app framework + hosted agent observability.</p>
         </summary>
         <div class="company-detail">
@@ -228,7 +234,7 @@
       <li class="company"><details>
         <summary>
           <div class="company-head"><span class="company-num">2.</span><span class="company-name">DeepEval (Confident AI)</span></div>
-          <p class="company-meta"><strong>2023</strong> &middot; Seed &middot; YC</p>
+          <p class="company-meta"><strong>Founded 2023</strong> &middot; Seed &middot; YC</p>
           <p class="company-tldr">Pytest-style open-source LLM eval framework + SaaS dashboard.</p>
         </summary>
         <div class="company-detail">
@@ -241,7 +247,7 @@
       <li class="company"><details>
         <summary>
           <div class="company-head"><span class="company-num">3.</span><span class="company-name">Galileo</span></div>
-          <p class="company-meta"><strong>2023</strong> &middot; Series A &middot; Battery Ventures</p>
+          <p class="company-meta"><strong>Founded 2023</strong> &middot; Series A &middot; Battery Ventures</p>
           <p class="company-tldr">Enterprise GenAI evaluation focused on hallucination detection.</p>
         </summary>
         <div class="company-detail">
@@ -254,7 +260,7 @@
       <li class="company"><details>
         <summary>
           <div class="company-head"><span class="company-num">4.</span><span class="company-name">Braintrust</span></div>
-          <p class="company-meta"><strong>2023</strong> &middot; Series A &middot; a16z, Greylock</p>
+          <p class="company-meta"><strong>Founded 2023</strong> &middot; Series A &middot; a16z, Greylock</p>
           <p class="company-tldr">Prompt engineering + agent eval workspace with CI hooks.</p>
         </summary>
         <div class="company-detail">
@@ -266,21 +272,8 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">5.</span><span class="company-name">Weights &amp; Biases (Weave)</span></div>
-          <p class="company-meta"><strong>2017</strong> &middot; Acquired by CoreWeave (2025, ~$1.7B) &middot; Insight, Sequoia, Coatue</p>
-          <p class="company-tldr">De-facto ML experiment tracker, extended to LLM observability.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> The de-facto ML experiment tracker (W&amp;B Models) for training runs and hyperparameter sweeps, expanded with W&amp;B Weave for tracing, evaluating, and monitoring LLM and agent applications in production.</p>
-          <p><span class="label">Model.</span> Free tier for individuals and academic users; per-seat team subscriptions; six- to seven-figure enterprise contracts. Now positioned as the eval / observability layer of the CoreWeave AI cloud stack.</p>
-          <p class="company-link-row"><a href="https://wandb.ai/">wandb.ai &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">6.</span><span class="company-name">Arize AI (Phoenix)</span></div>
-          <p class="company-meta"><strong>2020</strong> &middot; Series B+ &middot; Battery Ventures, Foundation Capital</p>
+          <div class="company-head"><span class="company-num">5.</span><span class="company-name">Arize AI (Phoenix)</span></div>
+          <p class="company-meta"><strong>Founded 2020</strong> &middot; Series B+ &middot; Battery Ventures, Foundation Capital</p>
           <p class="company-tldr">Open-source (Phoenix) + enterprise (AX) LLM observability.</p>
         </summary>
         <div class="company-detail">
@@ -292,14 +285,209 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">7.</span><span class="company-name">Humanloop</span></div>
-          <p class="company-meta"><strong>2020</strong> &middot; Series A &middot; Index Ventures</p>
+          <div class="company-head"><span class="company-num">6.</span><span class="company-name">Humanloop</span></div>
+          <p class="company-meta"><strong>Founded 2020</strong> &middot; Series A &middot; Index Ventures</p>
           <p class="company-tldr">Prompt management + eval workspace for product engineers.</p>
         </summary>
         <div class="company-detail">
           <p><span class="label">Product.</span> LLM product-engineering platform: collaborative prompt management with version control, datasets + evaluation pipelines, and human-feedback loops. Used inside Duolingo, Vanta, and other product teams shipping LLM features.</p>
-          <p><span class="label">Model.</span> Per-seat SaaS with usage-based add-ons for eval runs. Sells primarily to product engineering teams (not infra teams), which differentiates it from W&amp;B / Arize.</p>
+          <p><span class="label">Model.</span> Per-seat SaaS with usage-based add-ons for eval runs. Sells primarily to product engineering teams (not infra teams), which differentiates it from Arize / W&amp;B.</p>
           <p class="company-link-row"><a href="https://humanloop.com/">humanloop.com &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">7.</span><span class="company-name">Sierra</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
+          <p class="company-meta"><strong>Founded 2024</strong> &middot; Series C ($350M, Sep 2025, ~$10B val) &middot; Greenoaks, Sequoia, Benchmark, ICONIQ, Thrive</p>
+          <p class="company-tldr">Conversational AI agents for customer service, branded per customer.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Founded by Bret Taylor (ex-Salesforce co-CEO, OpenAI chair) and Clay Bavor (ex-Google VR/AR). Builds bespoke voice and chat AI agents for large consumer brands &mdash; SoFi, ADT, Sonos, WeightWatchers &mdash; that handle returns, account changes, troubleshooting, and upsell.</p>
+          <p><span class="label">Model.</span> Outcome-based pricing: customers pay per resolved interaction rather than per seat, aligning Sierra&rsquo;s upside with measured CSAT and deflection metrics. Multi-year enterprise contracts.</p>
+          <p class="company-link-row"><a href="https://sierra.ai/">sierra.ai &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">8.</span><span class="company-name">Cognition Labs (Devin)</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
+          <p class="company-meta"><strong>Founded 2024</strong> &middot; Series A2 ($175M, Mar 2024, ~$2B val) &middot; Founders Fund, Khosla</p>
+          <p class="company-tldr">Devin &mdash; autonomous AI software engineer.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Devin runs in a sandboxed environment with shell, browser, and editor access &mdash; takes a written ticket, plans steps, writes and tests code, opens PRs. Now deployed inside Goldman Sachs, Santander, Nubank and others. Acquired Windsurf IDE assets in 2025 to expand its surface.</p>
+          <p><span class="label">Model.</span> Per-seat SaaS for individual engineers; enterprise tier sized by team count plus committed agent compute hours.</p>
+          <p class="company-link-row"><a href="https://www.cognition.ai/">cognition.ai &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">9.</span><span class="company-name">/dev/agents</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
+          <p class="company-meta"><strong>Founded Aug 2024</strong> &middot; Seed ($56M, ~$500M val) &middot; Index Ventures</p>
+          <p class="company-tldr">An operating-system layer for AI agents.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Founded by David Singleton (ex-Stripe CTO), Hugo Barra (ex-Meta VR), and Nicholas Jitkoff (Quora co-founder). Aims to build the &ldquo;Android of agents&rdquo; &mdash; a shared substrate handling memory, identity, tool coordination, and permissions across many agent applications.</p>
+          <p><span class="label">Model.</span> Pre-revenue; eventual model is likely usage-based platform fees for developers building on the OS, plus a consumer-facing entry product.</p>
+          <p class="company-link-row"><a href="https://sdsa.ai/">sdsa.ai &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">10.</span><span class="company-name">Harvey</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
+          <p class="company-meta"><strong>Founded 2022</strong> &middot; Series E ($300M, 2025, $5B+ val) &middot; Sequoia, Kleiner Perkins</p>
+          <p class="company-tldr">Vertical AI agents for the legal industry.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Legal-specific LLM workflows for contract review, due diligence, deal closings, and research. Deeply integrated with firm document management (NetDocuments, iManage). Customers include PwC, Allen &amp; Overy, A&amp;O Shearman.</p>
+          <p><span class="label">Model.</span> Per-attorney annual enterprise subscriptions; multi-year contracts with white-shoe firms running into eight-figure ACVs.</p>
+          <p class="company-link-row"><a href="https://www.harvey.ai/">harvey.ai &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">11.</span><span class="company-name">Decagon</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
+          <p class="company-meta"><strong>Founded 2023</strong> &middot; Series C ($131M, 2025) &middot; Andreessen Horowitz, Accel</p>
+          <p class="company-tldr">Customer-service AI agents that resolve tickets end-to-end.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Founded by Jesse Zhang (ex-Lowkey CEO) and Ashwin Sreenivas (ex-Helia). AI agents that handle complex multi-step customer issues (refunds, account changes, troubleshooting) without human handoff. Customers: Eventbrite, Hertz, Bilt, Substack.</p>
+          <p><span class="label">Model.</span> Outcome pricing &mdash; charges per resolved conversation, not per seat. The closest competitor to Sierra in the CS-agent market.</p>
+          <p class="company-link-row"><a href="https://decagon.ai/">decagon.ai &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">12.</span><span class="company-name">Hippocratic AI</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
+          <p class="company-meta"><strong>Founded 2023</strong> &middot; Series C ($141M, 2025, $3.5B val) &middot; General Catalyst, Andreessen Horowitz</p>
+          <p class="company-tldr">Voice AI agents (&ldquo;AI nurses&rdquo;) for low-acuity healthcare tasks.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Founded by Munjal Shah (ex-Health IQ). Builds safety-tuned voice agents for tasks that don&rsquo;t require a licensed clinician &mdash; appointment reminders, post-discharge follow-up, chronic-care check-ins, pre-op education. Each agent persona is validated by panels of clinicians.</p>
+          <p><span class="label">Model.</span> Per-call or per-hour pricing sold to health systems and payers, positioned as filling clinician shortages rather than replacing nurses.</p>
+          <p class="company-link-row"><a href="https://www.hippocraticai.com/">hippocraticai.com &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">13.</span><span class="company-name">Cursor (Anysphere)</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
+          <p class="company-meta"><strong>Founded 2022</strong> &middot; Series C (2025, ~$9B val) &middot; Andreessen Horowitz, Thrive</p>
+          <p class="company-tldr">AI-native code editor; $300M+ ARR coding agent.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Founded by four MIT-affiliated engineers (Aman Sanger, Sualeh Asif, Michael Truell, Arvid Lunnemark). VS Code-based editor rebuilt around deep code context: agent mode for multi-file edits, model-of-the-week support, repo-wide retrieval. One of the fastest products to hit $100M ARR in software history.</p>
+          <p><span class="label">Model.</span> Freemium product-led growth. Pro tier $20/month per developer; Business tier with admin controls; enterprise contracts for security-conscious orgs.</p>
+          <p class="company-link-row"><a href="https://cursor.com/">cursor.com &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">14.</span><span class="company-name">Mercor</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
+          <p class="company-meta"><strong>Founded 2023</strong> &middot; Series C ($350M, Oct 2025, $10B val) &middot; Felicis (lead), Benchmark, General Catalyst, Robinhood Ventures</p>
+          <p class="company-tldr">AI recruiting / contracting marketplace; founded by three 21-year-olds.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Founded by Brendan Foody, Adarsh Hiremath, and Surya Midha. AI screens, interviews, and matches engineers, researchers, and data labellers to short-term contracts. Major customers include OpenAI, Anthropic, and others sourcing RLHF / domain-expert workers.</p>
+          <p><span class="label">Model.</span> Platform fee on hires plus hourly billing on contract work &mdash; an Upwork-style marketplace with an AI matching layer that compresses time-to-fill.</p>
+          <p class="company-link-row"><a href="https://mercor.com/">mercor.com &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">15.</span><span class="company-name">Clay</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
+          <p class="company-meta"><strong>Founded 2017</strong> &middot; Series C (2025, ~$3.1B val) &middot; Sequoia, CapitalG</p>
+          <p class="company-tldr">GTM data enrichment + AI signals for sales workflows.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Founded by Kareem Amin and Varun Anand. Combines 100+ data providers, LLM enrichment, and AI-derived signals into a spreadsheet-like workflow product for sales and RevOps teams &mdash; the de facto &ldquo;GTM engineering&rdquo; tool.</p>
+          <p><span class="label">Model.</span> Credit-based SaaS subscription that scales with usage; enterprise multi-year contracts at the top of the funnel.</p>
+          <p class="company-link-row"><a href="https://www.clay.com/">clay.com &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">16.</span><span class="company-name">11x</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
+          <p class="company-meta"><strong>Founded 2023</strong> &middot; Series B ($50M+, 2024) &middot; Andreessen Horowitz, Benchmark</p>
+          <p class="company-tldr">AI &ldquo;digital workers&rdquo; for outbound sales.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Founded by Hasan Sukkar. Markets three AI personas &mdash; Alice (outbound email), Jordan (voice calling), Mike (LinkedIn) &mdash; that run end-to-end outbound sales workflows including research, drafting, and follow-up.</p>
+          <p><span class="label">Model.</span> Monthly per-&ldquo;AI worker&rdquo; seat priced as a fraction of a fully-loaded SDR cost; outcome metrics dictate retention.</p>
+          <p class="company-link-row"><a href="https://www.11x.ai/">11x.ai &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">17.</span><span class="company-name">Artisan</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
+          <p class="company-meta"><strong>Founded 2023</strong> &middot; Series A ($25M, 2024) &middot; Y Combinator, HubSpot Ventures</p>
+          <p class="company-tldr">Ava &mdash; autonomous outbound SDR.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Founded by Jaspar Carmichael-Jack. Ava scrapes prospects from B2B data sources, drafts personalised emails, sequences follow-ups, and books meetings &mdash; pitched bluntly as &ldquo;Stop hiring humans.&rdquo;</p>
+          <p><span class="label">Model.</span> Subscription per Ava seat, positioned as a direct replacement for SDR headcount.</p>
+          <p class="company-link-row"><a href="https://www.artisan.co/">artisan.co &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">18.</span><span class="company-name">Sardine</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
+          <p class="company-meta"><strong>Founded 2020</strong> &middot; Series C ($70M, Feb 2025) &middot; Activant Capital, Andreessen Horowitz</p>
+          <p class="company-tldr">Behavioural-biometrics + ML for fraud, AML, payments risk.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Founded by Soups Ranjan (ex-Coinbase). Combines device fingerprinting, behavioural biometrics, and ML risk models into a single decision engine for fraud, AML, and credit. Serves fintechs, payments processors, and crypto exchanges.</p>
+          <p><span class="label">Model.</span> B2B SaaS priced per transaction reviewed or per API call; enterprise tier with custom rule engines and dedicated risk analysts.</p>
+          <p class="company-link-row"><a href="https://www.sardine.ai/">sardine.ai &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">19.</span><span class="company-name">Glean</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
+          <p class="company-meta"><strong>Founded 2019</strong> &middot; Series F (2025, ~$7.2B val) &middot; Sequoia, Lightspeed, Kleiner Perkins</p>
+          <p class="company-tldr">Enterprise search and work assistant; building agentic workflows.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Founded by Arvind Jain (ex-Rubrik, Google). Unified search and Q&amp;A across Drive, Slack, Confluence, Jira, Salesforce, and 100+ other enterprise apps. Increasingly an agentic platform that takes actions, not just answers.</p>
+          <p><span class="label">Model.</span> Per-seat enterprise SaaS, sold to large organisations on multi-year contracts; one of the larger ACVs in enterprise AI.</p>
+          <p class="company-link-row"><a href="https://www.glean.com/">glean.com &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">20.</span><span class="company-name">Norm AI</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
+          <p class="company-meta"><strong>Founded 2023</strong> &middot; Series B ($48M, 2024) &middot; Coatue, Vanguard, Bain Capital Ventures</p>
+          <p class="company-tldr">Compliance agents for financial-services regulation.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Founded by Diego Baez. Translates SEC, FINRA, FDIC, and SEC marketing rules into executable compliance agents that auto-review marketing materials, employee communications, and public disclosures before they ship.</p>
+          <p><span class="label">Model.</span> Enterprise SaaS scaled by regulatory scope (which rule sets) and review volume; sold to banks, asset managers, and fintechs.</p>
+          <p class="company-link-row"><a href="https://www.normai.com/">normai.com &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">21.</span><span class="company-name">EvenUp</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
+          <p class="company-meta"><strong>Founded 2019</strong> &middot; Series D (2024, $1B+ val) &middot; Bain Capital Ventures, Bessemer</p>
+          <p class="company-tldr">Personal-injury legal AI &mdash; auto-generates demand packages.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Founded by Rami Karabibar and Saam Mashhad. Ingests a personal-injury client&rsquo;s medical records, generates structured demand letters, computes damages, and benchmarks settlement amounts against comparable cases.</p>
+          <p><span class="label">Model.</span> Vertical SaaS priced per case or per attorney seat, sold to plaintiff-side personal-injury firms.</p>
+          <p class="company-link-row"><a href="https://www.evenuplaw.com/">evenuplaw.com &nearr;</a></p>
         </div>
       </details></li>
 
@@ -314,7 +502,7 @@
       <li class="company"><details>
         <summary>
           <div class="company-head"><span class="company-num">1.</span><span class="company-name">Neuralink</span></div>
-          <p class="company-meta"><strong>2016</strong> &middot; Series D+ &middot; Founders Fund</p>
+          <p class="company-meta"><strong>Founded 2016</strong> &middot; Series D+ &middot; Founders Fund</p>
           <p class="company-tldr">Invasive high-bandwidth BCI implanted by surgical robot.</p>
         </summary>
         <div class="company-detail">
@@ -327,7 +515,7 @@
       <li class="company"><details>
         <summary>
           <div class="company-head"><span class="company-num">2.</span><span class="company-name">Synchron</span></div>
-          <p class="company-meta"><strong>2016</strong> &middot; Series C+ &middot; Khosla, ARCH</p>
+          <p class="company-meta"><strong>Founded 2016</strong> &middot; Series C+ &middot; Khosla, ARCH</p>
           <p class="company-tldr">Endovascular BCI delivered through blood vessels &mdash; no craniotomy.</p>
         </summary>
         <div class="company-detail">
@@ -340,7 +528,7 @@
       <li class="company"><details>
         <summary>
           <div class="company-head"><span class="company-num">3.</span><span class="company-name">Kernel</span></div>
-          <p class="company-meta"><strong>2016</strong> &middot; Series C &middot; General Catalyst</p>
+          <p class="company-meta"><strong>Founded 2016</strong> &middot; Series C &middot; General Catalyst</p>
           <p class="company-tldr">Wearable TD-fNIRS helmet for non-invasive brain imaging.</p>
         </summary>
         <div class="company-detail">
@@ -353,7 +541,7 @@
       <li class="company"><details>
         <summary>
           <div class="company-head"><span class="company-num">4.</span><span class="company-name">Rune Labs</span></div>
-          <p class="company-meta"><strong>2018</strong> &middot; Series A+ &middot; Eclipse Ventures</p>
+          <p class="company-meta"><strong>Founded 2018</strong> &middot; Series A+ &middot; Eclipse Ventures</p>
           <p class="company-tldr">Parkinson&rsquo;s data platform unifying wearable + DBS-device signals.</p>
         </summary>
         <div class="company-detail">
@@ -366,7 +554,7 @@
       <li class="company"><details>
         <summary>
           <div class="company-head"><span class="company-num">5.</span><span class="company-name">Paradromics</span></div>
-          <p class="company-meta"><strong>2015</strong> &middot; Series A+ &middot; Prime Movers Lab</p>
+          <p class="company-meta"><strong>Founded 2015</strong> &middot; Series A+ &middot; Prime Movers Lab</p>
           <p class="company-tldr">Highest-density microelectrode array for high-bandwidth BCI.</p>
         </summary>
         <div class="company-detail">
@@ -378,8 +566,8 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">6.</span><span class="company-name">Precision Neuroscience</span></div>
-          <p class="company-meta"><strong>2021</strong> &middot; Series C &middot; Forepont, B Capital</p>
+          <div class="company-head"><span class="company-num">6.</span><span class="company-name">Precision Neuroscience</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
+          <p class="company-meta"><strong>Founded 2021</strong> &middot; Series C &middot; Forepont, B Capital</p>
           <p class="company-tldr">Surface BCI on flexible film &mdash; no penetrating electrodes.</p>
         </summary>
         <div class="company-detail">
@@ -393,53 +581,14 @@
 
     <!-- ====== Track 3 ====== -->
     <h2 id="track-3"><span class="track-no">Track 3</span>AI Drug Discovery &amp; Bio Infrastructure</h2>
-    <p class="track-note">AI &times; bio heavyweights &mdash; from cell-programming foundries to physics-based simulation to in-house pipelines.</p>
+    <p class="track-note">AI &times; bio &mdash; from generative chemistry to foundation models for proteins and cells.</p>
 
     <ul class="companies">
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">1.</span><span class="company-name">Ginkgo Bioworks</span></div>
-          <p class="company-meta"><strong>2008</strong> &middot; Public (NYSE: DNA) &middot; YC (early)</p>
-          <p class="company-tldr">Automated cell-programming foundry as a service.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> Foundry &mdash; a highly automated facility for engineering custom microorganisms (yeast, bacteria) for pharma, agriculture, fragrance, and materials. Customers describe an organism&rsquo;s desired function; Ginkgo iterates strains.</p>
-          <p><span class="label">Model.</span> Two-stream: upfront foundry &ldquo;R&amp;D services&rdquo; fees per programme plus downstream value &mdash; royalties, milestones, or equity in the customer&rsquo;s commercial product.</p>
-          <p class="company-link-row"><a href="https://www.ginkgobioworks.com/">ginkgobioworks.com &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">2.</span><span class="company-name">Recursion</span></div>
-          <p class="company-meta"><strong>2013</strong> &middot; Public (Nasdaq: RXRX) &middot; Baillie Gifford</p>
-          <p class="company-tldr">Petabyte-scale cellular-image library + ML for drug discovery.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> An &ldquo;operating system for biology&rdquo; built on petabytes of standardised cellular images. ML models map gene perturbations and compound exposures to morphological phenotypes, identifying drug candidates for rare disease, oncology, and inflammation.</p>
-          <p><span class="label">Model.</span> Hybrid: long-term pharma partnerships (Bayer, Roche-Genentech) that pay platform-access fees and milestones, plus a wholly-owned clinical pipeline whose upside accrues to Recursion if approved.</p>
-          <p class="company-link-row"><a href="https://www.recursion.com/">recursion.com &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">3.</span><span class="company-name">Schr&ouml;dinger</span></div>
-          <p class="company-meta"><strong>1990</strong> &middot; Public (Nasdaq: SDGR) &middot; Gates Foundation</p>
-          <p class="company-tldr">Physics-based molecular simulation software + in-house pipeline.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> Physics-based molecular modelling suite (Maestro, FEP+, Glide) used across most large pharma for protein-ligand binding-affinity prediction, free-energy calculations, and lead optimisation. Decades-deep validation data.</p>
-          <p><span class="label">Model.</span> Two parallel businesses: high-margin enterprise software subscriptions and an internal therapeutics pipeline licensed out to large pharma at high-value milestone terms.</p>
-          <p class="company-link-row"><a href="https://www.schrodinger.com/">schrodinger.com &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">4.</span><span class="company-name">Genesis Therapeutics</span></div>
-          <p class="company-meta"><strong>2019</strong> &middot; Series B &middot; a16z</p>
+          <div class="company-head"><span class="company-num">1.</span><span class="company-name">Genesis Therapeutics</span></div>
+          <p class="company-meta"><strong>Founded 2019</strong> &middot; Series B &middot; a16z</p>
           <p class="company-tldr">Generative ML for hard small-molecule drug targets.</p>
         </summary>
         <div class="company-detail">
@@ -451,8 +600,8 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">5.</span><span class="company-name">BigHat Biosciences</span></div>
-          <p class="company-meta"><strong>2019</strong> &middot; Series B &middot; a16z</p>
+          <div class="company-head"><span class="company-num">2.</span><span class="company-name">BigHat Biosciences</span></div>
+          <p class="company-meta"><strong>Founded 2019</strong> &middot; Series B &middot; a16z</p>
           <p class="company-tldr">Tightly-coupled ML + wet lab for antibody design.</p>
         </summary>
         <div class="company-detail">
@@ -464,8 +613,8 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">6.</span><span class="company-name">Asimov</span></div>
-          <p class="company-meta"><strong>2017</strong> &middot; Series B &middot; a16z</p>
+          <div class="company-head"><span class="company-num">3.</span><span class="company-name">Asimov</span></div>
+          <p class="company-meta"><strong>Founded 2017</strong> &middot; Series B &middot; a16z</p>
           <p class="company-tldr">CAD platform for mammalian-cell genetic circuits.</p>
         </summary>
         <div class="company-detail">
@@ -477,8 +626,8 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">7.</span><span class="company-name">Scribe Therapeutics</span></div>
-          <p class="company-meta"><strong>2017</strong> &middot; Series B &middot; a16z</p>
+          <div class="company-head"><span class="company-num">4.</span><span class="company-name">Scribe Therapeutics</span></div>
+          <p class="company-meta"><strong>Founded 2017</strong> &middot; Series B &middot; a16z</p>
           <p class="company-tldr">Engineered CasX enzymes for therapeutic gene editing.</p>
         </summary>
         <div class="company-detail">
@@ -490,21 +639,8 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">8.</span><span class="company-name">BioAge Labs</span></div>
-          <p class="company-meta"><strong>2015</strong> &middot; Series D &middot; a16z</p>
-          <p class="company-tldr">Aging-biobank discovery + asset-driven longevity drugs.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> Discovery engine that mines human longitudinal biobanks (proteomics, transcriptomics linked to lifespan/healthspan outcomes) to identify molecular drivers of healthy ageing &mdash; especially around muscle mass and metabolic health.</p>
-          <p><span class="label">Model.</span> &ldquo;Asset-driven&rdquo;: in-licence existing shelved compounds cheaply, validate them in an ageing indication, and out-licence late-stage assets to large pharma at high upfront + royalties.</p>
-          <p class="company-link-row"><a href="https://bioagelabs.com/">bioagelabs.com &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">9.</span><span class="company-name">Valo Health</span></div>
-          <p class="company-meta"><strong>2019</strong> &middot; Series C &middot; a16z</p>
+          <div class="company-head"><span class="company-num">5.</span><span class="company-name">Valo Health</span></div>
+          <p class="company-meta"><strong>Founded 2019</strong> &middot; Series C &middot; a16z</p>
           <p class="company-tldr">End-to-end human-data-driven drug discovery (Opal).</p>
         </summary>
         <div class="company-detail">
@@ -516,21 +652,8 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">10.</span><span class="company-name">Camp4 Therapeutics</span></div>
-          <p class="company-meta"><strong>2016</strong> &middot; Series B &middot; a16z</p>
-          <p class="company-tldr">Regulatory-RNA platform to upregulate disease-linked genes.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> RAP platform &mdash; targets regulatory RNAs (eRNAs / lncRNAs) to dial up the expression of disease-relevant genes, opening a new modality alongside silencing-style RNA drugs.</p>
-          <p><span class="label">Model.</span> Target-discovery collaborations with pharma (upfront + per-target milestones) plus internal programmes in genetic liver disease and CNS indications.</p>
-          <p class="company-link-row"><a href="https://www.camp4tx.com/">camp4tx.com &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">11.</span><span class="company-name">Atomwise</span></div>
-          <p class="company-meta"><strong>2012</strong> &middot; Series B+ &middot; YC, Tencent</p>
+          <div class="company-head"><span class="company-num">6.</span><span class="company-name">Atomwise</span></div>
+          <p class="company-meta"><strong>Founded 2012</strong> &middot; Series B+ &middot; YC, Tencent</p>
           <p class="company-tldr">CNN-based virtual screening of small molecules (AtomNet).</p>
         </summary>
         <div class="company-detail">
@@ -542,8 +665,8 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">12.</span><span class="company-name">Culture Biosciences</span></div>
-          <p class="company-meta"><strong>2016</strong> &middot; Series B &middot; YC, a16z</p>
+          <div class="company-head"><span class="company-num">7.</span><span class="company-name">Culture Biosciences</span></div>
+          <p class="company-meta"><strong>Founded 2016</strong> &middot; Series B &middot; YC, a16z</p>
           <p class="company-tldr">Cloud bioreactors as a service for biotech.</p>
         </summary>
         <div class="company-detail">
@@ -555,21 +678,8 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">13.</span><span class="company-name">Notable Labs</span></div>
-          <p class="company-meta"><strong>2014</strong> &middot; Series B &middot; YC</p>
-          <p class="company-tldr">Ex-vivo drug-response prediction for cancer therapies.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> Predictive Precision Medicine Platform &mdash; takes a patient&rsquo;s leukaemia or lymphoma sample, exposes it ex vivo to a panel of drugs, and combines flow-cytometry plus ML to predict clinical response before treatment.</p>
-          <p><span class="label">Model.</span> Combines reference-laboratory fees per assay with a wholly-owned drug pipeline (e.g. fosciclopirox in AML) advanced with risk-shared trial designs that pair patient enrolment to predicted responders.</p>
-          <p class="company-link-row"><a href="https://www.notablelabs.com/">notablelabs.com &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">14.</span><span class="company-name">Owkin</span></div>
-          <p class="company-meta"><strong>2016</strong> &middot; Series C (Unicorn) &middot; Sanofi, Google</p>
+          <div class="company-head"><span class="company-num">8.</span><span class="company-name">Owkin</span></div>
+          <p class="company-meta"><strong>Founded 2016</strong> &middot; Series C (Unicorn) &middot; Sanofi, Google</p>
           <p class="company-tldr">Federated learning across hospital data without exposing PHI.</p>
         </summary>
         <div class="company-detail">
@@ -581,21 +691,8 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">15.</span><span class="company-name">Tempus</span></div>
-          <p class="company-meta"><strong>2015</strong> &middot; Public (Nasdaq: TEM) &middot; Baillie Gifford</p>
-          <p class="company-tldr">Clinical + molecular oncology dataset licensed to pharma.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> Library of de-identified clinical + molecular records spanning oncology, cardiology, and depression, sourced from genomic-sequencing services Tempus runs for partner hospitals.</p>
-          <p><span class="label">Model.</span> Two reinforcing legs: per-sample sequencing/diagnostic fees billed to hospitals/payers (Genomics business), and large-deal data licences to pharma (Data &amp; Services business) where most of the long-term value sits.</p>
-          <p class="company-link-row"><a href="https://www.tempus.com/">tempus.com &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">16.</span><span class="company-name">Isomorphic Labs</span></div>
-          <p class="company-meta"><strong>2021</strong> &middot; ~$600M first external round (2024) &middot; Thrive Capital, Alphabet</p>
+          <div class="company-head"><span class="company-num">9.</span><span class="company-name">Isomorphic Labs</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
+          <p class="company-meta"><strong>Founded 2021</strong> &middot; ~$600M first external round (2024) &middot; Thrive Capital, Alphabet</p>
           <p class="company-tldr">AlphaFold-derived drug discovery from DeepMind spin-out.</p>
         </summary>
         <div class="company-detail">
@@ -607,8 +704,8 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">17.</span><span class="company-name">Insilico Medicine</span></div>
-          <p class="company-meta"><strong>2014</strong> &middot; Series E &middot; Sanofi, WuXi, Warburg Pincus</p>
+          <div class="company-head"><span class="company-num">10.</span><span class="company-name">Insilico Medicine</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
+          <p class="company-meta"><strong>Founded 2014</strong> &middot; Series E &middot; Sanofi, WuXi, Warburg Pincus</p>
           <p class="company-tldr">Pharma.AI platform with AI-discovered drug in Phase II.</p>
         </summary>
         <div class="company-detail">
@@ -618,495 +715,9 @@
         </div>
       </details></li>
 
-    </ul>
-
-    <!-- ====== Track 4 ====== -->
-    <h2 id="track-4"><span class="track-no">Track 4</span>Digital Health &amp; Data Platforms</h2>
-    <p class="track-note">Tech-enabled payers, providers, diagnostics, and software &mdash; companies operating inside the existing healthcare reimbursement system.</p>
-
-    <ul class="companies">
-
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">1.</span><span class="company-name">Freenome</span></div>
-          <p class="company-meta"><strong>2014</strong> &middot; Series E &middot; a16z, Roche</p>
-          <p class="company-tldr">Multi-omics blood test for early cancer detection (CRC).</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> Multi-omics blood test combining cell-free DNA, methylation, and protein signals with ML to detect early-stage cancer &mdash; lead programme is colorectal cancer screening as an alternative to colonoscopy/FIT.</p>
-          <p><span class="label">Model.</span> Reimbursed per-test pricing once on national guidelines (Medicare + commercial payers), plus companion-diagnostic revenue from pharma clinical trials in the meantime.</p>
-          <p class="company-link-row"><a href="https://www.freenome.com/">freenome.com &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">2.</span><span class="company-name">Flatiron Health</span></div>
-          <p class="company-meta"><strong>2012</strong> &middot; Acquired by Roche (2018, $1.9B) &middot; Google Ventures, ICONIQ</p>
-          <p class="company-tldr">Oncology EMR + real-world dataset for pharma (Roche subsidiary).</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> OncoEMR &mdash; an oncology-specialty electronic medical record used at hundreds of community cancer centres &mdash; plus a curated real-world oncology dataset built from that EMR footprint.</p>
-          <p><span class="label">Model.</span> Hospital SaaS for OncoEMR and OncoBilling; data licences to pharma for clinical-trial design and regulatory submissions (RWD endpoints). Operates as a Roche subsidiary post-acquisition.</p>
-          <p class="company-link-row"><a href="https://flatiron.com/">flatiron.com &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">3.</span><span class="company-name">TrialSpark (Formation Bio)</span></div>
-          <p class="company-meta"><strong>2013</strong> &middot; Series C &middot; Thrive, Sequoia</p>
-          <p class="company-tldr">Tech-driven CRO pivoted to in-licensing drugs.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> Originally a software-driven CRO running trials inside primary-care clinics with proprietary trial-recruitment infrastructure. Has since pivoted into Formation Bio, an in-licensing biotech that uses its trial machinery on drugs it owns.</p>
-          <p><span class="label">Model.</span> Shifted from CRO fee-for-service to drug-development economics &mdash; buy promising assets from biotech cheaply, run them more efficiently, capture full upside on approval.</p>
-          <p class="company-link-row"><a href="https://www.trialspark.com/">trialspark.com &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">4.</span><span class="company-name">Devoted Health</span></div>
-          <p class="company-meta"><strong>2017</strong> &middot; Series E &middot; a16z</p>
-          <p class="company-tldr">Tech-enabled Medicare Advantage health plan for seniors.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> Tech-enabled Medicare Advantage health plan for US seniors. Owns the full stack &mdash; software for member engagement, an in-house clinical team for high-cost members, and the insurance entity itself.</p>
-          <p><span class="label">Model.</span> Capitated payments from the federal government per enrolled senior. Profit comes from the spread between CMS payments and actual medical costs, which Devoted aims to lower via proactive primary-care interventions.</p>
-          <p class="company-link-row"><a href="https://www.devoted.com/">devoted.com &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">5.</span><span class="company-name">Omada Health</span></div>
-          <p class="company-meta"><strong>2011</strong> &middot; Series E &middot; a16z</p>
-          <p class="company-tldr">Digital therapeutics for chronic-disease management.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> Digital-therapeutic programmes for diabetes prevention, diabetes management, hypertension, and musculoskeletal pain. Combines an app, a connected scale or BP cuff, and human health coaches.</p>
-          <p><span class="label">Model.</span> Per-member-per-month subscriptions sold to self-insured employers and health plans, often with a pay-for-performance component &mdash; fees tied to weight loss or A1C reduction milestones.</p>
-          <p class="company-link-row"><a href="https://www.omadahealth.com/">omadahealth.com &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">6.</span><span class="company-name">Komodo Health</span></div>
-          <p class="company-meta"><strong>2014</strong> &middot; Series E &middot; a16z, ICONIQ</p>
-          <p class="company-tldr">&ldquo;Healthcare Map&rdquo; longitudinal patient-journey dataset.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> &ldquo;Healthcare Map&rdquo; &mdash; a longitudinal dataset linking ~330M US patient journeys across diagnoses, prescriptions, and provider visits, queried via Sentinel and MapEnhance applications.</p>
-          <p><span class="label">Model.</span> Multi-year enterprise SaaS contracts with pharma (commercial-strategy use), payers (network-design use), and providers. Typical deal sizes in the high six to low seven figures.</p>
-          <p class="company-link-row"><a href="https://www.komodohealth.com/">komodohealth.com &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">7.</span><span class="company-name">PatientPing (Bamboo Health)</span></div>
-          <p class="company-meta"><strong>2013</strong> &middot; Acquired by Appriss (2021) &middot; a16z</p>
-          <p class="company-tldr">Real-time care-coordination notifications.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> Real-time care-coordination network &mdash; pings clinicians the moment a shared patient hits an ED, is admitted, or is discharged anywhere on the network. Reduces readmissions and improves post-acute follow-up.</p>
-          <p><span class="label">Model.</span> SaaS subscriptions to hospitals, ACOs, payers, and post-acute facilities, sized by lives covered. Now sold as part of Bamboo Health&rsquo;s broader care-coordination suite.</p>
-          <p class="company-link-row"><a href="https://bamboohealth.com/">bamboohealth.com &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">8.</span><span class="company-name">Athelas</span></div>
-          <p class="company-meta"><strong>2016</strong> &middot; Series B &middot; YC</p>
-          <p class="company-tldr">At-home connected devices billed via RPM/CCM codes.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> At-home connected diagnostic devices (white-blood-cell counter, blood-pressure cuff, glucometer) that stream vitals to a clinical operations team. Originally aimed at clozapine-monitored patients; expanded to chronic-care RPM and revenue-cycle software.</p>
-          <p><span class="label">Model.</span> Hardware bundled essentially free with services. Revenue from CPT-coded Remote Patient Monitoring (RPM) and Chronic Care Management (CCM) reimbursement billed to Medicare and commercial payers each month.</p>
-          <p class="company-link-row"><a href="https://athelas.com/">athelas.com &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">9.</span><span class="company-name">BioRender</span></div>
-          <p class="company-meta"><strong>2017</strong> &middot; Series A &middot; YC</p>
-          <p class="company-tldr">&ldquo;Canva for life sciences&rdquo; scientific illustration SaaS.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> The &ldquo;Canva for life sciences&rdquo; &mdash; a drag-and-drop illustration tool with thousands of scientifically-accurate icons (organs, cells, molecules) used to make figures for papers, posters, and grants.</p>
-          <p><span class="label">Model.</span> Product-led freemium SaaS. Individuals use it free with watermarks; lab teams and biotech companies pay per-seat annual subscriptions for high-resolution export, custom assets, and team libraries.</p>
-          <p class="company-link-row"><a href="https://biorender.com/">biorender.com &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">10.</span><span class="company-name">Volumetric (3D Systems Bioprinting)</span></div>
-          <p class="company-meta"><strong>2018</strong> &middot; Acquired by 3D Systems (2021) &middot; YC</p>
-          <p class="company-tldr">High-resolution 3D bioprinter for vascularised tissue.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> Stereolithography-based bioprinters capable of resolving fine vasculature inside printed tissue constructs &mdash; a step toward printable, perfusable organs.</p>
-          <p><span class="label">Model.</span> Capital-equipment sale of the printer plus razor-blade recurring revenue from proprietary photoreactive bio-inks and cartridges.</p>
-          <p class="company-link-row"><a href="https://www.3dsystems.com/bioprinting">3dsystems.com/bioprinting &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">11.</span><span class="company-name">Miroculus (Integra)</span></div>
-          <p class="company-meta"><strong>2014</strong> &middot; Acquired by Integra Biosciences (2024) &middot; YC</p>
-          <p class="company-tldr">Digital microfluidics for automated NGS sample prep.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> Miro Canvas &mdash; benchtop digital microfluidics system that automates NGS library prep and other multi-step molecular protocols on a single chip, with minimal user setup.</p>
-          <p><span class="label">Model.</span> Razor-and-blades &mdash; the instrument is the razor, the single-use proprietary cartridges and reagent kits are the recurring blade revenue per protocol run.</p>
-          <p class="company-link-row"><a href="https://miroculus.com/">miroculus.com &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">12.</span><span class="company-name">Nurx (Thirty Madison)</span></div>
-          <p class="company-meta"><strong>2015</strong> &middot; Merged with Thirty Madison (2022) &middot; YC</p>
-          <p class="company-tldr">Telehealth + mail-order for women&rsquo;s health.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> Telehealth direct-to-consumer service for women&rsquo;s health (birth control, emergency contraception, HPV screening, migraine, dermatology). Asynchronous clinical review plus mail-order pharmacy.</p>
-          <p><span class="label">Model.</span> Subscription prescription fulfilment with long-tail per-month drug margin (especially contraceptives), supplemented by per-consultation fees and insurance billing where applicable.</p>
-          <p class="company-link-row"><a href="https://www.nurx.com/">nurx.com &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">13.</span><span class="company-name">Curative</span></div>
-          <p class="company-meta"><strong>2020</strong> &middot; Private &middot; YC</p>
-          <p class="company-tldr">COVID-PCR origin, pivoting to employer health insurance.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> Originated as a COVID-19 PCR testing platform optimised for logistics and turnaround. Has since pivoted into employer health-insurance plans built around proactive primary-care &ldquo;baseline visits.&rdquo;</p>
-          <p><span class="label">Model.</span> Originally fee-for-service reimbursement per COVID test. Now monthly per-member-per-month employer premium revenue, similar to Devoted but for the employer market.</p>
-          <p class="company-link-row"><a href="https://curative.com/">curative.com &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">14.</span><span class="company-name">Oscar Health</span></div>
-          <p class="company-meta"><strong>2012</strong> &middot; Public (NYSE: OSCR) &middot; Thrive</p>
-          <p class="company-tldr">Tech-driven ACA-marketplace health insurer.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> Tech-driven health-insurance plans on the ACA individual marketplace, plus a +Oscar enterprise software platform sold to other insurers wanting to modernise their member experience.</p>
-          <p><span class="label">Model.</span> Premium revenue from policy holders. Profit margin depends on the gap between premium intake and medical-loss ratio (claim payouts), which software is meant to compress over time.</p>
-          <p class="company-link-row"><a href="https://www.hioscar.com/">hioscar.com &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">15.</span><span class="company-name">Cedar</span></div>
-          <p class="company-meta"><strong>2016</strong> &middot; Series D &middot; Thrive, a16z</p>
-          <p class="company-tldr">Patient billing platform for hospital revenue cycles.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> Patient billing and payment platform layered over hospital revenue-cycle systems. Sends plain-language, mobile-first bills, surfaces price estimates, and offers no-fee payment plans.</p>
-          <p><span class="label">Model.</span> Combination of annual platform SaaS fees to hospitals and a transaction fee on every patient payment that flows through Cedar &mdash; the larger health-system contracts compound both legs.</p>
-          <p class="company-link-row"><a href="https://www.cedar.com/">cedar.com &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">16.</span><span class="company-name">Aetion</span></div>
-          <p class="company-meta"><strong>2012</strong> &middot; Series C &middot; Thrive</p>
-          <p class="company-tldr">Real-world data analytics for pharma and FDA.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> Aetion Evidence Platform &mdash; transparent, reproducible analytics on real-world data (claims, EMRs, registries) so pharma and FDA reviewers can answer comparative-effectiveness and safety questions without bespoke statistician work.</p>
-          <p><span class="label">Model.</span> Enterprise SaaS subscriptions to pharma (regulatory and HEOR teams) and government regulators, sometimes augmented by analytic-services engagements.</p>
-          <p class="company-link-row"><a href="https://aetion.com/">aetion.com &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">17.</span><span class="company-name">PathAI</span></div>
-          <p class="company-meta"><strong>2016</strong> &middot; Series C+ &middot; General Catalyst</p>
-          <p class="company-tldr">AI digital pathology + clinical-trial screening.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> AI-augmented digital pathology &mdash; deep-learning models for tumour grading, biomarker quantification (PD-L1, HER2), and trial-eligibility screening on whole-slide images. Includes a contract-research lab arm (acquired Poplar).</p>
-          <p><span class="label">Model.</span> Two streams: pharma contracts for clinical-trial enrollment and companion-diagnostic development (large milestone-based deals), and a SaaS pathology platform sold to hospital labs.</p>
-          <p class="company-link-row"><a href="https://www.pathai.com/">pathai.com &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">18.</span><span class="company-name">Spring Health</span></div>
-          <p class="company-meta"><strong>2016</strong> &middot; Series D &middot; Tiger Global</p>
-          <p class="company-tldr">ML-matched mental-health benefits for employers.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> Employer-benefits platform that triages each employee&rsquo;s self-reported symptoms with an ML model and matches them to the modality most likely to work for them (self-guided content, coaching, therapy, psychiatry, or specialist care).</p>
-          <p><span class="label">Model.</span> Per-employee-per-month subscription sold to large employers, with utilisation-based fees stacked on top for actual therapy hours, psychiatry visits, and specialised programmes.</p>
-          <p class="company-link-row"><a href="https://www.springhealth.com/">springhealth.com &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">19.</span><span class="company-name">Hinge Health</span></div>
-          <p class="company-meta"><strong>2014</strong> &middot; Public (NYSE: HNGE, May 2025) &middot; Coatue, Tiger Global</p>
-          <p class="company-tldr">Digital therapeutics for MSK pain (IPO&rsquo;d 2025).</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> Digital programmes for musculoskeletal (MSK) pain, women&rsquo;s pelvic health, and acute injury. Pairs wearable motion sensors and an in-app exercise library with remote physical therapists and health coaches.</p>
-          <p><span class="label">Model.</span> Per-employee-per-month subscriptions sold to large self-insured employers and health plans, often with shared-savings or pay-for-performance components linked to reductions in MSK claims spend.</p>
-          <p class="company-link-row"><a href="https://www.hingehealth.com/">hingehealth.com &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">20.</span><span class="company-name">Lyra Health</span></div>
-          <p class="company-meta"><strong>2015</strong> &middot; Series F &middot; Coatue, Sands Capital</p>
-          <p class="company-tldr">Enterprise mental-health benefits platform.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> Mental-health benefits platform for large employers (Morgan Stanley, Amgen, Starbucks, etc.). Combines ML-driven care navigation with a curated network of therapists trained in evidence-based modalities (CBT, ACT), plus coaching, psychiatry, and specialised programmes for complex care.</p>
-          <p><span class="label">Model.</span> Per-employee-per-month enterprise subscription plus utilisation-based fees per therapy session, psychiatry visit, or specialised programme &mdash; the closer enterprise-tier competitor to Spring Health.</p>
-          <p class="company-link-row"><a href="https://www.lyrahealth.com/">lyrahealth.com &nearr;</a></p>
-        </div>
-      </details></li>
-
-    </ul>
-
-    <!-- ====== 2024-2026 Wave ====== -->
-    <h2 id="wave"><span class="track-no">Wave</span>2024&ndash;2026 &mdash; recent entrants &amp; momentum</h2>
-    <div class="wave-intro">
-      <p>50 currently-VC-stage companies that defined the funding landscape in 2024-2026 &mdash; all still private, all still raising. Excludes companies that have IPO&rsquo;d, been acquired, or are now corporate-scale (OpenAI, Anthropic, Cerebras, etc.).</p>
-      <p><strong>Top 2025-2026 VC themes captured below:</strong></p>
-      <p>&middot; <strong>Agentic AI is the dominant flow</strong> &mdash; vertical agents (sales, recruiting, compliance, legal) crowning category leaders; outcome-based pricing becoming the norm.<br />
-      &middot; <strong>AI infra splits into compute &amp; inference</strong> &mdash; specialty chips (Groq LPUs), open-source inference clouds (Together, Fireworks), and stranded-energy GPU farms (Crusoe).<br />
-      &middot; <strong>Robotics has its iPhone moment</strong> &mdash; robot foundation models (Physical Intelligence, Skild) and humanoid hardware (Figure, 1X, Apptronik) absorbing decacorn-scale capital; $10.3B raised across robotics in 2025.<br />
-      &middot; <strong>Voice AI matured into infrastructure</strong> &mdash; ElevenLabs, Cartesia, Vapi powering the voice-agent boom across Sierra, Hippocratic, and consumer apps.<br />
-      &middot; <strong>Defense AI normalised</strong> &mdash; VCs were ideologically allergic in 2018; now Anduril, Helsing, Saronic, Shield AI each pulling unicorn-plus capital from generalist funds.<br />
-      &middot; <strong>AI &times; bio splits in two</strong> &mdash; pipeline biotechs (Xaira&rsquo;s $1B launch) versus foundation-model labs (EvolutionaryScale, Latent, Chai) spun out of big-AI shops.</p>
-    </div>
-
-    <h3 class="wave-cat">Agent infrastructure &amp; vertical agents (15)</h3>
-    <ul class="companies">
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">1.</span><span class="company-name">Sierra</span></div>
-          <p class="company-meta"><strong>Founded 2024</strong> &middot; Series C ($350M, Sep 2025, ~$10B val) &middot; Greenoaks, Sequoia, Benchmark, ICONIQ, Thrive</p>
-          <p class="company-tldr">Conversational AI agents for customer service, branded per customer.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> Founded by Bret Taylor (ex-Salesforce co-CEO, OpenAI chair) and Clay Bavor (ex-Google VR/AR). Builds bespoke voice and chat AI agents for large consumer brands &mdash; SoFi, ADT, Sonos, WeightWatchers &mdash; that handle returns, account changes, troubleshooting, and upsell.</p>
-          <p><span class="label">Model.</span> Outcome-based pricing: customers pay per resolved interaction rather than per seat, aligning Sierra&rsquo;s upside with measured CSAT and deflection metrics. Multi-year enterprise contracts.</p>
-          <p class="company-link-row"><a href="https://sierra.ai/">sierra.ai &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">2.</span><span class="company-name">Cognition Labs (Devin)</span></div>
-          <p class="company-meta"><strong>Founded 2024</strong> &middot; Series A2 ($175M, Mar 2024, ~$2B val) &middot; Founders Fund, Khosla</p>
-          <p class="company-tldr">Devin &mdash; autonomous AI software engineer.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> Devin runs in a sandboxed environment with shell, browser, and editor access &mdash; takes a written ticket, plans steps, writes and tests code, opens PRs. Targeted at backend tasks, internal tools, and migrations. Acquired Windsurf IDE assets in 2025 to expand its surface.</p>
-          <p><span class="label">Model.</span> Per-seat SaaS for individual engineers; enterprise tier sized by team count plus committed agent compute hours.</p>
-          <p class="company-link-row"><a href="https://www.cognition.ai/">cognition.ai &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">3.</span><span class="company-name">/dev/agents</span></div>
-          <p class="company-meta"><strong>Founded Aug 2024</strong> &middot; Seed ($56M, ~$500M val) &middot; Index Ventures</p>
-          <p class="company-tldr">An operating-system layer for AI agents.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> Founded by David Singleton (ex-Stripe CTO), Hugo Barra (ex-Meta VR), and Nicholas Jitkoff (Quora co-founder). Aims to build the &ldquo;Android of agents&rdquo; &mdash; a shared substrate handling memory, identity, tool coordination, and permissions across many agent applications.</p>
-          <p><span class="label">Model.</span> Pre-revenue; eventual model is likely usage-based platform fees for developers building on the OS, plus a consumer-facing entry product.</p>
-          <p class="company-link-row"><a href="https://sdsa.ai/">sdsa.ai &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">4.</span><span class="company-name">Harvey</span></div>
-          <p class="company-meta"><strong>Founded 2022</strong> &middot; Series E ($300M, 2025, $5B+ val) &middot; Sequoia, Kleiner Perkins</p>
-          <p class="company-tldr">Vertical AI agents for the legal industry.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> Legal-specific LLM workflows for contract review, due diligence, deal closings, and research. Deeply integrated with firm document management (NetDocuments, iManage). Customers include PwC, Allen &amp; Overy, A&amp;O Shearman.</p>
-          <p><span class="label">Model.</span> Per-attorney annual enterprise subscriptions; multi-year contracts with white-shoe firms running into eight-figure ACVs.</p>
-          <p class="company-link-row"><a href="https://www.harvey.ai/">harvey.ai &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">5.</span><span class="company-name">Decagon</span></div>
-          <p class="company-meta"><strong>Founded 2023</strong> &middot; Series C ($131M, 2025) &middot; Andreessen Horowitz, Accel</p>
-          <p class="company-tldr">Customer-service AI agents that resolve tickets end-to-end.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> Founded by Jesse Zhang (ex-Lowkey CEO) and Ashwin Sreenivas (ex-Helia). AI agents that handle complex multi-step customer issues (refunds, account changes, troubleshooting) without human handoff. Customers: Eventbrite, Hertz, Bilt, Substack.</p>
-          <p><span class="label">Model.</span> Outcome pricing &mdash; charges per resolved conversation, not per seat. The closest competitor to Sierra in the CS-agent market.</p>
-          <p class="company-link-row"><a href="https://decagon.ai/">decagon.ai &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">6.</span><span class="company-name">Hippocratic AI</span></div>
-          <p class="company-meta"><strong>Founded 2023</strong> &middot; Series C ($141M, 2025, $3.5B val) &middot; General Catalyst, Andreessen Horowitz</p>
-          <p class="company-tldr">Voice AI agents (&ldquo;AI nurses&rdquo;) for low-acuity healthcare tasks.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> Founded by Munjal Shah (ex-Health IQ). Builds safety-tuned voice agents for tasks that don&rsquo;t require a licensed clinician &mdash; appointment reminders, post-discharge follow-up, chronic-care check-ins, pre-op education. Each agent persona is validated by panels of clinicians.</p>
-          <p><span class="label">Model.</span> Per-call or per-hour pricing sold to health systems and payers, positioned as filling clinician shortages rather than replacing nurses.</p>
-          <p class="company-link-row"><a href="https://www.hippocraticai.com/">hippocraticai.com &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">7.</span><span class="company-name">Cursor (Anysphere)</span></div>
-          <p class="company-meta"><strong>Founded 2022</strong> &middot; Series C (2025, ~$9B val) &middot; Andreessen Horowitz, Thrive</p>
-          <p class="company-tldr">AI-native code editor; $300M+ ARR coding agent.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> Founded by four MIT-affiliated engineers (Aman Sanger, Sualeh Asif, Michael Truell, Arvid Lunnemark). VS Code-based editor rebuilt around deep code context: agent mode for multi-file edits, model-of-the-week support, repo-wide retrieval. One of the fastest products to hit $100M ARR in software history.</p>
-          <p><span class="label">Model.</span> Freemium product-led growth. Pro tier $20/month per developer; Business tier with admin controls; enterprise contracts for security-conscious orgs. Bottom-up adoption that pulls into the enterprise sale.</p>
-          <p class="company-link-row"><a href="https://cursor.com/">cursor.com &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">8.</span><span class="company-name">Mercor</span></div>
-          <p class="company-meta"><strong>Founded 2023</strong> &middot; Series C ($350M, Oct 2025, $10B val) &middot; Felicis (lead), Benchmark, General Catalyst, Robinhood Ventures</p>
-          <p class="company-tldr">AI recruiting / contracting marketplace; founded by three 21-year-olds.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> Founded by Brendan Foody, Adarsh Hiremath, and Surya Midha. AI screens, interviews, and matches engineers, researchers, and data labellers to short-term contracts. Major customers include OpenAI, Anthropic, and others sourcing RLHF / domain-expert workers.</p>
-          <p><span class="label">Model.</span> Platform fee on hires plus hourly billing on contract work &mdash; an Upwork-style marketplace with an AI matching layer that compresses time-to-fill.</p>
-          <p class="company-link-row"><a href="https://mercor.com/">mercor.com &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">9.</span><span class="company-name">Clay</span></div>
-          <p class="company-meta"><strong>Founded 2017</strong> &middot; Series C (2025, ~$3.1B val) &middot; Sequoia, CapitalG</p>
-          <p class="company-tldr">GTM data enrichment + AI signals for sales workflows.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> Founded by Kareem Amin and Varun Anand. Combines 100+ data providers, LLM enrichment, and AI-derived signals into a spreadsheet-like workflow product for sales and RevOps teams &mdash; the de facto &ldquo;GTM engineering&rdquo; tool.</p>
-          <p><span class="label">Model.</span> Credit-based SaaS subscription that scales with usage; enterprise multi-year contracts at the top of the funnel.</p>
-          <p class="company-link-row"><a href="https://www.clay.com/">clay.com &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">10.</span><span class="company-name">11x</span></div>
-          <p class="company-meta"><strong>Founded 2023</strong> &middot; Series B ($50M+, 2024) &middot; Andreessen Horowitz, Benchmark</p>
-          <p class="company-tldr">AI &ldquo;digital workers&rdquo; for outbound sales.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> Founded by Hasan Sukkar. Markets three AI personas &mdash; Alice (outbound email), Jordan (voice calling), Mike (LinkedIn) &mdash; that run end-to-end outbound sales workflows including research, drafting, and follow-up.</p>
-          <p><span class="label">Model.</span> Monthly per-&ldquo;AI worker&rdquo; seat priced as a fraction of a fully-loaded SDR cost; outcome metrics dictate retention.</p>
-          <p class="company-link-row"><a href="https://www.11x.ai/">11x.ai &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">11.</span><span class="company-name">Artisan</span></div>
-          <p class="company-meta"><strong>Founded 2023</strong> &middot; Series A ($25M, 2024) &middot; Y Combinator, HubSpot Ventures</p>
-          <p class="company-tldr">Ava &mdash; autonomous outbound SDR.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> Founded by Jaspar Carmichael-Jack. Ava scrapes prospects from B2B data sources, drafts personalised emails, sequences follow-ups, and books meetings &mdash; pitched bluntly as &ldquo;Stop hiring humans.&rdquo;</p>
-          <p><span class="label">Model.</span> Subscription per Ava seat, positioned as a direct replacement for SDR headcount.</p>
-          <p class="company-link-row"><a href="https://www.artisan.co/">artisan.co &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">12.</span><span class="company-name">Sardine</span></div>
-          <p class="company-meta"><strong>Founded 2020</strong> &middot; Series C ($70M, Feb 2025) &middot; Activant Capital, Andreessen Horowitz</p>
-          <p class="company-tldr">Behavioural-biometrics + ML for fraud, AML, payments risk.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> Founded by Soups Ranjan (ex-Coinbase). Combines device fingerprinting, behavioural biometrics, and ML risk models into a single decision engine for fraud, AML, and credit. Serves fintechs, payments processors, and crypto exchanges.</p>
-          <p><span class="label">Model.</span> B2B SaaS priced per transaction reviewed or per API call; enterprise tier with custom rule engines and dedicated risk analysts.</p>
-          <p class="company-link-row"><a href="https://www.sardine.ai/">sardine.ai &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">13.</span><span class="company-name">Glean</span></div>
-          <p class="company-meta"><strong>Founded 2019</strong> &middot; Series F (2025, ~$7.2B val) &middot; Sequoia, Lightspeed, Kleiner Perkins</p>
-          <p class="company-tldr">Enterprise search and work assistant; building agentic workflows.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> Founded by Arvind Jain (ex-Rubrik, Google). Unified search and Q&amp;A across Drive, Slack, Confluence, Jira, Salesforce, and 100+ other enterprise apps. Increasingly an agentic platform that takes actions, not just answers.</p>
-          <p><span class="label">Model.</span> Per-seat enterprise SaaS, sold to large organisations on multi-year contracts; one of the larger ACVs in enterprise AI.</p>
-          <p class="company-link-row"><a href="https://www.glean.com/">glean.com &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">14.</span><span class="company-name">Norm AI</span></div>
-          <p class="company-meta"><strong>Founded 2023</strong> &middot; Series B ($48M, 2024) &middot; Coatue, Vanguard, Bain Capital Ventures</p>
-          <p class="company-tldr">Compliance agents for financial-services regulation.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> Founded by Diego Baez. Translates SEC, FINRA, FDIC, and SEC marketing rules into executable compliance agents that auto-review marketing materials, employee communications, and public disclosures before they ship.</p>
-          <p><span class="label">Model.</span> Enterprise SaaS scaled by regulatory scope (which rule sets) and review volume; sold to banks, asset managers, and fintechs.</p>
-          <p class="company-link-row"><a href="https://www.normai.com/">normai.com &nearr;</a></p>
-        </div>
-      </details></li>
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">15.</span><span class="company-name">EvenUp</span></div>
-          <p class="company-meta"><strong>Founded 2019</strong> &middot; Series D (2024, $1B+ val) &middot; Bain Capital Ventures, Bessemer</p>
-          <p class="company-tldr">Personal-injury legal AI &mdash; auto-generates demand packages.</p>
-        </summary>
-        <div class="company-detail">
-          <p><span class="label">Product.</span> Founded by Rami Karabibar and Saam Mashhad. Ingests a personal-injury client&rsquo;s medical records, generates structured demand letters, computes damages, and benchmarks settlement amounts against comparable cases.</p>
-          <p><span class="label">Model.</span> Vertical SaaS priced per case or per attorney seat, sold to plaintiff-side personal-injury firms.</p>
-          <p class="company-link-row"><a href="https://www.evenuplaw.com/">evenuplaw.com &nearr;</a></p>
-        </div>
-      </details></li>
-
-    </ul>
-
-    <h3 class="wave-cat">AI &times; Bio &mdash; generative protein &amp; cell-discovery labs (8)</h3>
-    <ul class="companies">
-
-      <li class="company"><details>
-        <summary>
-          <div class="company-head"><span class="company-num">1.</span><span class="company-name">Xaira Therapeutics</span></div>
+          <div class="company-head"><span class="company-num">11.</span><span class="company-name">Xaira Therapeutics</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
           <p class="company-meta"><strong>Launched Apr 2024</strong> &middot; Series A ($1B, 2024) &middot; ARCH, Foresite, Sequoia, NEA, Lux</p>
           <p class="company-tldr">$1B AI-first biotech built on RFdiffusion / RFantibody.</p>
         </summary>
@@ -1119,7 +730,7 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">2.</span><span class="company-name">EvolutionaryScale</span></div>
+          <div class="company-head"><span class="company-num">12.</span><span class="company-name">EvolutionaryScale</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
           <p class="company-meta"><strong>Founded 2024</strong> &middot; Seed ($142M) &middot; Lux Capital, Nat Friedman, Daniel Gross, Amazon</p>
           <p class="company-tldr">ESM3 protein foundation model from Meta FAIR spin-out.</p>
         </summary>
@@ -1132,7 +743,7 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">3.</span><span class="company-name">Latent Labs</span></div>
+          <div class="company-head"><span class="company-num">13.</span><span class="company-name">Latent Labs</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
           <p class="company-meta"><strong>Founded 2024</strong> &middot; Seed ($50M) &middot; Radical Ventures, Sofinnova</p>
           <p class="company-tldr">DeepMind alum&rsquo;s startup for programmable biologic design.</p>
         </summary>
@@ -1145,7 +756,7 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">4.</span><span class="company-name">Chai Discovery</span></div>
+          <div class="company-head"><span class="company-num">14.</span><span class="company-name">Chai Discovery</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
           <p class="company-meta"><strong>Founded 2024</strong> &middot; Seed (~$30M) &middot; OpenAI Startup Fund, Thrive, Index</p>
           <p class="company-tldr">Chai-1 &mdash; open-weights protein structure model rivalling AlphaFold 3.</p>
         </summary>
@@ -1158,7 +769,7 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">5.</span><span class="company-name">Tahoe Therapeutics</span></div>
+          <div class="company-head"><span class="company-num">15.</span><span class="company-name">Tahoe Therapeutics</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
           <p class="company-meta"><strong>Founded 2024</strong> &middot; Seed &middot; (undisclosed)</p>
           <p class="company-tldr">Single-cell foundation models on a 100M-cell perturbation atlas.</p>
         </summary>
@@ -1171,7 +782,7 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">6.</span><span class="company-name">Manas AI</span></div>
+          <div class="company-head"><span class="company-num">16.</span><span class="company-name">Manas AI</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
           <p class="company-meta"><strong>Launched Jan 2025</strong> &middot; Seed (~$24M) &middot; Greylock, General Catalyst</p>
           <p class="company-tldr">Reid Hoffman &times; Siddhartha Mukherjee cancer-drug AI.</p>
         </summary>
@@ -1184,7 +795,7 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">7.</span><span class="company-name">Lila Sciences</span></div>
+          <div class="company-head"><span class="company-num">17.</span><span class="company-name">Lila Sciences</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
           <p class="company-meta"><strong>Launched 2025</strong> &middot; Seed ($200M) &middot; Flagship Pioneering, Catalio, March Capital</p>
           <p class="company-tldr">Generative AI + autonomous wet labs for &ldquo;scientific superintelligence.&rdquo;</p>
         </summary>
@@ -1197,7 +808,7 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">8.</span><span class="company-name">Profluent AI</span></div>
+          <div class="company-head"><span class="company-num">18.</span><span class="company-name">Profluent AI</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
           <p class="company-meta"><strong>Founded 2022</strong> &middot; Series A ($35M, 2024) &middot; Spark Capital, Insight</p>
           <p class="company-tldr">Generative protein language models; released first AI-designed CRISPR.</p>
         </summary>
@@ -1210,12 +821,171 @@
 
     </ul>
 
-    <h3 class="wave-cat">Digital health &mdash; ambient AI scribes &amp; clinical agents (5)</h3>
+    <!-- ====== Track 4 ====== -->
+    <h2 id="track-4"><span class="track-no">Track 4</span>Digital Health &amp; Data Platforms</h2>
+    <p class="track-note">Tech-enabled payers, providers, diagnostics, and ambient clinical AI &mdash; companies operating inside the existing healthcare reimbursement system.</p>
+
     <ul class="companies">
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">1.</span><span class="company-name">Abridge</span></div>
+          <div class="company-head"><span class="company-num">1.</span><span class="company-name">Freenome</span></div>
+          <p class="company-meta"><strong>Founded 2014</strong> &middot; Series E &middot; a16z, Roche</p>
+          <p class="company-tldr">Multi-omics blood test for early cancer detection (CRC).</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Multi-omics blood test combining cell-free DNA, methylation, and protein signals with ML to detect early-stage cancer &mdash; lead programme is colorectal cancer screening as an alternative to colonoscopy/FIT.</p>
+          <p><span class="label">Model.</span> Reimbursed per-test pricing once on national guidelines (Medicare + commercial payers), plus companion-diagnostic revenue from pharma clinical trials in the meantime.</p>
+          <p class="company-link-row"><a href="https://www.freenome.com/">freenome.com &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">2.</span><span class="company-name">TrialSpark (Formation Bio)</span></div>
+          <p class="company-meta"><strong>Founded 2013</strong> &middot; Series C &middot; Thrive, Sequoia</p>
+          <p class="company-tldr">Tech-driven CRO pivoted to in-licensing drugs.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Originally a software-driven CRO running trials inside primary-care clinics with proprietary trial-recruitment infrastructure. Has since pivoted into Formation Bio, an in-licensing biotech that uses its trial machinery on drugs it owns.</p>
+          <p><span class="label">Model.</span> Shifted from CRO fee-for-service to drug-development economics &mdash; buy promising assets from biotech cheaply, run them more efficiently, capture full upside on approval.</p>
+          <p class="company-link-row"><a href="https://www.trialspark.com/">trialspark.com &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">3.</span><span class="company-name">Devoted Health</span></div>
+          <p class="company-meta"><strong>Founded 2017</strong> &middot; Series E &middot; a16z</p>
+          <p class="company-tldr">Tech-enabled Medicare Advantage health plan for seniors.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Tech-enabled Medicare Advantage health plan for US seniors. Owns the full stack &mdash; software for member engagement, an in-house clinical team for high-cost members, and the insurance entity itself.</p>
+          <p><span class="label">Model.</span> Capitated payments from the federal government per enrolled senior. Profit comes from the spread between CMS payments and actual medical costs, which Devoted aims to lower via proactive primary-care interventions.</p>
+          <p class="company-link-row"><a href="https://www.devoted.com/">devoted.com &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">4.</span><span class="company-name">Komodo Health</span></div>
+          <p class="company-meta"><strong>Founded 2014</strong> &middot; Series E &middot; a16z, ICONIQ</p>
+          <p class="company-tldr">&ldquo;Healthcare Map&rdquo; longitudinal patient-journey dataset.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> &ldquo;Healthcare Map&rdquo; &mdash; a longitudinal dataset linking ~330M US patient journeys across diagnoses, prescriptions, and provider visits, queried via Sentinel and MapEnhance applications.</p>
+          <p><span class="label">Model.</span> Multi-year enterprise SaaS contracts with pharma (commercial-strategy use), payers (network-design use), and providers. Typical deal sizes in the high six to low seven figures.</p>
+          <p class="company-link-row"><a href="https://www.komodohealth.com/">komodohealth.com &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">5.</span><span class="company-name">Athelas (Commure)</span></div>
+          <p class="company-meta"><strong>Founded 2016</strong> &middot; Series B &middot; YC</p>
+          <p class="company-tldr">At-home connected devices billed via RPM/CCM codes.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> At-home connected diagnostic devices (white-blood-cell counter, blood-pressure cuff, glucometer) that stream vitals to a clinical operations team. Originally aimed at clozapine-monitored patients; expanded to chronic-care RPM and revenue-cycle software. Merged with Commure in 2024 (still private).</p>
+          <p><span class="label">Model.</span> Hardware bundled essentially free with services. Revenue from CPT-coded Remote Patient Monitoring (RPM) and Chronic Care Management (CCM) reimbursement billed to Medicare and commercial payers each month.</p>
+          <p class="company-link-row"><a href="https://athelas.com/">athelas.com &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">6.</span><span class="company-name">BioRender</span></div>
+          <p class="company-meta"><strong>Founded 2017</strong> &middot; Series A &middot; YC</p>
+          <p class="company-tldr">&ldquo;Canva for life sciences&rdquo; scientific illustration SaaS.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> The &ldquo;Canva for life sciences&rdquo; &mdash; a drag-and-drop illustration tool with thousands of scientifically-accurate icons (organs, cells, molecules) used to make figures for papers, posters, and grants.</p>
+          <p><span class="label">Model.</span> Product-led freemium SaaS. Individuals use it free with watermarks; lab teams and biotech companies pay per-seat annual subscriptions for high-resolution export, custom assets, and team libraries.</p>
+          <p class="company-link-row"><a href="https://biorender.com/">biorender.com &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">7.</span><span class="company-name">Curative</span></div>
+          <p class="company-meta"><strong>Founded 2020</strong> &middot; Private &middot; YC</p>
+          <p class="company-tldr">COVID-PCR origin, pivoting to employer health insurance.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Originated as a COVID-19 PCR testing platform optimised for logistics and turnaround. Has since pivoted into employer health-insurance plans built around proactive primary-care &ldquo;baseline visits.&rdquo;</p>
+          <p><span class="label">Model.</span> Originally fee-for-service reimbursement per COVID test. Now monthly per-member-per-month employer premium revenue, similar to Devoted but for the employer market.</p>
+          <p class="company-link-row"><a href="https://curative.com/">curative.com &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">8.</span><span class="company-name">Cedar</span></div>
+          <p class="company-meta"><strong>Founded 2016</strong> &middot; Series D &middot; Thrive, a16z</p>
+          <p class="company-tldr">Patient billing platform for hospital revenue cycles.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Patient billing and payment platform layered over hospital revenue-cycle systems. Sends plain-language, mobile-first bills, surfaces price estimates, and offers no-fee payment plans.</p>
+          <p><span class="label">Model.</span> Combination of annual platform SaaS fees to hospitals and a transaction fee on every patient payment that flows through Cedar &mdash; the larger health-system contracts compound both legs.</p>
+          <p class="company-link-row"><a href="https://www.cedar.com/">cedar.com &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">9.</span><span class="company-name">Aetion</span></div>
+          <p class="company-meta"><strong>Founded 2012</strong> &middot; Series C &middot; Thrive</p>
+          <p class="company-tldr">Real-world data analytics for pharma and FDA.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Aetion Evidence Platform &mdash; transparent, reproducible analytics on real-world data (claims, EMRs, registries) so pharma and FDA reviewers can answer comparative-effectiveness and safety questions without bespoke statistician work.</p>
+          <p><span class="label">Model.</span> Enterprise SaaS subscriptions to pharma (regulatory and HEOR teams) and government regulators, sometimes augmented by analytic-services engagements.</p>
+          <p class="company-link-row"><a href="https://aetion.com/">aetion.com &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">10.</span><span class="company-name">PathAI</span></div>
+          <p class="company-meta"><strong>Founded 2016</strong> &middot; Series C+ &middot; General Catalyst</p>
+          <p class="company-tldr">AI digital pathology + clinical-trial screening.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> AI-augmented digital pathology &mdash; deep-learning models for tumour grading, biomarker quantification (PD-L1, HER2), and trial-eligibility screening on whole-slide images. Includes a contract-research lab arm (acquired Poplar).</p>
+          <p><span class="label">Model.</span> Two streams: pharma contracts for clinical-trial enrollment and companion-diagnostic development (large milestone-based deals), and a SaaS pathology platform sold to hospital labs.</p>
+          <p class="company-link-row"><a href="https://www.pathai.com/">pathai.com &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">11.</span><span class="company-name">Spring Health</span></div>
+          <p class="company-meta"><strong>Founded 2016</strong> &middot; Series D &middot; Tiger Global</p>
+          <p class="company-tldr">ML-matched mental-health benefits for employers.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Employer-benefits platform that triages each employee&rsquo;s self-reported symptoms with an ML model and matches them to the modality most likely to work for them (self-guided content, coaching, therapy, psychiatry, or specialist care).</p>
+          <p><span class="label">Model.</span> Per-employee-per-month subscription sold to large employers, with utilisation-based fees stacked on top for actual therapy hours, psychiatry visits, and specialised programmes.</p>
+          <p class="company-link-row"><a href="https://www.springhealth.com/">springhealth.com &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">12.</span><span class="company-name">Lyra Health</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
+          <p class="company-meta"><strong>Founded 2015</strong> &middot; Series F &middot; Coatue, Sands Capital</p>
+          <p class="company-tldr">Enterprise mental-health benefits platform.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Mental-health benefits platform for large employers (Morgan Stanley, Amgen, Starbucks, etc.). Combines ML-driven care navigation with a curated network of therapists trained in evidence-based modalities (CBT, ACT), plus coaching, psychiatry, and specialised programmes for complex care.</p>
+          <p><span class="label">Model.</span> Per-employee-per-month enterprise subscription plus utilisation-based fees per therapy session, psychiatry visit, or specialised programme &mdash; the closer enterprise-tier competitor to Spring Health.</p>
+          <p class="company-link-row"><a href="https://www.lyrahealth.com/">lyrahealth.com &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">13.</span><span class="company-name">Abridge</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
           <p class="company-meta"><strong>Founded 2018</strong> &middot; Series E (2025, ~$5.3B val) &middot; Lightspeed, Bessemer, NEA</p>
           <p class="company-tldr">Ambient AI clinical scribe, deeply integrated with Epic.</p>
         </summary>
@@ -1228,7 +998,7 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">2.</span><span class="company-name">Ambience Healthcare</span></div>
+          <div class="company-head"><span class="company-num">14.</span><span class="company-name">Ambience Healthcare</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
           <p class="company-meta"><strong>Founded 2020</strong> &middot; Series C ($243M, Jul 2025, $1.25B val) &middot; Kleiner Perkins, a16z, Oak HC/FT, OpenAI Startup Fund</p>
           <p class="company-tldr">Ambient AI scribe + broader clinical-operations agents.</p>
         </summary>
@@ -1241,7 +1011,7 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">3.</span><span class="company-name">Suki</span></div>
+          <div class="company-head"><span class="company-num">15.</span><span class="company-name">Suki</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
           <p class="company-meta"><strong>Founded 2017</strong> &middot; Series D (~$165M, 2025, unicorn) &middot; March Capital, Bond, Flare</p>
           <p class="company-tldr">Voice-first AI clinical assistant across Epic, Cerner, MEDITECH.</p>
         </summary>
@@ -1254,7 +1024,7 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">4.</span><span class="company-name">Nabla</span></div>
+          <div class="company-head"><span class="company-num">16.</span><span class="company-name">Nabla</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
           <p class="company-meta"><strong>Founded 2018</strong> &middot; Series C ($70M, Jun 2025) &middot; HV Capital, Cathay Innovation</p>
           <p class="company-tldr">French ambient AI scribe with pre-visit context agent.</p>
         </summary>
@@ -1267,7 +1037,7 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">5.</span><span class="company-name">Open Evidence</span></div>
+          <div class="company-head"><span class="company-num">17.</span><span class="company-name">Open Evidence</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
           <p class="company-meta"><strong>Founded 2022</strong> &middot; Series B (~$210M, 2025, $3.5B val) &middot; Sequoia, GV, Kleiner</p>
           <p class="company-tldr">Physician-facing AI grounded in Mayo / JAMA / NEJM literature.</p>
         </summary>
@@ -1280,12 +1050,15 @@
 
     </ul>
 
-    <h3 class="wave-cat">Foundation models &amp; AI infrastructure (8)</h3>
+    <!-- ====== Track 5 ====== -->
+    <h2 id="track-5"><span class="track-no">Track 5</span>Foundation Models &amp; AI Infrastructure</h2>
+    <p class="track-note">The capital-heaviest part of the market &mdash; private model labs, inference clouds, specialty chips, and AI-purpose-built data centres.</p>
+
     <ul class="companies">
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">1.</span><span class="company-name">Mistral AI</span></div>
+          <div class="company-head"><span class="company-num">1.</span><span class="company-name">Mistral AI</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
           <p class="company-meta"><strong>Founded 2023</strong> &middot; Series C (&euro;1.7B, Sep 2025, &euro;11.7B val) &middot; ASML (lead), Andreessen Horowitz</p>
           <p class="company-tldr">European open-weights LLM leader.</p>
         </summary>
@@ -1298,7 +1071,7 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">2.</span><span class="company-name">Perplexity</span></div>
+          <div class="company-head"><span class="company-num">2.</span><span class="company-name">Perplexity</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
           <p class="company-meta"><strong>Founded 2022</strong> &middot; Series E (2025, ~$18B val) &middot; IVP, NEA, Nvidia</p>
           <p class="company-tldr">Conversational AI search with cited sources; Comet browser.</p>
         </summary>
@@ -1311,7 +1084,7 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">3.</span><span class="company-name">Together AI</span></div>
+          <div class="company-head"><span class="company-num">3.</span><span class="company-name">Together AI</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
           <p class="company-meta"><strong>Founded 2022</strong> &middot; Series B ($305M, Feb 2025, $3.3B val) &middot; General Catalyst, Lightspeed</p>
           <p class="company-tldr">Open-source model inference cloud + GPU training platform.</p>
         </summary>
@@ -1324,7 +1097,7 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">4.</span><span class="company-name">Fireworks AI</span></div>
+          <div class="company-head"><span class="company-num">4.</span><span class="company-name">Fireworks AI</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
           <p class="company-meta"><strong>Founded 2022</strong> &middot; Series C ($250M, Oct 2025, $4B val) &middot; Sequoia, Index, Benchmark</p>
           <p class="company-tldr">Low-latency inference cloud with proprietary engine.</p>
         </summary>
@@ -1337,7 +1110,7 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">5.</span><span class="company-name">Groq</span></div>
+          <div class="company-head"><span class="company-num">5.</span><span class="company-name">Groq</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
           <p class="company-meta"><strong>Founded 2016</strong> &middot; Series E ($750M, Sep 2025, $6.9B val) &middot; BlackRock, Cisco</p>
           <p class="company-tldr">Custom LPU chips for ultra-fast LLM inference.</p>
         </summary>
@@ -1350,7 +1123,7 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">6.</span><span class="company-name">Replicate</span></div>
+          <div class="company-head"><span class="company-num">6.</span><span class="company-name">Replicate</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
           <p class="company-meta"><strong>Founded 2019</strong> &middot; Series B ($40M, 2024) &middot; Andreessen Horowitz, Sequoia</p>
           <p class="company-tldr">One-click hosting and API for thousands of open-source AI models.</p>
         </summary>
@@ -1363,7 +1136,7 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">7.</span><span class="company-name">Lambda Labs</span></div>
+          <div class="company-head"><span class="company-num">7.</span><span class="company-name">Lambda Labs</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
           <p class="company-meta"><strong>Founded 2012</strong> &middot; Series D ($480M, Feb 2025, $4B val) &middot; Andra Capital, SGW</p>
           <p class="company-tldr">GPU cloud + AI workstations for researchers and AI labs.</p>
         </summary>
@@ -1376,7 +1149,7 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">8.</span><span class="company-name">Crusoe Energy</span></div>
+          <div class="company-head"><span class="company-num">8.</span><span class="company-name">Crusoe Energy</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
           <p class="company-meta"><strong>Founded 2018</strong> &middot; Series D-1 ($686M, May 2024, $2.8B val) &middot; Founders Fund, Fidelity</p>
           <p class="company-tldr">GPU data centres on stranded flare gas; dedicated AI infra build-outs.</p>
         </summary>
@@ -1389,12 +1162,15 @@
 
     </ul>
 
-    <h3 class="wave-cat">Voice &amp; multimodal AI (4)</h3>
+    <!-- ====== Track 6 ====== -->
+    <h2 id="track-6"><span class="track-no">Track 6</span>Voice &amp; Multimodal AI</h2>
+    <p class="track-note">The audio / multimodal substrate powering voice agents and consumer apps.</p>
+
     <ul class="companies">
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">1.</span><span class="company-name">ElevenLabs</span></div>
+          <div class="company-head"><span class="company-num">1.</span><span class="company-name">ElevenLabs</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
           <p class="company-meta"><strong>Founded 2022</strong> &middot; Series C (2025, ~$3.3B val) &middot; Andreessen Horowitz, ICONIQ</p>
           <p class="company-tldr">Industry-leading multilingual voice synthesis &amp; cloning.</p>
         </summary>
@@ -1407,7 +1183,7 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">2.</span><span class="company-name">Cartesia</span></div>
+          <div class="company-head"><span class="company-num">2.</span><span class="company-name">Cartesia</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
           <p class="company-meta"><strong>Founded 2023</strong> &middot; Series A ($27M+, 2024) &middot; Index Ventures, Andreessen Horowitz</p>
           <p class="company-tldr">State-space-model voice/multimodal optimised for real-time latency.</p>
         </summary>
@@ -1420,7 +1196,7 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">3.</span><span class="company-name">Vapi</span></div>
+          <div class="company-head"><span class="company-num">3.</span><span class="company-name">Vapi</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
           <p class="company-meta"><strong>Founded 2023</strong> &middot; Series A ($20M, 2024) &middot; Bessemer, Andreessen Horowitz</p>
           <p class="company-tldr">&ldquo;Twilio for voice AI&rdquo; &mdash; developer infrastructure for voice agents.</p>
         </summary>
@@ -1433,7 +1209,7 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">4.</span><span class="company-name">Speak</span></div>
+          <div class="company-head"><span class="company-num">4.</span><span class="company-name">Speak</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
           <p class="company-meta"><strong>Founded 2016</strong> &middot; Series C (2024, ~$1B val) &middot; OpenAI Startup Fund, Khosla Ventures</p>
           <p class="company-tldr">Conversational AI language-learning app; Korea-first PMF.</p>
         </summary>
@@ -1446,12 +1222,15 @@
 
     </ul>
 
-    <h3 class="wave-cat">Embodied AI &amp; robotics (6)</h3>
+    <!-- ====== Track 7 ====== -->
+    <h2 id="track-7"><span class="track-no">Track 7</span>Embodied AI &amp; Robotics</h2>
+    <p class="track-note">Robot foundation models and humanoid hardware &mdash; the single hottest 2025 sub-sector after agentic AI.</p>
+
     <ul class="companies">
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">1.</span><span class="company-name">Physical Intelligence (&pi;)</span></div>
+          <div class="company-head"><span class="company-num">1.</span><span class="company-name">Physical Intelligence (&pi;)</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
           <p class="company-meta"><strong>Founded 2024</strong> &middot; Series C ($600M, late 2025) &middot; Bezos, Lux, Thrive</p>
           <p class="company-tldr">General-purpose robot foundation model (&pi; 0.5).</p>
         </summary>
@@ -1464,7 +1243,7 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">2.</span><span class="company-name">Skild AI</span></div>
+          <div class="company-head"><span class="company-num">2.</span><span class="company-name">Skild AI</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
           <p class="company-meta"><strong>Founded 2023</strong> &middot; Series C ($1.4B, early 2026) &middot; SoftBank, Coatue</p>
           <p class="company-tldr">Body-agnostic &ldquo;omni-bodied&rdquo; robot brain.</p>
         </summary>
@@ -1477,7 +1256,7 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">3.</span><span class="company-name">Figure AI</span></div>
+          <div class="company-head"><span class="company-num">3.</span><span class="company-name">Figure AI</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
           <p class="company-meta"><strong>Founded 2022</strong> &middot; Series C ($1B, 2025, $39B val) &middot; Microsoft, OpenAI Startup Fund, Bezos, Nvidia</p>
           <p class="company-tldr">Figure 02 humanoid; BMW and UPS pilots.</p>
         </summary>
@@ -1490,7 +1269,7 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">4.</span><span class="company-name">1X Technologies</span></div>
+          <div class="company-head"><span class="company-num">4.</span><span class="company-name">1X Technologies</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
           <p class="company-meta"><strong>Founded 2014</strong> &middot; Series B ($100M, 2024) &middot; OpenAI Startup Fund, EQT Ventures</p>
           <p class="company-tldr">Norwegian humanoid robots optimised for home safety.</p>
         </summary>
@@ -1503,7 +1282,7 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">5.</span><span class="company-name">Apptronik</span></div>
+          <div class="company-head"><span class="company-num">5.</span><span class="company-name">Apptronik</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
           <p class="company-meta"><strong>Founded 2016</strong> &middot; Series A ($350M, 2025, $1.6B val) &middot; Google, B Capital</p>
           <p class="company-tldr">Apollo humanoid; Mercedes factory pilot; Google DeepMind partnership.</p>
         </summary>
@@ -1516,7 +1295,7 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">6.</span><span class="company-name">FieldAI</span></div>
+          <div class="company-head"><span class="company-num">6.</span><span class="company-name">FieldAI</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
           <p class="company-meta"><strong>Founded 2024</strong> &middot; Series A ($30M+, 2025) &middot; Bezos Expeditions</p>
           <p class="company-tldr">Robot foundation models for outdoor / unstructured environments.</p>
         </summary>
@@ -1529,12 +1308,15 @@
 
     </ul>
 
-    <h3 class="wave-cat">AI defense &amp; security (4)</h3>
+    <!-- ====== Track 8 ====== -->
+    <h2 id="track-8"><span class="track-no">Track 8</span>AI Defense &amp; Security</h2>
+    <p class="track-note">Generalist VCs once allergic to defence are now leading rounds in this category.</p>
+
     <ul class="companies">
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">1.</span><span class="company-name">Anduril</span></div>
+          <div class="company-head"><span class="company-num">1.</span><span class="company-name">Anduril</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
           <p class="company-meta"><strong>Founded 2017</strong> &middot; Series F (2025, ~$14B val) &middot; Founders Fund, Andreessen Horowitz</p>
           <p class="company-tldr">Autonomous drones + Lattice battlefield OS for US defence.</p>
         </summary>
@@ -1547,7 +1329,7 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">2.</span><span class="company-name">Shield AI</span></div>
+          <div class="company-head"><span class="company-num">2.</span><span class="company-name">Shield AI</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
           <p class="company-meta"><strong>Founded 2015</strong> &middot; Series F (2025, ~$5.3B val) &middot; Riot Ventures, Andreessen Horowitz</p>
           <p class="company-tldr">V-BAT autonomous fixed-wing UAS + Hivemind swarm AI.</p>
         </summary>
@@ -1560,7 +1342,7 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">3.</span><span class="company-name">Helsing</span></div>
+          <div class="company-head"><span class="company-num">3.</span><span class="company-name">Helsing</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
           <p class="company-meta"><strong>Founded 2021</strong> &middot; Series D (2025, ~&euro;12B val) &middot; General Catalyst, Lightspeed, Saab</p>
           <p class="company-tldr">European AI defence: battlefield software + HX-2 loitering munitions.</p>
         </summary>
@@ -1573,7 +1355,7 @@
 
       <li class="company"><details>
         <summary>
-          <div class="company-head"><span class="company-num">4.</span><span class="company-name">Saronic</span></div>
+          <div class="company-head"><span class="company-num">4.</span><span class="company-name">Saronic</span> <span class="trend-tag">#Trending2024&ndash;26</span></div>
           <p class="company-meta"><strong>Founded 2022</strong> &middot; Series C ($600M, 2025, ~$4B val) &middot; General Catalyst, Andreessen Horowitz</p>
           <p class="company-tldr">Autonomous surface vessels for US Navy and allies.</p>
         </summary>
