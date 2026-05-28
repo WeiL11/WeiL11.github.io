@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AI Agent / 健康 AI / 神經科技 — VC 投融資地圖 · Tzu-Wei Lee</title>
-  <meta name="description" content="VC 重押的 AI Agent、神經科技、AI 新藥與數位醫療公司清單與商業模式速覽。" />
+  <title>VC Funding Map: AI Agents, NeuroTech, AI Bio &amp; Digital Health · Tzu-Wei Lee</title>
+  <meta name="description" content="A scan of 42 VC-backed startups across four adjacent sectors: AI agent infrastructure, brain-computer interfaces, AI drug discovery, and digital health platforms. Stage, lead investors, product, and revenue model for each." />
   <style>
     :root {
       --fg: #1c1c1c;
@@ -21,7 +21,7 @@
     * { box-sizing: border-box; }
     html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Noto Sans CJK TC", "Microsoft JhengHei", Roboto, Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       line-height: 1.65;
       padding: 2.5rem 1.25rem 4rem;
     }
@@ -39,6 +39,7 @@
     }
     .subtitle { color: var(--muted); margin: 0 0 0.5rem; font-size: 1.05rem; }
     .meta { color: var(--muted); font-size: 0.85rem; margin: 0 0 1.5rem; }
+
     .intro {
       background: var(--card-bg);
       border-left: 3px solid var(--link);
@@ -59,21 +60,22 @@
     .toc strong { display: block; margin-bottom: 0.25rem; color: var(--muted); font-weight: 600; font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; }
     .toc ul { margin: 0; padding-left: 1.1rem; }
     .toc li { margin: 0.1rem 0; }
+    .toc .count { color: var(--muted); font-size: 0.85em; }
 
     h2 {
       font-size: 1.25rem; font-weight: 600;
-      margin: 2.5rem 0 0.5rem;
+      margin: 2.5rem 0 0.35rem;
       padding-bottom: 0.4rem;
       border-bottom: 1px solid var(--rule);
     }
     h2 .track-no { color: var(--muted); font-weight: 500; margin-right: 0.4rem; }
     .track-note {
-      color: var(--muted); font-size: 0.85rem; font-style: italic; margin: 0 0 1rem;
+      color: var(--muted); font-size: 0.88rem; margin: 0 0 1rem;
     }
 
     .companies { list-style: none; padding: 0; margin: 0; }
     .company {
-      padding: 1rem 0;
+      padding: 1.1rem 0;
       border-bottom: 1px solid var(--rule);
     }
     .company:last-child { border-bottom: none; }
@@ -82,14 +84,18 @@
       align-items: baseline; gap: 0.5rem 0.75rem;
       margin-bottom: 0.3rem;
     }
-    .company-num { color: var(--muted); font-weight: 500; min-width: 1.7rem; }
+    .company-num { color: var(--muted); font-weight: 500; min-width: 1.6rem; }
     .company-name { font-weight: 600; font-size: 1.05rem; }
     .company-link { font-size: 0.88rem; }
     .company-meta {
       color: var(--muted); font-size: 0.88rem; margin: 0 0 0.4rem;
     }
     .company-meta strong { color: var(--fg); font-weight: 500; }
-    .company-body { font-size: 0.95rem; margin: 0; }
+    .company-body { font-size: 0.95rem; margin: 0.25rem 0; }
+    .label {
+      font-weight: 600; color: var(--fg);
+      margin-right: 0.25rem;
+    }
 
     footer {
       color: var(--muted); font-size: 0.85rem;
@@ -97,476 +103,522 @@
       border-top: 1px solid var(--rule);
       text-align: center;
     }
+    footer p { margin: 0.25rem 0; }
   </style>
 </head>
 <body>
   <main>
-    <a class="back" href="../">&larr; 回首頁</a>
+    <a class="back" href="../">&larr; Back to home</a>
 
-    <h1>AI Agent / 健康 AI / 神經科技 — VC 投融資地圖</h1>
-    <p class="subtitle">四大賽道、約 47 家代表性公司的階段、領投 VC 與獲利模式速覽。</p>
-    <p class="meta">By Tzu-Wei Lee · 2026</p>
+    <h1>VC Funding Map: AI Agents, NeuroTech, AI Bio &amp; Digital Health</h1>
+    <p class="subtitle">42 representative VC-backed companies across four adjacent sectors &mdash; with stage, lead investors, product, and how they actually make money.</p>
+    <p class="meta">By Tzu-Wei Lee &middot; 2026</p>
 
     <div class="intro">
-      <p>本頁整理近年 VC 重押的 AI Agent、神經科技、AI 新藥與數位醫療公司，依四條賽道分類，記錄成立年份、目前融資階段、領投機構與其獲利模式。</p>
-      <p>編號為較長分析中的全域序號；本頁僅收錄各賽道中段／後段公司（接續較長草稿中的前段，故首編號非從 1 開始）。</p>
+      <p>Where is venture money flowing in the AI-agent and AI-x-bio space, and how do these companies actually earn revenue? This page is a working scan, organised into four adjacent tracks: agent infrastructure, brain-computer interfaces, AI-driven drug discovery, and digital health platforms.</p>
+      <p>For each company I list founding year, most recent funding round, lead investors, the product, and the revenue mechanism. The list is not exhaustive &mdash; it focuses on companies whose business model is informative for the sector as a whole.</p>
     </div>
 
-    <nav class="toc" aria-label="目錄">
-      <strong>目錄</strong>
+    <nav class="toc" aria-label="Contents">
+      <strong>Contents</strong>
       <ul>
-        <li><a href="#track-1">賽道一：Agent 評測與自動化（Infrastructure &amp; Trust Layer）</a></li>
-        <li><a href="#track-2">賽道二：神經科技與 BCI（The Neuro-Frontier）</a></li>
-        <li><a href="#track-3">賽道三：AI 新藥與生物基建（AI &times; Bio Heavyweights）</a></li>
-        <li><a href="#track-4">賽道四：數位醫療與數據平台（Digital Health &amp; Data）</a></li>
+        <li><a href="#track-1">Track 1 &mdash; Agent Evaluation &amp; Automation</a> <span class="count">(4)</span></li>
+        <li><a href="#track-2">Track 2 &mdash; Neurotechnology &amp; Brain-Computer Interfaces</a> <span class="count">(5)</span></li>
+        <li><a href="#track-3">Track 3 &mdash; AI Drug Discovery &amp; Bio Infrastructure</a> <span class="count">(15)</span></li>
+        <li><a href="#track-4">Track 4 &mdash; Digital Health &amp; Data Platforms</a> <span class="count">(18)</span></li>
       </ul>
     </nav>
 
-    <!-- ====== 賽道一 ====== -->
-    <h2 id="track-1"><span class="track-no">賽道一</span>Agent 評測與自動化</h2>
-    <p class="track-note">The Infrastructure &amp; Trust Layer · 接續前文 1–3 家，共 7 家</p>
+    <!-- ====== Track 1 ====== -->
+    <h2 id="track-1"><span class="track-no">Track 1</span>Agent Evaluation &amp; Automation</h2>
+    <p class="track-note">The infrastructure &amp; trust layer for LLM applications &mdash; the &ldquo;observability and CI&rdquo; of the agent era.</p>
 
     <ul class="companies">
       <li class="company">
         <div class="company-head">
-          <span class="company-num">4.</span>
+          <span class="company-num">1.</span>
           <span class="company-name">LangChain (LangSmith)</span>
           <span class="company-link"><a href="https://smith.langchain.com/">smith.langchain.com</a></span>
         </div>
-        <p class="company-meta"><strong>2022</strong> · Series B+ · Sequoia</p>
-        <p class="company-body">提供開發者構建 LLM 應用的開源框架，並透過付費的 LangSmith 平台提供 Agent 軌跡追蹤與觀測服務。獲利來自企業級 SaaS 訂閱（按觀測軌跡量與座位數收費）。</p>
+        <p class="company-meta"><strong>Founded 2022</strong> &middot; Series B+ &middot; Sequoia</p>
+        <p class="company-body"><span class="label">Product.</span> Open-source Python/JS framework for chaining LLM calls, tool use, and retrieval into agents. The hosted layer, LangSmith, captures every prompt, tool call, and intermediate step so developers can debug, evaluate, and monitor agents in production.</p>
+        <p class="company-body"><span class="label">Model.</span> Open-source framework is free (the funnel). LangSmith charges a per-seat developer fee plus a usage fee tied to the number of traces ingested, with an enterprise tier for SOC2 / VPC deployments.</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">2.</span>
+          <span class="company-name">DeepEval (Confident AI)</span>
+          <span class="company-link"><a href="https://confident-ai.com/">confident-ai.com</a></span>
+        </div>
+        <p class="company-meta"><strong>Founded 2023</strong> &middot; Seed &middot; YC</p>
+        <p class="company-body"><span class="label">Product.</span> Open-source <code>pytest</code>-style unit-test framework for LLM and agent outputs &mdash; hallucination, factual-consistency, toxicity, custom rubric metrics. The Confident AI dashboard layers experiment tracking, regression detection, and CI/CD hooks on top.</p>
+        <p class="company-body"><span class="label">Model.</span> Classic open-core: framework is MIT-licensed; teams pay for the SaaS dashboard, scheduled regression suites, and CI integrations on a per-seat + per-eval basis.</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">3.</span>
+          <span class="company-name">Galileo</span>
+          <span class="company-link"><a href="https://www.rungalileo.io/">rungalileo.io</a></span>
+        </div>
+        <p class="company-meta"><strong>Founded 2023</strong> &middot; Series A &middot; Battery Ventures</p>
+        <p class="company-body"><span class="label">Product.</span> Enterprise-grade GenAI evaluation platform centred on hallucination detection. Proprietary &ldquo;ChainPoll&rdquo; and &ldquo;Luna&rdquo; metrics flag unsupported claims, prompt drift, and PII leakage across both pre-production evals and live production monitoring.</p>
+        <p class="company-body"><span class="label">Model.</span> Pure enterprise B2B SaaS. Annual platform licence sized by traffic volume and number of models monitored, often six- to seven-figure ACVs for Fortune 500 buyers.</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">4.</span>
+          <span class="company-name">Braintrust</span>
+          <span class="company-link"><a href="https://www.braintrustdata.com/">braintrustdata.com</a></span>
+        </div>
+        <p class="company-meta"><strong>Founded 2023</strong> &middot; Series A &middot; a16z, Greylock</p>
+        <p class="company-body"><span class="label">Product.</span> End-to-end workspace for prompt engineering and agent evaluation: a playground for prompt iteration, an experiments view for A/B-testing model versions, a dataset manager, and shared rubrics teams can run in CI.</p>
+        <p class="company-body"><span class="label">Model.</span> B2B SaaS priced by collaboration seats plus compute usage (eval runs and stored traces). Targets engineering teams that have moved past prototypes and need shared infrastructure.</p>
+      </li>
+    </ul>
+
+    <!-- ====== Track 2 ====== -->
+    <h2 id="track-2"><span class="track-no">Track 2</span>Neurotechnology &amp; Brain-Computer Interfaces</h2>
+    <p class="track-note">The neuro-frontier &mdash; ranging from fully invasive implants to non-invasive wearables.</p>
+
+    <ul class="companies">
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">1.</span>
+          <span class="company-name">Neuralink</span>
+          <span class="company-link"><a href="https://neuralink.com/">neuralink.com</a></span>
+        </div>
+        <p class="company-meta"><strong>Founded 2016</strong> &middot; Series D+ &middot; Founders Fund</p>
+        <p class="company-body"><span class="label">Product.</span> High-channel-count invasive BCI: the N1 implant has &gt;1,000 electrodes on flexible threads, placed by the purpose-built R1 surgical robot. Initial clinical indication is restoring digital-device control for people with severe motor impairment (ALS, spinal-cord injury).</p>
+        <p class="company-body"><span class="label">Model.</span> Pre-revenue, R&amp;D-stage. Eventual model will follow the high-cost medical-device path &mdash; per-implant device sale, surgical service fees, and Medicare/private-insurance reimbursement once an FDA indication is granted.</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">2.</span>
+          <span class="company-name">Synchron</span>
+          <span class="company-link"><a href="https://synchron.com/">synchron.com</a></span>
+        </div>
+        <p class="company-meta"><strong>Founded 2016</strong> &middot; Series C+ &middot; Khosla, ARCH</p>
+        <p class="company-body"><span class="label">Product.</span> Stentrode &mdash; a stent-mounted electrode array delivered through the jugular vein into the brain&rsquo;s motor cortex, removing the need for open craniotomy. Lower channel count than Neuralink, but installable by existing endovascular surgeons.</p>
+        <p class="company-body"><span class="label">Model.</span> Standard high-end medical-device pathway: FDA clearance, then hospital sales backed by CMS / private-payer reimbursement. The minimally-invasive procedure is positioned as a faster, broader market path than craniotomy-based BCIs.</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">3.</span>
+          <span class="company-name">Kernel</span>
+          <span class="company-link"><a href="https://www.kernel.com/">kernel.com</a></span>
+        </div>
+        <p class="company-meta"><strong>Founded 2016</strong> &middot; Series C &middot; General Catalyst</p>
+        <p class="company-body"><span class="label">Product.</span> Kernel Flow &mdash; a non-invasive, wearable time-domain functional near-infrared spectroscopy (TD-fNIRS) helmet that measures cortical haemoglobin response at MRI-comparable spatial resolution, without a magnet.</p>
+        <p class="company-body"><span class="label">Model.</span> Hardware sale plus &ldquo;brain data as a service&rdquo;: research labs and pharma buy or rent helmets, plus paid access to standardised datasets collected across the deployed fleet.</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">4.</span>
+          <span class="company-name">Rune Labs</span>
+          <span class="company-link"><a href="https://runelabs.io/">runelabs.io</a></span>
+        </div>
+        <p class="company-meta"><strong>Founded 2018</strong> &middot; Series A+ &middot; Eclipse Ventures</p>
+        <p class="company-body"><span class="label">Product.</span> StrivePD platform &mdash; ingests data from Apple Watch, deep-brain-stimulation devices (Medtronic Percept), and patient-reported outcomes to give clinicians and pharma a longitudinal view of Parkinson&rsquo;s symptoms outside the clinic.</p>
+        <p class="company-body"><span class="label">Model.</span> B2B platform subscription. Pharma pays for de-identified objective endpoints in clinical trials; device makers pay for post-market surveillance; health systems pay for population dashboards.</p>
       </li>
 
       <li class="company">
         <div class="company-head">
           <span class="company-num">5.</span>
-          <span class="company-name">DeepEval (Confident AI)</span>
-          <span class="company-link"><a href="https://confident-ai.com/">confident-ai.com</a></span>
+          <span class="company-name">Paradromics</span>
+          <span class="company-link"><a href="https://paradromics.com/">paradromics.com</a></span>
         </div>
-        <p class="company-meta"><strong>2023</strong> · Seed · YC 等</p>
-        <p class="company-body">LLM 與 Agent 的開源壓力測試框架。獲利模式為「開源引流 + 企業版 SaaS 訂閱」，企業付費以獲得視覺化儀表板與 CI/CD 持續整合測試環境。</p>
+        <p class="company-meta"><strong>Founded 2015</strong> &middot; Series A+ &middot; Prime Movers Lab</p>
+        <p class="company-body"><span class="label">Product.</span> Connexus Direct Data Interface &mdash; one of the highest-density microelectrode arrays in development, with thousands of channels aimed at high-bandwidth speech and motor decoding.</p>
+        <p class="company-body"><span class="label">Model.</span> Medical-device hardware sales once cleared; near-term revenue from research collaborations and government grants while in clinical development.</p>
+      </li>
+    </ul>
+
+    <!-- ====== Track 3 ====== -->
+    <h2 id="track-3"><span class="track-no">Track 3</span>AI Drug Discovery &amp; Bio Infrastructure</h2>
+    <p class="track-note">AI &times; bio heavyweights &mdash; from cell-programming foundries to physics-based simulation to in-house pipelines.</p>
+
+    <ul class="companies">
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">1.</span>
+          <span class="company-name">Ginkgo Bioworks</span>
+          <span class="company-link"><a href="https://www.ginkgobioworks.com/">ginkgobioworks.com</a></span>
+        </div>
+        <p class="company-meta"><strong>Founded 2008</strong> &middot; Public (NYSE: DNA) &middot; YC (early)</p>
+        <p class="company-body"><span class="label">Product.</span> Foundry &mdash; a highly automated facility for engineering custom microorganisms (yeast, bacteria) for pharma, agriculture, fragrance, and materials. Customers describe an organism&rsquo;s desired function; Ginkgo iterates strains.</p>
+        <p class="company-body"><span class="label">Model.</span> Two-stream: upfront foundry &ldquo;R&amp;D services&rdquo; fees per programme plus downstream value &mdash; royalties, milestones, or equity in the customer&rsquo;s commercial product.</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">2.</span>
+          <span class="company-name">Recursion</span>
+          <span class="company-link"><a href="https://www.recursion.com/">recursion.com</a></span>
+        </div>
+        <p class="company-meta"><strong>Founded 2013</strong> &middot; Public (Nasdaq: RXRX) &middot; Baillie Gifford</p>
+        <p class="company-body"><span class="label">Product.</span> An &ldquo;operating system for biology&rdquo; built on petabytes of standardised cellular images. Machine-learning models map gene perturbations and compound exposures to morphological phenotypes, identifying drug candidates for rare disease, oncology, and inflammation.</p>
+        <p class="company-body"><span class="label">Model.</span> Hybrid: long-term pharma partnerships (Bayer, Roche-Genentech) that pay platform-access fees and milestones, plus a wholly-owned clinical pipeline whose upside accrues to Recursion if approved.</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">3.</span>
+          <span class="company-name">Schr&ouml;dinger</span>
+          <span class="company-link"><a href="https://www.schrodinger.com/">schrodinger.com</a></span>
+        </div>
+        <p class="company-meta"><strong>Founded 1990</strong> &middot; Public (Nasdaq: SDGR) &middot; Gates Foundation</p>
+        <p class="company-body"><span class="label">Product.</span> Physics-based molecular modelling suite (Maestro, FEP+, Glide) used across most large pharma for protein-ligand binding-affinity prediction, free-energy calculations, and lead optimisation. Decades-deep validation data.</p>
+        <p class="company-body"><span class="label">Model.</span> Two parallel businesses: high-margin enterprise software subscriptions and an internal therapeutics pipeline licensed out to large pharma at high-value milestone terms.</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">4.</span>
+          <span class="company-name">Genesis Therapeutics</span>
+          <span class="company-link"><a href="https://www.genesistherapeutics.ai/">genesistherapeutics.ai</a></span>
+        </div>
+        <p class="company-meta"><strong>Founded 2019</strong> &middot; Series B &middot; a16z</p>
+        <p class="company-body"><span class="label">Product.</span> GEMS platform &mdash; deep-learning molecular generation tuned for small molecules in &ldquo;difficult&rdquo; chemistry: undruggable targets, allosteric pockets, and selectivity-constrained scaffolds. Generates synthetically accessible candidates rather than virtual compounds.</p>
+        <p class="company-body"><span class="label">Model.</span> Co-development deals where Genesis is the AI-design half (upfront + milestones + royalties), alongside a wholly-owned pipeline that captures full upside on chosen targets.</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">5.</span>
+          <span class="company-name">BigHat Biosciences</span>
+          <span class="company-link"><a href="https://www.bighatbio.com/">bighatbio.com</a></span>
+        </div>
+        <p class="company-meta"><strong>Founded 2019</strong> &middot; Series B &middot; a16z</p>
+        <p class="company-body"><span class="label">Product.</span> Milliner&trade; platform &mdash; tightly coupled ML + high-throughput antibody wet lab. Generates diverse antibody candidates against multi-objective property profiles (affinity, viscosity, half-life) and iterates in days rather than months.</p>
+        <p class="company-body"><span class="label">Model.</span> Large-pharma co-development partnerships (Amgen, Merck) for specific therapeutic programmes, with upfront, success-based milestones, and tiered royalties.</p>
       </li>
 
       <li class="company">
         <div class="company-head">
           <span class="company-num">6.</span>
-          <span class="company-name">Galileo</span>
-          <span class="company-link"><a href="https://www.rungalileo.io/">rungalileo.io</a></span>
+          <span class="company-name">Asimov</span>
+          <span class="company-link"><a href="https://www.asimov.com/">asimov.com</a></span>
         </div>
-        <p class="company-meta"><strong>2023</strong> · Series A · Battery Ventures</p>
-        <p class="company-body">GenAI 幻覺檢測與模型評估平台。獲利模式為純 B2B SaaS，向企業客戶收取高額軟體授權與平台使用費。</p>
+        <p class="company-meta"><strong>Founded 2017</strong> &middot; Series B &middot; a16z</p>
+        <p class="company-body"><span class="label">Product.</span> Kernel &mdash; a CAD-style platform for designing mammalian-cell genetic circuits, especially for biologics manufacturing (CHO cells producing antibodies). Pairs design software with characterised &ldquo;genetic part&rdquo; libraries the customer can compose.</p>
+        <p class="company-body"><span class="label">Model.</span> Software licence to biotech and pharma customers, bundled with proprietary consumables (engineered cell lines, validated genetic parts) sold per programme.</p>
       </li>
 
       <li class="company">
         <div class="company-head">
           <span class="company-num">7.</span>
-          <span class="company-name">Braintrust</span>
-          <span class="company-link"><a href="https://www.braintrustdata.com/">braintrustdata.com</a></span>
+          <span class="company-name">Scribe Therapeutics</span>
+          <span class="company-link"><a href="https://www.scribetx.com/">scribetx.com</a></span>
         </div>
-        <p class="company-meta"><strong>2023</strong> · Series A · a16z, Greylock</p>
-        <p class="company-body">企業級提示詞（Prompt）測試與 Agent 效能評估平台。獲利模式為 B2B SaaS，按協作座位（per-seat）或運算用量收費。</p>
+        <p class="company-meta"><strong>Founded 2017</strong> &middot; Series B &middot; a16z</p>
+        <p class="company-body"><span class="label">Product.</span> CRISPR by Design&trade; &mdash; engineered CasX enzymes that are smaller, more specific, and more deliverable than wild-type Cas9, aimed at in vivo therapeutic editing.</p>
+        <p class="company-body"><span class="label">Model.</span> Platform licensing: large pharma (e.g. Sanofi, Prevail) pay upfront, programme fees, and milestone-based royalties to use Scribe enzymes inside their pipelines, while Scribe also advances internal targets.</p>
       </li>
-    </ul>
 
-    <!-- ====== 賽道二 ====== -->
-    <h2 id="track-2"><span class="track-no">賽道二</span>神經科技與 BCI</h2>
-    <p class="track-note">The Neuro-Frontier · 接續前文 8–10 家，共 8 家</p>
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">8.</span>
+          <span class="company-name">BioAge Labs</span>
+          <span class="company-link"><a href="https://bioagelabs.com/">bioagelabs.com</a></span>
+        </div>
+        <p class="company-meta"><strong>Founded 2015</strong> &middot; Series D &middot; a16z</p>
+        <p class="company-body"><span class="label">Product.</span> Discovery engine that mines human longitudinal biobanks (proteomics, transcriptomics linked to lifespan/healthspan outcomes) to identify molecular drivers of healthy ageing &mdash; especially around muscle mass and metabolic health.</p>
+        <p class="company-body"><span class="label">Model.</span> &ldquo;Asset-driven&rdquo;: in-licence existing shelved compounds cheaply, validate them in an ageing indication, and out-licence late-stage assets to large pharma at high upfront + royalties.</p>
+      </li>
 
-    <ul class="companies">
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">9.</span>
+          <span class="company-name">Valo Health</span>
+          <span class="company-link"><a href="https://www.valohealth.com/">valohealth.com</a></span>
+        </div>
+        <p class="company-meta"><strong>Founded 2019</strong> &middot; Series C &middot; a16z</p>
+        <p class="company-body"><span class="label">Product.</span> Opal &mdash; an end-to-end drug-discovery platform built on human multi-omics datasets, designed to keep target identification, generative chemistry, ADMET, and translational data in a single loop rather than across stitched vendors.</p>
+        <p class="company-body"><span class="label">Model.</span> Combines platform-access partnerships with large pharma and a wholly-owned pipeline; revenue from upfront/milestones near term, future revenue from owned assets reaching late-stage trials.</p>
+      </li>
+
+      <li class="company">
+        <div class="company-head">
+          <span class="company-num">10.</span>
+          <span class="company-name">Camp4 Therapeutics</span>
+          <span class="company-link"><a href="https://www.camp4tx.com/">camp4tx.com</a></span>
+        </div>
+        <p class="company-meta"><strong>Founded 2016</strong> &middot; Series B &middot; a16z</p>
+        <p class="company-body"><span class="label">Product.</span> RAP platform &mdash; targets regulatory RNAs (eRNAs / lncRNAs) to dial up the expression of disease-relevant genes, opening a new modality alongside silencing-style RNA drugs.</p>
+        <p class="company-body"><span class="label">Model.</span> Target-discovery collaborations with pharma (upfront + per-target milestones) plus internal programmes in genetic liver disease and CNS indications.</p>
+      </li>
+
       <li class="company">
         <div class="company-head">
           <span class="company-num">11.</span>
-          <span class="company-name">Neuralink</span>
-          <span class="company-link"><a href="https://neuralink.com/">neuralink.com</a></span>
+          <span class="company-name">Atomwise</span>
+          <span class="company-link"><a href="https://www.atomwise.com/">atomwise.com</a></span>
         </div>
-        <p class="company-meta"><strong>2016</strong> · Series D+ · Founders Fund 等</p>
-        <p class="company-body">高頻寬侵入式腦機介面（植入物與手術機器人）。目前處於研發階段，未來將依賴高單價醫療器材銷售與保險給付。</p>
+        <p class="company-meta"><strong>Founded 2012</strong> &middot; Series B+ &middot; YC, Tencent</p>
+        <p class="company-body"><span class="label">Product.</span> AtomNet &mdash; an early production-deployed CNN for structure-based virtual screening. Customers point it at a target pocket; AtomNet ranks millions of commercially-available molecules in days at fraction of wet-lab cost.</p>
+        <p class="company-body"><span class="label">Model.</span> Two streams: project-based research collaborations with pharma and academic groups, plus joint-venture programmes where Atomwise retains long-term economics on resulting assets.</p>
       </li>
 
       <li class="company">
         <div class="company-head">
           <span class="company-num">12.</span>
-          <span class="company-name">Synchron</span>
-          <span class="company-link"><a href="https://synchron.com/">synchron.com</a></span>
+          <span class="company-name">Culture Biosciences</span>
+          <span class="company-link"><a href="https://www.culturebiosciences.com/">culturebiosciences.com</a></span>
         </div>
-        <p class="company-meta"><strong>2016</strong> · Series C+ · Khosla, ARCH</p>
-        <p class="company-body">無須開顱的微創血管內腦機介面。獲利模式依循傳統高階醫療器材的 FDA 批准途徑與醫療保險給付。</p>
+        <p class="company-meta"><strong>Founded 2016</strong> &middot; Series B &middot; YC, a16z</p>
+        <p class="company-body"><span class="label">Product.</span> Cloud Bioreactors &mdash; remotely controlled 250 mL and 1 L bioreactors operated in Culture&rsquo;s own facility. Customers design experiments in a web app; Culture runs and streams real-time data back. Removes the need to staff an in-house fermentation lab.</p>
+        <p class="company-body"><span class="label">Model.</span> &ldquo;Lab as a service&rdquo; &mdash; usage-based pricing per reactor-hour or per experiment, plus consumables. Targets fast-moving startups and biopharma teams that need to iterate strain conditions weekly.</p>
       </li>
 
       <li class="company">
         <div class="company-head">
           <span class="company-num">13.</span>
-          <span class="company-name">Kernel</span>
-          <span class="company-link"><a href="https://www.kernel.com/">kernel.com</a></span>
+          <span class="company-name">Notable Labs</span>
+          <span class="company-link"><a href="https://www.notablelabs.com/">notablelabs.com</a></span>
         </div>
-        <p class="company-meta"><strong>2016</strong> · Series C · General Catalyst</p>
-        <p class="company-body">量子級非侵入式腦部血氧偵測頭盔（Kernel Flow）。獲利模式為「硬體銷售 + 腦部數據即服務（DaaS）」，向研究機構收取標準化量測數據費用。</p>
+        <p class="company-meta"><strong>Founded 2014</strong> &middot; Series B &middot; YC</p>
+        <p class="company-body"><span class="label">Product.</span> Predictive Precision Medicine Platform &mdash; takes a patient&rsquo;s leukaemia or lymphoma sample, exposes it ex vivo to a panel of drugs, and combines flow-cytometry plus ML to predict clinical response before treatment.</p>
+        <p class="company-body"><span class="label">Model.</span> Combines reference-laboratory fees per assay with a wholly-owned drug pipeline (e.g. fosciclopirox in AML) advanced with risk-shared trial designs that pair patient enrolment to predicted responders.</p>
       </li>
 
       <li class="company">
         <div class="company-head">
           <span class="company-num">14.</span>
-          <span class="company-name">Rune Labs</span>
-          <span class="company-link"><a href="https://runelabs.io/">runelabs.io</a></span>
+          <span class="company-name">Owkin</span>
+          <span class="company-link"><a href="https://owkin.com/">owkin.com</a></span>
         </div>
-        <p class="company-meta"><strong>2018</strong> · Series A+ · Eclipse Ventures</p>
-        <p class="company-body">針對帕金森氏症的神經數據整合 SaaS（StrivePD）。獲利模式為 B2B 平台訂閱，向藥廠與醫材廠收費以協助其追蹤臨床療效。</p>
+        <p class="company-meta"><strong>Founded 2016</strong> &middot; Series C (Unicorn) &middot; Sanofi, Google</p>
+        <p class="company-body"><span class="label">Product.</span> Federated-learning network that trains AI models across hospital-held multi-omics and histopathology data without that data ever leaving each hospital. Used to discover biomarkers and stratify patients in oncology.</p>
+        <p class="company-body"><span class="label">Model.</span> Strategic partnerships with large pharma (notably Sanofi, $180M deal) covering upfront fees, target-based milestones, and royalty participation on assets co-discovered with the platform.</p>
       </li>
 
       <li class="company">
         <div class="company-head">
           <span class="company-num">15.</span>
-          <span class="company-name">Paradromics</span>
-          <span class="company-link"><a href="https://paradromics.com/">paradromics.com</a></span>
-        </div>
-        <p class="company-meta"><strong>2015</strong> · Series A+ · Prime Movers Lab</p>
-        <p class="company-body">開發目前市場上最高密度的微電極陣列腦部植入物（Connexus）。獲利模式為醫療級硬體設備銷售。</p>
-      </li>
-    </ul>
-
-    <!-- ====== 賽道三 ====== -->
-    <h2 id="track-3"><span class="track-no">賽道三</span>AI 新藥與生物基建</h2>
-    <p class="track-note">The AI &times; Bio Heavyweights · 接續前文 16–17 家，共 17 家</p>
-
-    <ul class="companies">
-      <li class="company">
-        <div class="company-head">
-          <span class="company-num">18.</span>
-          <span class="company-name">Ginkgo Bioworks</span>
-          <span class="company-link"><a href="https://www.ginkgobioworks.com/">ginkgobioworks.com</a></span>
-        </div>
-        <p class="company-meta"><strong>2008</strong> · Public (NYSE) · YC 等早期</p>
-        <p class="company-body">細胞自動化編程工廠（Foundry）。獲利模式為「代工服務費 + 下游產品分成」，幫客戶改造細胞並獲取最終產品上市的利潤或股權。</p>
-      </li>
-
-      <li class="company">
-        <div class="company-head">
-          <span class="company-num">19.</span>
-          <span class="company-name">Recursion</span>
-          <span class="company-link"><a href="https://www.recursion.com/">recursion.com</a></span>
-        </div>
-        <p class="company-meta"><strong>2013</strong> · Public (Nasdaq) · Baillie Gifford 等</p>
-        <p class="company-body">AI 細胞顯微影像分析找藥平台（OS 平台）。獲利模式為「平台授權 + 自有管線」，利用自身技術開發具備龐大市場價值的新藥資產。</p>
-      </li>
-
-      <li class="company">
-        <div class="company-head">
-          <span class="company-num">20.</span>
-          <span class="company-name">Schr&ouml;dinger</span>
-          <span class="company-link"><a href="https://www.schrodinger.com/">schrodinger.com</a></span>
-        </div>
-        <p class="company-meta"><strong>1990</strong> · Public (Nasdaq) · Gates Foundation</p>
-        <p class="company-body">基於物理學的分子模擬與對接計算軟體。獲利模式為「純軟體訂閱授權 + 內部自主研發藥物管線高價授權」。</p>
-      </li>
-
-      <li class="company">
-        <div class="company-head">
-          <span class="company-num">21.</span>
-          <span class="company-name">Genesis Therapeutics</span>
-          <span class="company-link"><a href="https://www.genesistherapeutics.ai/">genesistherapeutics.ai</a></span>
-        </div>
-        <p class="company-meta"><strong>2019</strong> · Series B · a16z</p>
-        <p class="company-body">AI 驅動的小分子藥物生成平台。獲利模式為聯合研發協議（收取平台技術費）與自有管線推進的里程碑獎金。</p>
-      </li>
-
-      <li class="company">
-        <div class="company-head">
-          <span class="company-num">22.</span>
-          <span class="company-name">BigHat Biosciences</span>
-          <span class="company-link"><a href="https://www.bighatbio.com/">bighatbio.com</a></span>
-        </div>
-        <p class="company-meta"><strong>2019</strong> · Series B · a16z</p>
-        <p class="company-body">結合 AI 與合成生物學的抗體藥物設計平台。獲利模式為與大藥廠（如 Amgen）簽訂聯合研發協議，按階段收取高額授權金。</p>
-      </li>
-
-      <li class="company">
-        <div class="company-head">
-          <span class="company-num">23.</span>
-          <span class="company-name">Asimov</span>
-          <span class="company-link"><a href="https://www.asimov.com/">asimov.com</a></span>
-        </div>
-        <p class="company-meta"><strong>2017</strong> · Series B · a16z</p>
-        <p class="company-body">開發用於哺乳動物合成生物學的 CAD 軟體與細胞平台。獲利模式為向生技公司收取軟體授權費，並搭配販售專屬耗材。</p>
-      </li>
-
-      <li class="company">
-        <div class="company-head">
-          <span class="company-num">24.</span>
-          <span class="company-name">Scribe Therapeutics</span>
-          <span class="company-link"><a href="https://www.scribetx.com/">scribetx.com</a></span>
-        </div>
-        <p class="company-meta"><strong>2017</strong> · Series B · a16z</p>
-        <p class="company-body">開發下一代 CRISPR 基因編輯技術。獲利模式為專利技術授權，將底層技術授權給大廠並收取權利金與里程碑金。</p>
-      </li>
-
-      <li class="company">
-        <div class="company-head">
-          <span class="company-num">25.</span>
-          <span class="company-name">BioAge Labs</span>
-          <span class="company-link"><a href="https://bioagelabs.com/">bioagelabs.com</a></span>
-        </div>
-        <p class="company-meta"><strong>2015</strong> · Series D · a16z</p>
-        <p class="company-body">利用 AI 分析老化基因庫以尋找延長壽命的藥物。獲利模式為「資產驅動（Asset-Driven）」，低價買斷老藥進行研發，再高價授權（License-out）給大廠。</p>
-      </li>
-
-      <li class="company">
-        <div class="company-head">
-          <span class="company-num">26.</span>
-          <span class="company-name">Valo Health</span>
-          <span class="company-link"><a href="https://www.valohealth.com/">valohealth.com</a></span>
-        </div>
-        <p class="company-meta"><strong>2019</strong> · Series C · a16z</p>
-        <p class="company-body">端到端以人類數據為核心的 AI 研發平台（Opal）。獲利模式為平台技術授權與自建藥物資產管線。</p>
-      </li>
-
-      <li class="company">
-        <div class="company-head">
-          <span class="company-num">27.</span>
-          <span class="company-name">Camp4 Therapeutics</span>
-          <span class="company-link"><a href="https://www.camp4tx.com/">camp4tx.com</a></span>
-        </div>
-        <p class="company-meta"><strong>2016</strong> · Series B · a16z</p>
-        <p class="company-body">調節性 RNA 平台，針對基因表達異常疾病尋找靶點。獲利模式為與藥廠簽訂靶點發現合作協議，收取前期金與里程碑金。</p>
-      </li>
-
-      <li class="company">
-        <div class="company-head">
-          <span class="company-num">28.</span>
-          <span class="company-name">Atomwise</span>
-          <span class="company-link"><a href="https://www.atomwise.com/">atomwise.com</a></span>
-        </div>
-        <p class="company-meta"><strong>2012</strong> · Series B+ · YC, Tencent</p>
-        <p class="company-body">基於卷積神經網路（CNN）的小分子虛擬篩選平台（AtomNet）。獲利模式為專案合作費與藥物推進的里程碑獎金。</p>
-      </li>
-
-      <li class="company">
-        <div class="company-head">
-          <span class="company-num">29.</span>
-          <span class="company-name">Culture Biosciences</span>
-          <span class="company-link"><a href="https://www.culturebiosciences.com/">culturebiosciences.com</a></span>
-        </div>
-        <p class="company-meta"><strong>2016</strong> · Series B · YC, a16z</p>
-        <p class="company-body">雲端連線控制的生物反應器（Cloud Bioreactors）。獲利模式為「實驗室即服務（Lab-as-a-Service）」，按使用設備時數或容量收費。</p>
-      </li>
-
-      <li class="company">
-        <div class="company-head">
-          <span class="company-num">30.</span>
-          <span class="company-name">Notable Labs</span>
-          <span class="company-link"><a href="https://www.notablelabs.com/">notablelabs.com</a></span>
-        </div>
-        <p class="company-meta"><strong>2014</strong> · Series B · YC 等</p>
-        <p class="company-body">自動化預測癌細胞對藥物反應的篩選平台。獲利模式為向藥廠收取平台服務費及潛在臨床成功的分潤。</p>
-      </li>
-
-      <li class="company">
-        <div class="company-head">
-          <span class="company-num">31.</span>
-          <span class="company-name">Owkin</span>
-          <span class="company-link"><a href="https://owkin.com/">owkin.com</a></span>
-        </div>
-        <p class="company-meta"><strong>2016</strong> · Series C (Unicorn) · Sanofi, Google</p>
-        <p class="company-body">利用聯邦學習（Federated Learning）共享醫療數據訓練 AI 模型，但不侵犯病患隱私。獲利模式為大藥廠研發合作前期金與里程碑。</p>
-      </li>
-
-      <li class="company">
-        <div class="company-head">
-          <span class="company-num">32.</span>
           <span class="company-name">Tempus</span>
           <span class="company-link"><a href="https://www.tempus.com/">tempus.com</a></span>
         </div>
-        <p class="company-meta"><strong>2015</strong> · Series G+ (Pre-IPO) · Baillie Gifford</p>
-        <p class="company-body">臨床與分子精準醫療數據庫。獲利模式為向醫院收取檢測服務費，再將龐大的數據庫授權給藥廠變現。</p>
+        <p class="company-meta"><strong>Founded 2015</strong> &middot; Public (Nasdaq: TEM) &middot; Baillie Gifford</p>
+        <p class="company-body"><span class="label">Product.</span> Library of de-identified clinical + molecular records spanning oncology, cardiology, and depression, sourced from genomic-sequencing services Tempus runs for partner hospitals.</p>
+        <p class="company-body"><span class="label">Model.</span> Two reinforcing legs: per-sample sequencing/diagnostic fees billed to hospitals/payers (Genomics business), and large-deal data licences to pharma (Data &amp; Services business) where most of the long-term value sits.</p>
       </li>
     </ul>
 
-    <!-- ====== 賽道四 ====== -->
-    <h2 id="track-4"><span class="track-no">賽道四</span>數位醫療與數據平台</h2>
-    <p class="track-note">Digital Health &amp; Data · 共 18 家</p>
+    <!-- ====== Track 4 ====== -->
+    <h2 id="track-4"><span class="track-no">Track 4</span>Digital Health &amp; Data Platforms</h2>
+    <p class="track-note">Tech-enabled payers, providers, diagnostics, and software &mdash; companies operating inside the existing healthcare reimbursement system.</p>
 
     <ul class="companies">
       <li class="company">
         <div class="company-head">
-          <span class="company-num">33.</span>
+          <span class="company-num">1.</span>
           <span class="company-name">Freenome</span>
           <span class="company-link"><a href="https://www.freenome.com/">freenome.com</a></span>
         </div>
-        <p class="company-meta"><strong>2014</strong> · Series E · a16z, Roche</p>
-        <p class="company-body">結合多模態生物標記的癌症血液篩檢平台。獲利模式為一般醫療保險給付，以及藥廠臨床試驗的伴隨式診斷費用。</p>
+        <p class="company-meta"><strong>Founded 2014</strong> &middot; Series E &middot; a16z, Roche</p>
+        <p class="company-body"><span class="label">Product.</span> Multi-omics blood test combining cell-free DNA, methylation, and protein signals with ML to detect early-stage cancer &mdash; lead programme is colorectal cancer screening as an alternative to colonoscopy/FIT.</p>
+        <p class="company-body"><span class="label">Model.</span> Reimbursed per-test pricing once on national guidelines (Medicare + commercial payers), plus companion-diagnostic revenue from pharma clinical trials in the meantime.</p>
       </li>
 
       <li class="company">
         <div class="company-head">
-          <span class="company-num">34.</span>
-          <span class="company-name">Flatiron Health <span class="company-meta" style="display:inline; margin:0;">（前已述）</span></span>
+          <span class="company-num">2.</span>
+          <span class="company-name">Flatiron Health</span>
           <span class="company-link"><a href="https://flatiron.com/">flatiron.com</a></span>
         </div>
+        <p class="company-meta"><strong>Founded 2012</strong> &middot; Acquired by Roche (2018, $1.9B) &middot; Google Ventures, ICONIQ</p>
+        <p class="company-body"><span class="label">Product.</span> OncoEMR &mdash; an oncology-specialty electronic medical record used at hundreds of community cancer centres &mdash; plus a curated real-world oncology dataset built from that EMR footprint.</p>
+        <p class="company-body"><span class="label">Model.</span> Hospital SaaS for OncoEMR and OncoBilling; data licences to pharma for clinical-trial design and regulatory submissions (RWD endpoints). Operates as a Roche subsidiary post-acquisition.</p>
       </li>
 
       <li class="company">
         <div class="company-head">
-          <span class="company-num">35.</span>
+          <span class="company-num">3.</span>
           <span class="company-name">TrialSpark</span>
           <span class="company-link"><a href="https://www.trialspark.com/">trialspark.com</a></span>
         </div>
-        <p class="company-meta"><strong>2013</strong> · Series C · Thrive, Sequoia</p>
-        <p class="company-body">科技賦能的臨床試驗平台。獲利模式從早期的「臨床代工（CRO）服務費」，進化為「買斷專利自己開發新藥」賺取暴利。</p>
+        <p class="company-meta"><strong>Founded 2013</strong> &middot; Series C &middot; Thrive, Sequoia</p>
+        <p class="company-body"><span class="label">Product.</span> Originally a software-driven CRO running trials inside primary-care clinics with proprietary trial-recruitment infrastructure. Has since pivoted into Formation Bio, an in-licensing biotech that uses its trial machinery on drugs it owns.</p>
+        <p class="company-body"><span class="label">Model.</span> Shifted from CRO fee-for-service to drug-development economics &mdash; buy promising assets from biotech cheaply, run them more efficiently, capture full upside on approval.</p>
       </li>
 
       <li class="company">
         <div class="company-head">
-          <span class="company-num">36.</span>
+          <span class="company-num">4.</span>
           <span class="company-name">Devoted Health</span>
           <span class="company-link"><a href="https://www.devoted.com/">devoted.com</a></span>
         </div>
-        <p class="company-meta"><strong>2017</strong> · Series E · a16z</p>
-        <p class="company-body">面向老年人的科技賦能聯邦醫療保險計畫（Medicare Advantage）。獲利模式為透過軟體提升健康、減少無效看病，賺取政府撥款與實際支出的利潤差額。</p>
+        <p class="company-meta"><strong>Founded 2017</strong> &middot; Series E &middot; a16z</p>
+        <p class="company-body"><span class="label">Product.</span> Tech-enabled Medicare Advantage health plan for US seniors. Owns the full stack &mdash; software for member engagement, an in-house clinical team for high-cost members, and the insurance entity itself.</p>
+        <p class="company-body"><span class="label">Model.</span> Capitated payments from the federal government per enrolled senior. Profit comes from the spread between CMS payments and actual medical costs, which Devoted aims to lower via proactive primary-care interventions.</p>
       </li>
 
       <li class="company">
         <div class="company-head">
-          <span class="company-num">37.</span>
+          <span class="company-num">5.</span>
           <span class="company-name">Omada Health</span>
           <span class="company-link"><a href="https://www.omadahealth.com/">omadahealth.com</a></span>
         </div>
-        <p class="company-meta"><strong>2011</strong> · Series E · a16z</p>
-        <p class="company-body">數位慢性病管理療法（Digital Therapeutics）。獲利模式為 B2B 企業訂閱，並採「按績效付費（Pay-for-Performance）」，病患減重越多收越多錢。</p>
+        <p class="company-meta"><strong>Founded 2011</strong> &middot; Series E &middot; a16z</p>
+        <p class="company-body"><span class="label">Product.</span> Digital-therapeutic programmes for diabetes prevention, diabetes management, hypertension, and musculoskeletal pain. Combines an app, a connected scale or BP cuff, and human health coaches.</p>
+        <p class="company-body"><span class="label">Model.</span> Per-member-per-month subscriptions sold to self-insured employers and health plans, often with a pay-for-performance component &mdash; fees tied to weight loss or A1C reduction milestones.</p>
       </li>
 
       <li class="company">
         <div class="company-head">
-          <span class="company-num">38.</span>
+          <span class="company-num">6.</span>
           <span class="company-name">Komodo Health</span>
           <span class="company-link"><a href="https://www.komodohealth.com/">komodohealth.com</a></span>
         </div>
-        <p class="company-meta"><strong>2014</strong> · Series E · a16z, ICONIQ</p>
-        <p class="company-body">彙整全美病患看診與用藥路徑的「醫療數據地圖（Healthcare Map）」。獲利模式為向藥廠與保險公司收取高額的巨型 SaaS 年費。</p>
+        <p class="company-meta"><strong>Founded 2014</strong> &middot; Series E &middot; a16z, ICONIQ</p>
+        <p class="company-body"><span class="label">Product.</span> &ldquo;Healthcare Map&rdquo; &mdash; a longitudinal dataset linking ~330M US patient journeys across diagnoses, prescriptions, and provider visits, queried via Sentinel and MapEnhance applications.</p>
+        <p class="company-body"><span class="label">Model.</span> Multi-year enterprise SaaS contracts with pharma (commercial-strategy use), payers (network-design use), and providers. Typical deal sizes in the high six to low seven figures.</p>
       </li>
 
       <li class="company">
         <div class="company-head">
-          <span class="company-num">39.</span>
-          <span class="company-name">PatientPing (Appriss Health)</span>
-          <span class="company-link"><a href="https://patientping.com/">patientping.com</a></span>
+          <span class="company-num">7.</span>
+          <span class="company-name">PatientPing (now Bamboo Health)</span>
+          <span class="company-link"><a href="https://bamboohealth.com/">bamboohealth.com</a></span>
         </div>
-        <p class="company-meta"><strong>2013</strong> · 被 Appriss 併購 · a16z</p>
-        <p class="company-body">即時追蹤病患出入院動態的醫療協調網絡。獲利模式為按機構規模向醫院及長照中心收取 SaaS 訂閱費。（現跳轉 Appriss）</p>
+        <p class="company-meta"><strong>Founded 2013</strong> &middot; Acquired by Appriss (2021) &middot; a16z</p>
+        <p class="company-body"><span class="label">Product.</span> Real-time care-coordination network &mdash; pings clinicians the moment a shared patient hits an ED, is admitted, or is discharged anywhere on the network. Reduces readmissions and improves post-acute follow-up.</p>
+        <p class="company-body"><span class="label">Model.</span> SaaS subscriptions to hospitals, ACOs, payers, and post-acute facilities, sized by lives covered. Now sold as part of Bamboo Health&rsquo;s broader care-coordination suite.</p>
       </li>
 
       <li class="company">
         <div class="company-head">
-          <span class="company-num">40.</span>
+          <span class="company-num">8.</span>
           <span class="company-name">Athelas</span>
           <span class="company-link"><a href="https://athelas.com/">athelas.com</a></span>
         </div>
-        <p class="company-meta"><strong>2016</strong> · Series B · YC</p>
-        <p class="company-body">提供病患家用的連網血液與生命徵象檢測儀。獲利模式為「硬體即服務」，硬體免費，每月向保險公司請領「遠距持續監測（RPM）」費用。</p>
+        <p class="company-meta"><strong>Founded 2016</strong> &middot; Series B &middot; YC</p>
+        <p class="company-body"><span class="label">Product.</span> At-home connected diagnostic devices (white-blood-cell counter, blood-pressure cuff, glucometer) that stream vitals to a clinical operations team. Originally aimed at clozapine-monitored patients; expanded to chronic-care RPM and revenue-cycle software.</p>
+        <p class="company-body"><span class="label">Model.</span> Hardware bundled essentially free with services. Revenue from CPT-coded Remote Patient Monitoring (RPM) and Chronic Care Management (CCM) reimbursement billed to Medicare and commercial payers each month.</p>
       </li>
 
       <li class="company">
         <div class="company-head">
-          <span class="company-num">41.</span>
+          <span class="company-num">9.</span>
           <span class="company-name">BioRender</span>
           <span class="company-link"><a href="https://biorender.com/">biorender.com</a></span>
         </div>
-        <p class="company-meta"><strong>2017</strong> · Series A · YC</p>
-        <p class="company-body">科學界的 Canva，標準化生物醫學繪圖軟體。獲利模式為產品驅動成長（PLG）的 Freemium SaaS，個人免費，實驗室團隊付費訂閱。</p>
+        <p class="company-meta"><strong>Founded 2017</strong> &middot; Series A &middot; YC</p>
+        <p class="company-body"><span class="label">Product.</span> The &ldquo;Canva for life sciences&rdquo; &mdash; a drag-and-drop illustration tool with thousands of scientifically-accurate icons (organs, cells, molecules) used to make figures for papers, posters, and grants.</p>
+        <p class="company-body"><span class="label">Model.</span> Product-led freemium SaaS. Individuals use it free with watermarks; lab teams and biotech companies pay per-seat annual subscriptions for high-resolution export, custom assets, and team libraries.</p>
       </li>
 
       <li class="company">
         <div class="company-head">
-          <span class="company-num">42.</span>
-          <span class="company-name">Volumetric</span>
+          <span class="company-num">10.</span>
+          <span class="company-name">Volumetric (now 3D Systems Bioprinting)</span>
           <span class="company-link"><a href="https://www.3dsystems.com/bioprinting">3dsystems.com/bioprinting</a></span>
         </div>
-        <p class="company-meta"><strong>2018</strong> · 被 3D Systems 併購 · YC</p>
-        <p class="company-body">用於人體組織模型的 3D 生物列印機。獲利模式為硬體銷售與長尾的耗材（專利生物墨水）收入。（現跳轉 3D Systems）</p>
+        <p class="company-meta"><strong>Founded 2018</strong> &middot; Acquired by 3D Systems (2021) &middot; YC</p>
+        <p class="company-body"><span class="label">Product.</span> Stereolithography-based bioprinters capable of resolving fine vasculature inside printed tissue constructs &mdash; a step toward printable, perfusable organs.</p>
+        <p class="company-body"><span class="label">Model.</span> Capital-equipment sale of the printer plus razor-blade recurring revenue from proprietary photoreactive bio-inks and cartridges.</p>
       </li>
 
       <li class="company">
         <div class="company-head">
-          <span class="company-num">43.</span>
-          <span class="company-name">Miroculus</span>
+          <span class="company-num">11.</span>
+          <span class="company-name">Miroculus (now part of Integra Biosciences)</span>
           <span class="company-link"><a href="https://miroculus.com/">miroculus.com</a></span>
         </div>
-        <p class="company-meta"><strong>2014</strong> · 被 Integra Biosciences 併購 · YC</p>
-        <p class="company-body">自動化微流體基因定序樣本製備系統。獲利模式為吉列刮鬍刀模式（Razor and Blades），賣硬體綁定專屬耗材卡匣。（現跳轉 Integra）</p>
+        <p class="company-meta"><strong>Founded 2014</strong> &middot; Acquired by Integra Biosciences (2024) &middot; YC</p>
+        <p class="company-body"><span class="label">Product.</span> Miro Canvas &mdash; benchtop digital microfluidics system that automates NGS library prep and other multi-step molecular protocols on a single chip, with minimal user setup.</p>
+        <p class="company-body"><span class="label">Model.</span> Razor-and-blades &mdash; the instrument is the razor, the single-use proprietary cartridges and reagent kits are the recurring blade revenue per protocol run.</p>
       </li>
 
       <li class="company">
         <div class="company-head">
-          <span class="company-num">44.</span>
+          <span class="company-num">12.</span>
           <span class="company-name">Nurx (Thirty Madison)</span>
           <span class="company-link"><a href="https://www.nurx.com/">nurx.com</a></span>
         </div>
-        <p class="company-meta"><strong>2015</strong> · 與 Thirty Madison 合併 · YC</p>
-        <p class="company-body">自動化女性健康與遠距醫療平台。獲利模式為低價 D2C 線上問診費，以及龐大的處方藥（如避孕藥）長期配送利潤。</p>
+        <p class="company-meta"><strong>Founded 2015</strong> &middot; Merged with Thirty Madison (2022) &middot; YC</p>
+        <p class="company-body"><span class="label">Product.</span> Telehealth direct-to-consumer service for women&rsquo;s health (birth control, emergency contraception, HPV screening, migraine, dermatology). Asynchronous clinical review plus mail-order pharmacy.</p>
+        <p class="company-body"><span class="label">Model.</span> Subscription prescription fulfilment with long-tail per-month drug margin (especially contraceptives), supplemented by per-consultation fees and insurance billing where applicable.</p>
       </li>
 
       <li class="company">
         <div class="company-head">
-          <span class="company-num">45.</span>
+          <span class="company-num">13.</span>
           <span class="company-name">Curative</span>
           <span class="company-link"><a href="https://curative.com/">curative.com</a></span>
         </div>
-        <p class="company-meta"><strong>2020</strong> · 私人公司 · YC</p>
-        <p class="company-body">疫情期間崛起的優化核酸檢測與物流平台，現轉型健保。獲利模式最初為依賴保險或政府的按次檢測給付（Fee-for-Service）。</p>
+        <p class="company-meta"><strong>Founded 2020</strong> &middot; Private &middot; YC</p>
+        <p class="company-body"><span class="label">Product.</span> Originated as a COVID-19 PCR testing platform optimised for logistics and turnaround. Has since pivoted into employer health-insurance plans built around proactive primary-care &ldquo;baseline visits.&rdquo;</p>
+        <p class="company-body"><span class="label">Model.</span> Originally fee-for-service reimbursement per COVID test (federal payer). Now monthly per-member-per-month employer premium revenue, similar to Devoted but for the employer market.</p>
       </li>
 
       <li class="company">
         <div class="company-head">
-          <span class="company-num">46.</span>
+          <span class="company-num">14.</span>
           <span class="company-name">Oscar Health</span>
           <span class="company-link"><a href="https://www.hioscar.com/">hioscar.com</a></span>
         </div>
-        <p class="company-meta"><strong>2012</strong> · Public (NYSE) · Thrive 等</p>
-        <p class="company-body">科技驅動的新一代醫療保險公司。獲利模式為收取保費，並透過軟體優化看診流程以降低理賠率，賺取保費淨利。</p>
+        <p class="company-meta"><strong>Founded 2012</strong> &middot; Public (NYSE: OSCR) &middot; Thrive</p>
+        <p class="company-body"><span class="label">Product.</span> Tech-driven health-insurance plans on the ACA individual marketplace, plus a +Oscar enterprise software platform sold to other insurers wanting to modernise their member experience.</p>
+        <p class="company-body"><span class="label">Model.</span> Premium revenue from policy holders. Profit margin depends on the gap between premium intake and medical-loss ratio (claim payouts), which software is meant to compress over time.</p>
       </li>
 
       <li class="company">
         <div class="company-head">
-          <span class="company-num">47.</span>
+          <span class="company-num">15.</span>
           <span class="company-name">Cedar</span>
           <span class="company-link"><a href="https://www.cedar.com/">cedar.com</a></span>
         </div>
-        <p class="company-meta"><strong>2016</strong> · Series D · Thrive, a16z</p>
-        <p class="company-body">優化病患醫療帳單與財務體驗的支付平台。獲利模式為向醫院收取 SaaS 年費，並針對病患透過系統支付的帳單抽取交易手續費。</p>
+        <p class="company-meta"><strong>Founded 2016</strong> &middot; Series D &middot; Thrive, a16z</p>
+        <p class="company-body"><span class="label">Product.</span> Patient billing and payment platform layered over hospital revenue-cycle systems. Sends plain-language, mobile-first bills, surfaces price estimates, and offers no-fee payment plans.</p>
+        <p class="company-body"><span class="label">Model.</span> Combination of annual platform SaaS fees to hospitals and a transaction fee on every patient payment that flows through Cedar &mdash; the larger health-system contracts compound both legs.</p>
       </li>
 
       <li class="company">
         <div class="company-head">
-          <span class="company-num">48.</span>
+          <span class="company-num">16.</span>
           <span class="company-name">Aetion</span>
           <span class="company-link"><a href="https://aetion.com/">aetion.com</a></span>
         </div>
-        <p class="company-meta"><strong>2012</strong> · Series C · Thrive 等</p>
-        <p class="company-body">真實世界數據（RWD）驗證平台。獲利模式為向藥廠與監管機構（FDA）收取企業級軟體授權費與專業分析諮詢費。</p>
+        <p class="company-meta"><strong>Founded 2012</strong> &middot; Series C &middot; Thrive</p>
+        <p class="company-body"><span class="label">Product.</span> Aetion Evidence Platform &mdash; transparent, reproducible analytics on real-world data (claims, EMRs, registries) so pharma and FDA reviewers can answer comparative-effectiveness and safety questions without bespoke statistician work.</p>
+        <p class="company-body"><span class="label">Model.</span> Enterprise SaaS subscriptions to pharma (regulatory and HEOR teams) and government regulators, sometimes augmented by analytic-services engagements.</p>
       </li>
 
       <li class="company">
         <div class="company-head">
-          <span class="company-num">49.</span>
+          <span class="company-num">17.</span>
           <span class="company-name">PathAI</span>
           <span class="company-link"><a href="https://www.pathai.com/">pathai.com</a></span>
         </div>
-        <p class="company-meta"><strong>2016</strong> · Series C+ · General Catalyst</p>
-        <p class="company-body">AI 數位病理學分析平台。獲利模式為向醫院銷售病理分析 SaaS 平台，並協助大藥廠在臨床試驗中篩選病患，收取合作費。</p>
+        <p class="company-meta"><strong>Founded 2016</strong> &middot; Series C+ &middot; General Catalyst</p>
+        <p class="company-body"><span class="label">Product.</span> AI-augmented digital pathology &mdash; deep-learning models for tumour grading, biomarker quantification (PD-L1, HER2), and trial-eligibility screening on whole-slide images. Includes a contract-research lab arm (acquired Poplar).</p>
+        <p class="company-body"><span class="label">Model.</span> Two streams: pharma contracts for clinical-trial enrollment and companion-diagnostic development (large milestone-based deals), and a SaaS pathology platform sold to hospital labs.</p>
       </li>
 
       <li class="company">
         <div class="company-head">
-          <span class="company-num">50.</span>
+          <span class="company-num">18.</span>
           <span class="company-name">Spring Health</span>
           <span class="company-link"><a href="https://www.springhealth.com/">springhealth.com</a></span>
         </div>
-        <p class="company-meta"><strong>2016</strong> · Series D · Tiger Global</p>
-        <p class="company-body">結合 AI 精準匹配心理治療師的企業員工心理健康福利平台。獲利模式為 B2B 企業訂閱（按員工人數收費）。</p>
+        <p class="company-meta"><strong>Founded 2016</strong> &middot; Series D &middot; Tiger Global</p>
+        <p class="company-body"><span class="label">Product.</span> Employer-benefits platform that triages each employee&rsquo;s self-reported symptoms with an ML model and matches them to the modality most likely to work for them (self-guided content, coaching, therapy, psychiatry, or specialist care).</p>
+        <p class="company-body"><span class="label">Model.</span> Per-employee-per-month subscription sold to large employers, with utilisation-based fees stacked on top for actual therapy hours, psychiatry visits, and specialised programmes.</p>
       </li>
     </ul>
 
     <footer>
-      <p>整理 / 編輯：Tzu-Wei Lee · 資料截至 2026</p>
-      <p><a href="../">&larr; 回首頁</a></p>
+      <p>Compiled and edited by Tzu-Wei Lee &middot; Data as of 2026.</p>
+      <p>This page is a working scan, not investment advice. Funding stages and lead investors are as last publicly known; please verify before citing.</p>
+      <p><a href="../">&larr; Back to home</a></p>
     </footer>
   </main>
 </body>
