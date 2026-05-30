@@ -147,6 +147,20 @@
       letter-spacing: 0.04em;
       white-space: nowrap;
     }
+    .yc-tag {
+      display: inline-block;
+      padding: 0.05rem 0.5rem;
+      font-size: 0.68rem;
+      border-radius: 999px;
+      background: rgba(60, 160, 100, 0.12);
+      color: #2d8e58;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+    @media (prefers-color-scheme: dark) {
+      .yc-tag { background: rgba(80, 200, 130, 0.16); color: #6ad596; }
+    }
     .company-meta {
       color: var(--muted); font-size: 0.78rem; margin: 0 0 0.35rem;
     }
@@ -180,12 +194,12 @@
     <a class="back" href="../">&larr; Back to home</a>
 
     <h1>VC Funding Map: AI Agents, NeuroTech, AI Bio &amp; Digital Health</h1>
-    <p class="subtitle">84 currently-VC-funded private startups across eight sectors &mdash; with stage, lead investors, product, and how they actually make money.</p>
+    <p class="subtitle">96 currently-VC-funded private startups across eight sectors &mdash; with stage, lead investors, product, and how they actually make money.</p>
     <p class="meta">By Tzu-Wei Lee &middot; 2026</p>
 
     <div class="intro">
       <p>Every company below is <strong>currently private and actively raising VC</strong>. Companies that have IPO&rsquo;d, been acquired, or are now corporate-scale are intentionally excluded.</p>
-      <p>Cards tagged <span class="trend-tag">#Trending2024&ndash;26</span> were identified as defining the <strong>2024-2026 funding wave</strong> &mdash; either launched after Jan 2024 or had a defining round in 2024-2026 that vaulted them into a category lead.</p>
+      <p>Cards tagged <span class="trend-tag">#Trending2024&ndash;26</span> were identified as defining the <strong>2024-2026 funding wave</strong> &mdash; either launched after Jan 2024 or had a defining round in 2024-2026 that vaulted them into a category lead. Cards also tagged <span class="yc-tag">#YCW26</span> came from Y Combinator&rsquo;s Winter 2026 cohort &mdash; the youngest entrants on this page, still seed-stage and unproven.</p>
       <p><strong>Top VC themes in 2025-2026:</strong><br />
       &middot; <strong>Agentic AI is the dominant flow</strong> &mdash; vertical agents crowning category leaders; outcome-based pricing becoming the norm.<br />
       &middot; <strong>AI infra splits into compute &amp; inference</strong> &mdash; specialty chips (Groq LPUs), open-source inference clouds (Together, Fireworks), and stranded-energy GPU farms (Crusoe).<br />
@@ -202,18 +216,18 @@
 
     <nav class="toc" aria-label="Contents">
       <strong>Jump to</strong>
-      <a href="#track-1">Agent Infra &amp; Vertical Agents <span class="count">(21)</span></a>
+      <a href="#track-1">Agent Infra &amp; Vertical Agents <span class="count">(26)</span></a>
       <a href="#track-2">NeuroTech / BCI <span class="count">(6)</span></a>
       <a href="#track-3">AI Bio <span class="count">(18)</span></a>
       <a href="#track-4">Digital Health <span class="count">(17)</span></a>
-      <a href="#track-5">Foundation Models &amp; AI Infra <span class="count">(8)</span></a>
+      <a href="#track-5">Foundation Models &amp; AI Infra <span class="count">(13)</span></a>
       <a href="#track-6">Voice &amp; Multimodal <span class="count">(4)</span></a>
-      <a href="#track-7">Embodied AI &amp; Robotics <span class="count">(6)</span></a>
-      <a href="#track-8">AI Defense &amp; Security <span class="count">(4)</span></a>
+      <a href="#track-7">Embodied AI &amp; Robotics <span class="count">(7)</span></a>
+      <a href="#track-8">AI Defense &amp; Security <span class="count">(5)</span></a>
     </nav>
 
     <!-- ====== Track 1 ====== -->
-    <h2 id="track-1"><span class="track-no">Track 1</span>Agent Infrastructure &amp; Vertical Agents</h2>
+    <h2 id="track-1"><span class="track-no">Track 1</span>Agent Infrastructure &amp; Vertical Agents <span class="count" style="color:var(--muted); font-weight:500; font-size:0.9em;">(26)</span></h2>
     <p class="track-note">The eval/observability stack plus the wave of vertical agents (CS, legal, healthcare, sales, recruiting, compliance).</p>
 
     <ul class="companies">
@@ -488,6 +502,71 @@
           <p><span class="label">Product.</span> Founded by Rami Karabibar and Saam Mashhad. Ingests a personal-injury client&rsquo;s medical records, generates structured demand letters, computes damages, and benchmarks settlement amounts against comparable cases.</p>
           <p><span class="label">Model.</span> Vertical SaaS priced per case or per attorney seat, sold to plaintiff-side personal-injury firms.</p>
           <p class="company-link-row"><a href="https://www.evenuplaw.com/">evenuplaw.com &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">22.</span><span class="company-name">Stilta</span> <span class="trend-tag">#Trending2024&ndash;26</span> <span class="yc-tag">#YCW26</span></div>
+          <p class="company-meta"><strong>YC W26</strong> &middot; Seed &middot; YC + undisclosed</p>
+          <p class="company-tldr">Agentic AI for intellectual-property &amp; patent lawyers.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> AI agent that searches and analyses patents across patent databases plus scientific literature, then drafts arguments and prior-art comparisons. Targeted at IP law firms and corporate patent groups. Named among VCs&rsquo; top picks at the W26 Demo Day.</p>
+          <p><span class="label">Model.</span> Vertical SaaS expected to price per attorney seat plus per-matter usage &mdash; the Harvey playbook applied to IP specifically.</p>
+          <p class="company-link-row"><a href="https://www.ycombinator.com/companies?query=stilta">YC directory &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">23.</span><span class="company-name">BentoLabs</span> <span class="trend-tag">#Trending2024&ndash;26</span> <span class="yc-tag">#YCW26</span></div>
+          <p class="company-meta"><strong>YC W26</strong> &middot; Seed &middot; YC + undisclosed</p>
+          <p class="company-tldr">Monitoring + learning layer for long-running agents.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Detects when AI agents silently fail or drift from the user&rsquo;s goal, system prompt, or tool contracts. Targeted at engineering teams running production agents that no one watches in real time.</p>
+          <p><span class="label">Model.</span> Open-core or per-trace SaaS expected, similar in shape to LangSmith / Arize / Galileo but with a stronger focus on multi-turn agent drift rather than single-call eval.</p>
+          <p class="company-link-row"><a href="https://www.ycombinator.com/companies?query=bentolabs">YC directory &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">24.</span><span class="company-name">Sentrial</span> <span class="trend-tag">#Trending2024&ndash;26</span> <span class="yc-tag">#YCW26</span></div>
+          <p class="company-meta"><strong>YC W26</strong> &middot; Seed &middot; YC + undisclosed</p>
+          <p class="company-tldr">&ldquo;Datadog for agent reliability.&rdquo;</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Reliability platform purpose-built for agent systems &mdash; SLO tracking, alerting, replay, and root-cause analysis on multi-step agent traces. The bet: agentic apps will need the same observability investment that micro-services drove for Datadog in the 2010s.</p>
+          <p><span class="label">Model.</span> Standard SaaS pricing (per-host or per-trace), competing for the eval/observability budget alongside W&amp;B Weave and Arize.</p>
+          <p class="company-link-row"><a href="https://www.ycombinator.com/companies?query=sentrial">YC directory &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">25.</span><span class="company-name">Hessian</span> <span class="trend-tag">#Trending2024&ndash;26</span> <span class="yc-tag">#YCW26</span></div>
+          <p class="company-meta"><strong>YC W26</strong> &middot; Seed &middot; YC + undisclosed</p>
+          <p class="company-tldr">Forward-deployed AI agents for business operations.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Embeds engineers on-site at customer companies, maps how the business actually runs, then builds custom agents on Hessian&rsquo;s platform to run the work end-to-end &mdash; Palantir-style forward deployment applied to agentic AI.</p>
+          <p><span class="label">Model.</span> High-touch project fees plus recurring platform licence; targets mid-market and enterprise customers whose workflows are too messy for an off-the-shelf vertical agent.</p>
+          <p class="company-link-row"><a href="https://www.ycombinator.com/companies?query=hessian">YC directory &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">26.</span><span class="company-name">Syntropy</span> <span class="trend-tag">#Trending2024&ndash;26</span> <span class="yc-tag">#YCW26</span></div>
+          <p class="company-meta"><strong>YC W26</strong> &middot; Seed &middot; YC + undisclosed</p>
+          <p class="company-tldr">Agentic coding for complex, multi-file engineering tasks.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Coding agent aimed at the work Cursor and Copilot are still weak at &mdash; large refactors, multi-file migrations, codebases with non-trivial type systems. Plans steps, runs the change, verifies, and opens PRs.</p>
+          <p><span class="label">Model.</span> Per-seat SaaS plus enterprise tier sized by committed agent-compute hours; the latest entrant in the Cursor / Devin / Cognition competition.</p>
+          <p class="company-link-row"><a href="https://www.ycombinator.com/companies?query=syntropy">YC directory &nearr;</a></p>
         </div>
       </details></li>
 
@@ -1051,7 +1130,7 @@
     </ul>
 
     <!-- ====== Track 5 ====== -->
-    <h2 id="track-5"><span class="track-no">Track 5</span>Foundation Models &amp; AI Infrastructure</h2>
+    <h2 id="track-5"><span class="track-no">Track 5</span>Foundation Models &amp; AI Infrastructure <span class="count" style="color:var(--muted); font-weight:500; font-size:0.9em;">(13)</span></h2>
     <p class="track-note">The capital-heaviest part of the market &mdash; private model labs, inference clouds, specialty chips, and AI-purpose-built data centres.</p>
 
     <ul class="companies">
@@ -1160,6 +1239,71 @@
         </div>
       </details></li>
 
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">9.</span><span class="company-name">Ndea</span> <span class="trend-tag">#Trending2024&ndash;26</span> <span class="yc-tag">#YCW26</span></div>
+          <p class="company-meta"><strong>YC W26</strong> &middot; Seed ($43M) &middot; YC + undisclosed</p>
+          <p class="company-tldr">AGI lab from F. Chollet (creator of Keras); the largest single round in W26.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Frontier AGI research lab focused on architectures with stronger reasoning than today&rsquo;s pure-transformer LLMs, building on Chollet&rsquo;s long-running thesis (ARC, &ldquo;On the Measure of Intelligence&rdquo;) that current models pattern-match rather than reason.</p>
+          <p><span class="label">Model.</span> Pre-revenue research lab; eventual monetisation likely through API access to AGI-class models and high-value licensing into specialised reasoning workloads.</p>
+          <p class="company-link-row"><a href="https://www.ycombinator.com/companies?query=ndea">YC directory &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">10.</span><span class="company-name">Confluence Technologies</span> <span class="trend-tag">#Trending2024&ndash;26</span> <span class="yc-tag">#YCW26</span></div>
+          <p class="company-meta"><strong>YC W26</strong> &middot; Seed &middot; YC + undisclosed</p>
+          <p class="company-tldr">Scored 97.9% on ARC-AGI-2; near-human reasoning benchmark.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> AGI research lab whose system reportedly scored 97.9% on ARC-AGI-2 &mdash; a benchmark on which leading frontier LLMs were stuck around 5% as of late 2024. The methodology has not been fully published; treat the headline as remarkable but unaudited.</p>
+          <p><span class="label">Model.</span> Pre-revenue; future revenue will depend on whether the technique generalises beyond the ARC benchmark family.</p>
+          <p class="company-link-row"><a href="https://www.ycombinator.com/companies?query=confluence">YC directory &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">11.</span><span class="company-name">Rubric</span> <span class="trend-tag">#Trending2024&ndash;26</span> <span class="yc-tag">#YCW26</span></div>
+          <p class="company-meta"><strong>YC W26</strong> &middot; Seed &middot; YC + undisclosed</p>
+          <p class="company-tldr">Post-training research lab at exabyte scale.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Frontier research on the post-training stack &mdash; the RLHF / RLAIF / preference-modelling phase that Anthropic, OpenAI, and Google view as the moat layer above raw pretraining. Operates at exabyte-scale data.</p>
+          <p><span class="label">Model.</span> Pre-revenue; eventual monetisation likely through licensing post-training recipes and data pipelines to model labs and enterprises building proprietary models.</p>
+          <p class="company-link-row"><a href="https://www.ycombinator.com/companies?query=rubric">YC directory &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">12.</span><span class="company-name">ARC Prize Foundation</span> <span class="trend-tag">#Trending2024&ndash;26</span> <span class="yc-tag">#YCW26</span></div>
+          <p class="company-meta"><strong>YC W26</strong> &middot; Seed (non-profit-adjacent) &middot; YC + undisclosed</p>
+          <p class="company-tldr">Benchmarks for measuring progress toward AGI.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Builds and maintains ARC-AGI benchmarks (ARC-AGI-2 / ARC-AGI-3) used industry-wide as the reasoning yardstick most resistant to brute-force scaling. Also runs the ARC Prize competition that pays cash for verified open-source improvements.</p>
+          <p><span class="label">Model.</span> Hybrid &mdash; foundation-style mission of public benchmark hosting plus sponsorship + premium-evaluation services for frontier labs that need rigorous third-party validation.</p>
+          <p class="company-link-row"><a href="https://arcprize.org/">arcprize.org &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">13.</span><span class="company-name">Luel</span> <span class="trend-tag">#Trending2024&ndash;26</span> <span class="yc-tag">#YCW26</span></div>
+          <p class="company-meta"><strong>YC W26</strong> &middot; Seed &middot; YC + undisclosed</p>
+          <p class="company-tldr">Data marketplace connecting AI model makers with daily-life data contributors.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Marketplace where contributors submit short audio, video, and image clips of everyday activities (cooking, commuting, exercising) for AI model training. Differs from Scale AI / Mercor &mdash; those source professional labellers; Luel sources untrained contributors at consumer scale.</p>
+          <p><span class="label">Model.</span> Take rate on each transaction between buyer (foundation-model lab or robotics company) and contributor; recurring data-subscription tier likely follows once supply density is established.</p>
+          <p class="company-link-row"><a href="https://www.ycombinator.com/companies?query=luel">YC directory &nearr;</a></p>
+        </div>
+      </details></li>
+
     </ul>
 
     <!-- ====== Track 6 ====== -->
@@ -1223,7 +1367,7 @@
     </ul>
 
     <!-- ====== Track 7 ====== -->
-    <h2 id="track-7"><span class="track-no">Track 7</span>Embodied AI &amp; Robotics</h2>
+    <h2 id="track-7"><span class="track-no">Track 7</span>Embodied AI &amp; Robotics <span class="count" style="color:var(--muted); font-weight:500; font-size:0.9em;">(7)</span></h2>
     <p class="track-note">Robot foundation models and humanoid hardware &mdash; the single hottest 2025 sub-sector after agentic AI.</p>
 
     <ul class="companies">
@@ -1306,10 +1450,23 @@
         </div>
       </details></li>
 
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">7.</span><span class="company-name">GrazeMate</span> <span class="trend-tag">#Trending2024&ndash;26</span> <span class="yc-tag">#YCW26</span></div>
+          <p class="company-meta"><strong>YC W26</strong> &middot; Seed &middot; YC + undisclosed</p>
+          <p class="company-tldr">Autonomous drones for herding and monitoring cattle.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> Drone fleets that herd, count, and monitor cattle across large ranches &mdash; an activity currently done by trucks, dirt bikes, and helicopters that ranchers describe as the most expensive and dangerous part of their operation. Named a VC favourite at W26 Demo Day.</p>
+          <p><span class="label">Model.</span> Hardware-as-a-Service (drone fleet plus software platform) priced per herd size or per acre under management.</p>
+          <p class="company-link-row"><a href="https://www.ycombinator.com/companies?query=grazemate">YC directory &nearr;</a></p>
+        </div>
+      </details></li>
+
     </ul>
 
     <!-- ====== Track 8 ====== -->
-    <h2 id="track-8"><span class="track-no">Track 8</span>AI Defense &amp; Security</h2>
+    <h2 id="track-8"><span class="track-no">Track 8</span>AI Defense &amp; Security <span class="count" style="color:var(--muted); font-weight:500; font-size:0.9em;">(5)</span></h2>
     <p class="track-note">Generalist VCs once allergic to defence are now leading rounds in this category.</p>
 
     <ul class="companies">
@@ -1363,6 +1520,19 @@
           <p><span class="label">Product.</span> Founded by Dino Mavrookas and Rob Lehman (both ex-Navy). Autonomous unmanned surface vessels (Spyglass, Cipher, Corsair) in 6 ft, 14 ft, and 24 ft classes; acquired a Texas port to build its own vertically-integrated shipyard.</p>
           <p><span class="label">Model.</span> US Navy and allied government contracts plus owning the production base &mdash; an Anduril-style vertical-integration play applied to maritime.</p>
           <p class="company-link-row"><a href="https://www.saronic.com/">saronic.com &nearr;</a></p>
+        </div>
+      </details></li>
+
+      <li class="company"><details>
+        <summary>
+          <div class="company-head"><span class="company-num">5.</span><span class="company-name">Hex Security</span> <span class="trend-tag">#Trending2024&ndash;26</span> <span class="yc-tag">#YCW26</span></div>
+          <p class="company-meta"><strong>YC W26</strong> &middot; Seed &middot; YC + undisclosed</p>
+          <p class="company-tldr">AI agents acting as continuous, autonomous penetration testers.</p>
+        </summary>
+        <div class="company-detail">
+          <p><span class="label">Product.</span> AI agents constantly probe a customer&rsquo;s infrastructure for vulnerabilities, misconfigurations, and security gaps &mdash; turning what used to be a manual, low-frequency engagement (annual third-party pen-test) into always-on coverage. Targeted at security teams that can&rsquo;t afford continuous red-team headcount.</p>
+          <p><span class="label">Model.</span> SaaS sized by infrastructure footprint (number of hosts / endpoints / cloud accounts under coverage); enterprise tier with custom rules and human review.</p>
+          <p class="company-link-row"><a href="https://www.ycombinator.com/companies?query=hex-security">YC directory &nearr;</a></p>
         </div>
       </details></li>
 
