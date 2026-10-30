@@ -3,8 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tzu-Wei Lee</title>
-  <meta name="description" content="Tzu-Wei Lee — Ph.D. candidate in Biomedical Engineering, Vanderbilt University." />
+  <title>Charles (Tzu-Wei) Lee</title>
+  <meta name="description" content="Charles (Tzu-Wei) Lee — Ph.D. candidate in Biomedical Engineering at Vanderbilt University. MRI physics, neuroimaging, multimodal ML, and LLM agents &amp; inference systems." />
+  <meta property="og:title" content="Charles (Tzu-Wei) Lee" />
+  <meta property="og:description" content="Ph.D. candidate, Biomedical Engineering, Vanderbilt University. Neuroimaging &amp; MRI Physics · Multimodal ML · LLM Agents &amp; Inference Systems." />
+  <meta property="og:image" content="https://weil11.github.io/profile.jpg" />
+  <meta property="og:url" content="https://weil11.github.io/" />
   <style>
     :root {
       --fg: #1c1c1c;
@@ -130,6 +134,22 @@
       text-transform: uppercase;
       letter-spacing: 0.06em;
     }
+    .edu .when, .exp .when { color: var(--muted); white-space: nowrap; font-size: 0.92rem; }
+    .edu li.edu-note { display: block; color: var(--muted); font-size: 0.92rem; padding-top: 0; }
+    .exp { margin: 0.5rem 0 0; padding: 0; list-style: none; }
+    .exp > li { margin: 0.6rem 0 1rem; }
+    .exp-head { display: flex; justify-content: space-between; gap: 1rem; }
+    .exp-role { font-weight: 600; }
+    .exp-org { color: var(--muted); }
+    .exp-sub { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin: 0.5rem 0 0.1rem; }
+    .exp ul { margin: 0.25rem 0 0; padding-left: 1.2rem; font-size: 0.95rem; }
+    .exp ul li { margin: 0.2rem 0; }
+    .skills { margin: 0.5rem 0 0; font-size: 0.95rem; }
+    .skills dt { font-weight: 600; }
+    .skills dd { margin: 0 0 0.5rem; color: var(--fg); }
+    @media (max-width: 600px) {
+      .edu li, .exp-head { flex-direction: column; gap: 0; }
+    }
     .visitors-note { color: var(--muted); font-size: 0.9rem; }
     .visitor-map { display: flex; justify-content: center; margin-top: 0.5rem; }
     .visitor-map img { max-width: 100%; height: auto; }
@@ -144,15 +164,16 @@
 <body>
   <main>
     <header class="header">
-      <img class="avatar" src="profile.jpg" alt="Tzu-Wei Lee"
+      <img class="avatar" src="profile.jpg" alt="Charles (Tzu-Wei) Lee"
         onerror="this.outerHTML='&lt;div class=&quot;avatar&quot; aria-hidden=&quot;true&quot;&gt;TWL&lt;/div&gt;';" />
       <div>
-        <h1>Wei Lee<span class="han">李梓維</span></h1>
+        <h1>Charles (Tzu-Wei) Lee<span class="han">李梓維</span></h1>
         <p class="role">
           Ph.D. Candidate, Biomedical Engineering<br />
           <a href="https://www.vanderbilt.edu/">Vanderbilt University</a> · advised by Prof. John Gore<br />
           <a href="https://www.vumc.org/vuiis/">Vanderbilt University Institute of Imaging Science (VUIIS)</a>
         </p>
+        <p class="callme">Neuroimaging &amp; MRI Physics · Multimodal ML · LLM Agents &amp; Inference Systems · Dynamical Systems</p>
         <div class="links">
           <a href="mailto:tzuweilee@outlook.com">Email</a>
           <a href="https://github.com/WeiL11">GitHub</a>
@@ -165,28 +186,27 @@
     <section>
       <h2>About</h2>
       <p>
-        Hello! I'm Tzu-Wei (李梓維), a Ph.D. candidate in Biomedical Engineering at
-        Vanderbilt University, working with Prof. John Gore and affiliated with
-        the Vanderbilt University Institute of Imaging Science (VUIIS). My
-        research spans signal and image processing, neuroscience, brain
-        decoding, and machine learning.
+        Hello! I'm Charles (Tzu-Wei, 李梓維), a Ph.D. candidate in Biomedical Engineering
+        at Vanderbilt University, advised by Prof. John C. Gore at VUIIS. I bring 8+ years
+        in biotechnology and neuroscience and 7+ years of machine learning research.
+      </p>
+      <p>
+        My work spans MRI physics &mdash; pulse sequence programming and image
+        reconstruction at 3T, 7T, and 15.2T &mdash; multimodal representation learning on
+        large-scale neuroimaging and genomics data, and LLM agent systems for clinical
+        decision support. On the side, I dig into efficient LLM inference (vLLM, SGLang, Triton).
       </p>
     </section>
 
     <section>
       <h2>Research Interests</h2>
       <ul class="interests">
-        <li>Signal &amp; Image Processing</li>
-        <li>Image Reconstruction</li>
-        <li>Deep Learning</li>
-        <li>Physics</li>
-        <li>Neuroscience</li>
-        <li>Brain Decoding</li>
-        <li>AI Agents for Biomedicine &amp; Imaging</li>
-        <li>Neuro&#8209;inspired AI</li>
-        <li>AI Infrastructure</li>
-        <li>AI Trends</li>
-        <li>AI Entrepreneurship &amp; Company Growth</li>
+        <li>MRI Physics &amp; Image Reconstruction</li>
+        <li>fMRI &amp; BOLD Biophysics</li>
+        <li>Dynamical Systems Modeling</li>
+        <li>Multimodal Representation Learning</li>
+        <li>Clinical AI Agents</li>
+        <li>LLM Inference Systems</li>
       </ul>
     </section>
 
@@ -194,12 +214,78 @@
       <h2>Education</h2>
       <ul class="edu">
         <li>
-          <span>Ph.D., Biomedical Engineering</span>
-          <span class="school">Vanderbilt University</span>
+          <span>Ph.D., Bioengineering &amp; Biomedical Engineering <span class="school">&middot; Vanderbilt University</span></span>
+          <span class="when">2021 &ndash; expected 2026/27</span>
+        </li>
+        <li class="edu-note">Advisor: Prof. John C. Gore &middot; Dissertation: <em>Beyond fMRI Assumptions: Acquisition, Decomposition, and the Biophysical Origin of the BOLD Signal Beyond Gray Matter</em></li>
+        <li>
+          <span>Visiting Scholar <span class="school">&middot; University of Arizona (Prof. Nan-Kuei Chen)</span></span>
+          <span class="when">2019</span>
         </li>
         <li>
-          <span>B.S., Biomedical Engineering</span>
-          <span class="school">Taipei Medical University</span>
+          <span>B.S., Biomedical Engineering <span class="school">&middot; Taipei Medical University</span></span>
+          <span class="when">2016 &ndash; 2020</span>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <ul class="exp">
+        <li>
+          <div class="exp-head">
+            <span><span class="exp-role">Graduate Research Assistant</span> <span class="exp-org">&middot; VUIIS, Vanderbilt University</span></span>
+            <span class="when">2021 &ndash; present</span>
+          </div>
+          <div class="exp-sub">MRI Physics &amp; Neuroimaging</div>
+          <ul>
+            <li><strong>Mouse spinal cord fMRI at 15.2T</strong> &mdash; built the first end-to-end pipeline: experimental design, C++ pulse sequences, 3D-printed sub-3&nbsp;mm stabilization hardware, and automated Python/MATLAB preprocessing &amp; statistics.</li>
+            <li><strong>Multi-shot rosette DWI</strong> &mdash; implemented the sequence and co-developed reconstruction on 7T/15.2T, correcting B0 inhomogeneity, eddy currents, and phase variations.</li>
+            <li><strong>BOLD &amp; HRF modeling</strong> &mdash; time- and frequency-domain dynamical-system models linking neuronal input, CBF, CBV, and CMRO&#8322; to the BOLD signal.</li>
+          </ul>
+          <div class="exp-sub">Clinical AI &amp; Multimodal Learning</div>
+          <ul>
+            <li><strong>Multimodal learning &amp; white-matter brain charts</strong> &mdash; spatiotemporal masked autoencoder mapping fMRI and genomics into a shared latent space (INDI, HCP, UK Biobank; 600+&nbsp;TB, 60,000+ subjects); lifespan normative charts of 8 WM functional measures from 9,948 participants (ages 5&ndash;96).</li>
+            <li><strong>CopathAgent</strong> &mdash; multi-agent clinical decision support for multimodal dementia profiling, producing ranked, auditable co-pathology attributions.</li>
+            <li><strong>TissueLoom</strong> &mdash; tissue-aware GM/WM functional connectomics across 529 participants from preclinical AD to dementia; altered couplings rose from 0 to 75, tracking amyloid and tau.</li>
+            <li><strong>Primate behavior modeling</strong> &mdash; deep-learning motion tracking of non-human primate palm movements for quantitative motor-behavior analysis (<a href="https://doi.org/10.1016/j.bbr.2024.115265">lab publication</a>).</li>
+          </ul>
+        </li>
+        <li>
+          <div class="exp-head">
+            <span><span class="exp-role">Clinical Research Assistant</span> <span class="exp-org">&middot; Best-Image &amp; Siemens Healthineers, Taiwan</span></span>
+            <span class="when">2020 &ndash; 2021</span>
+          </div>
+          <ul>
+            <li>Programmed an ASL sequence in Siemens IDEA (VE11C) on a 3T Prisma; built Python ML pipelines for MRI denoising and segmentation; brought a newly installed hospital MRI into research use, launching 3 clinical/translational projects.</li>
+          </ul>
+        </li>
+        <li>
+          <div class="exp-head">
+            <span><span class="exp-role">Undergraduate Research Assistant</span> <span class="exp-org">&middot; Taipei Medical University Hospital</span></span>
+            <span class="when">2018 &ndash; 2020</span>
+          </div>
+          <ul>
+            <li>MRI protocols and quantitative SWI/QSM for a 20-subject Parkinson&rsquo;s study (improved nigrosome-1 CNR); radiogenomic perfusion MRI in glioblastoma; APOE-&epsilon;4 effects on cholinergic circuitry.</li>
+          </ul>
+        </li>
+        <li>
+          <div class="exp-head">
+            <span><span class="exp-role">Research Assistant</span> <span class="exp-org">&middot; Applied Mechanics, National Taiwan University</span></span>
+            <span class="when">2017 &ndash; 2018</span>
+          </div>
+          <ul>
+            <li>Microchannel chips for electricity-free blood centrifugation; ELISA, 3D modeling, silicon-wafer microfabrication.</li>
+          </ul>
+        </li>
+        <li>
+          <div class="exp-head">
+            <span><span class="exp-role">Teaching Assistant</span> <span class="exp-org">&middot; Taipei Medical University</span></span>
+            <span class="when">2019 &ndash; 2020</span>
+          </div>
+          <ul>
+            <li>Five courses in MATLAB programming, medical imaging, and neuroscience; taught in Mandarin and English.</li>
+          </ul>
         </li>
       </ul>
     </section>
@@ -207,6 +293,39 @@
     <section>
       <h2>Selected Publications</h2>
       <ol class="pubs">
+        <li class="pub">
+          <div class="pub-title">Mouse Spinal Cord fMRI at 15.2T <span class="pub-status">(paper under review)</span></div>
+          <div class="pub-authors"><strong>T.-W. Lee</strong>.</div>
+          <div class="pub-venue">ISMRM 2025 Oral &middot; ISMRM 2026 Oral.
+            <a href="https://archive.ismrm.org/2025/0827_JDb7KMQ5t.html">ISMRM 2025</a> &middot;
+            <a href="https://echo.ismrm.org/program/ISMRM2026/at-a-glance/session/512">ISMRM 2026</a>
+          </div>
+          <p class="pub-abstract">The first end-to-end pipeline for in-vivo mouse spinal cord fMRI, overcoming severe motion and low SNR with custom pulse sequences, 3D-printed stabilization hardware, and automated preprocessing.</p>
+          <ul class="pub-tags">
+            <li>#MRPhysics</li>
+            <li>#PulseSequence</li>
+            <li>#Hardware</li>
+            <li>#Neuroscience</li>
+          </ul>
+        </li>
+
+        <li class="pub">
+          <div class="pub-title">The Balloon Model Revisited <span class="pub-status">(under review)</span></div>
+          <div class="pub-authors"><strong>T.-W. Lee</strong>.</div>
+          <div class="pub-venue">Preprint, 2026.
+            <a href="https://www.researchsquare.com/article/rs-11197888/v1">Research Square</a> &middot;
+            <a href="https://www.researchgate.net/publication/415020267_The_ballon_model_revisited">ResearchGate</a> &middot;
+            <a href="https://weil11.github.io/function-mri-simulation/">Interactive simulations</a>
+          </div>
+          <p class="pub-abstract">A closed-form hemodynamic response function for BOLD fMRI, linking neuronal input, CBF, CBV, and CMRO&#8322; through a dynamical-systems model.</p>
+          <ul class="pub-tags">
+            <li>#Biophysics</li>
+            <li>#DynamicalSystems</li>
+            <li>#SignalProcessing</li>
+            <li>#Neuroscience</li>
+          </ul>
+        </li>
+
         <li class="pub">
           <div class="pub-title">Diffusion MRI with a Multi-Shot Rosette Readout</div>
           <div class="pub-authors">K. D. Harkins, <strong>T.-W. Lee</strong>, J. B. Martin, H. E. Alderson, J. C. Gore, M. D. Does.</div>
@@ -216,41 +335,17 @@
           <p class="pub-abstract">Demonstrates a rosette readout for diffusion MRI that corrects for three common sources of artifact while preserving SNR efficiency.</p>
           <ul class="pub-tags">
             <li>#ImageReconstruction</li>
-            <li>#Image/SignalProcessing</li>
+            <li>#SignalProcessing</li>
             <li>#MRPhysics</li>
           </ul>
         </li>
 
         <li class="pub">
-          <div class="pub-title">The First Mouse Spinal Cord fMRI <span class="pub-status">(under review)</span></div>
-          <div class="pub-authors"><strong>T.-W. Lee</strong>.</div>
-          <div class="pub-venue">2025.
-            <a href="https://www.notion.so/Mouse-Spinal-Neural-Signals-click-to-open-22c01df91271804e8257ea9028c28acb?pvs=21">Manuscript draft page</a>
+          <div class="pub-title">Earlier work</div>
+          <div class="pub-venue">
+            SWI/QSM in Parkinson&rsquo;s disease, <a href="http://echo.ismrm.org/p/ISMRM2020/1527">ISMRM 2020</a>, <a href="https://www.mdpi.com/1050610">Tomography 2021</a> &middot;
+            APOE-&epsilon;4 &amp; cholinergic circuitry, <a href="http://echo.ismrm.org/p/ISMRM2020/4793">ISMRM 2020</a>, <a href="https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2021.651388/full">Frontiers in Neurology 2021</a>
           </div>
-          <p class="pub-abstract">Since the 1990s, scientists have mapped functional networks in the spinal cord &mdash; showing that, like the brain, its regions continuously &ldquo;talk&rdquo; to each other. These networks are now well established in humans and even non-human primates. But why haven&rsquo;t we reliably studied them in mice? <strong>We actually could &mdash; but what are the limits?</strong></p>
-          <ul class="pub-tags">
-            <li>#Physics</li>
-            <li>#Hardware</li>
-            <li>#Design</li>
-            <li>#Statistics</li>
-            <li>#Neuroscience</li>
-          </ul>
-        </li>
-
-        <li class="pub">
-          <div class="pub-title">Brain Study &mdash; Linking Neural Signal to fMRI Power Spectrum</div>
-          <div class="pub-authors"><strong>T.-W. Lee</strong>.</div>
-          <div class="pub-venue">2025.
-            <a href="https://www.notion.so/Brain-Study-Linking-Neural-Signal-to-fMRI-contrast-click-to-open-22c01df91271805e9b3ced0897a3a965?pvs=21">Manuscript draft page</a>
-          </div>
-          <p class="pub-abstract">We mostly understand the brain through the cortex. But what if our interpretation of brain signals is oversimplified &mdash; focusing only on the temporal waves in noticeable regions? By treating these signals as dynamic systems and simulating different scenarios across regions, we can uncover hidden cause-and-effect relationships.</p>
-          <ul class="pub-tags">
-            <li>#Biophysics</li>
-            <li>#LinearSystemDesign</li>
-            <li>#Image/SignalProcessing</li>
-            <li>#Simulation</li>
-            <li>#Neuroscience</li>
-          </ul>
         </li>
       </ol>
     </section>
@@ -294,6 +389,18 @@
         </li>
       </ul>
 
+      <h3 class="proj-cat">Research Code</h3>
+      <ul class="projects">
+        <li class="project">
+          <a class="project-title" href="https://weil11.github.io/function-mri-simulation/">The Balloon Model Revisited &mdash; interactive BOLD/HRF simulations</a>
+          <span class="proj-tag">Demo</span>
+        </li>
+        <li class="project">
+          <a class="project-title" href="https://github.com/WeiL11/spectral-fit">spectral-fit &mdash; spectral model fitting</a>
+          <span class="proj-tag">GitHub</span>
+        </li>
+      </ul>
+
       <h3 class="proj-cat">AI Industry Analysis</h3>
       <ul class="projects">
         <li class="project">
@@ -325,6 +432,20 @@
       </ul>
     </section>
 
+    <section>
+      <h2>Skills</h2>
+      <dl class="skills">
+        <dt>Programming</dt>
+        <dd>Python, C++, C#, MATLAB, Julia, R, SQL, Go, Node.js, Bash</dd>
+        <dt>ML &amp; LLM</dt>
+        <dd>PyTorch, JAX/XLA, TensorFlow, scikit-learn, Hugging Face, LangChain, vLLM, SGLang, Triton, CUDA</dd>
+        <dt>MRI &amp; Signal Processing</dt>
+        <dd>Pulse sequence programming (Siemens IDEA, Bruker), image reconstruction, DWI, ASL, SWI/QSM, fMRI preprocessing, time/frequency-domain analysis, dynamical systems modeling</dd>
+        <dt>Infrastructure &amp; Cloud</dt>
+        <dd>Docker, Kubernetes, Ray, AWS (S3, Lambda, SageMaker), GCP (Vertex AI), Supabase, Redis, Linux, Git</dd>
+      </dl>
+    </section>
+
     <section class="visitors">
       <h2>Who's Visited</h2>
       <p class="visitors-note">Hello to everyone dropping by &mdash; here&rsquo;s where you&rsquo;re from.</p>
@@ -348,7 +469,7 @@
     </section>
 
     <footer>
-      © Tzu-Wei Lee · Last updated 2026-05-26
+      © Charles (Tzu-Wei) Lee · Last updated 2026-10-30
     </footer>
   </main>
 </body>
